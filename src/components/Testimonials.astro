@@ -1,0 +1,96 @@
+---
+interface Testimonial {
+	company: string;
+	companyUrl?: string;
+	author: string;
+	text: string;
+	bgColor: string;
+}
+
+interface Props {
+	subtitle?: string;
+	titlePart1?: string;
+	titlePart2?: string;
+	titleImage?: string;
+	testimonials?: Testimonial[];
+	shape1Image?: string;
+	shape2Image?: string;
+}
+
+const {
+	subtitle = "FEEDBACK",
+	titlePart1 = "What",
+	titlePart2 = "client",
+	titleImage = "images/shape/shape_129.svg",
+	shape1Image = "images/shape/shape_130.svg",
+	shape2Image = "images/shape/shape_131.svg",
+	testimonials = [
+		{
+			company: "FLX Websites",
+			companyUrl: "/",
+			author: "Nick Sergeant",
+			text: "We've been using the team at Design2Tailwind for almost a year now and they have had an outsized impact on our ability to grow our web design agency. I absolutely cannot imagine not having them as a resource for us at this point. They're detailed oriented, efficient, and more than fair in their pricing. If you're looking for help turning your designs into HTML & Tailwind, you've found it!",
+			bgColor: "#FFED4E",
+		},
+		{
+			company: "Insight Media",
+			companyUrl: "/",
+			author: "Dries",
+			text: "Vivian and Daniela converted our website layout into a high-quality Tailwind project. Their code integrated perfectly into our Laravel project. We highly recommend their services!",
+			bgColor: "#00FCFC",
+		},
+		{
+			company: "FLX Websites",
+			companyUrl: "/",
+			author: "Nick Sergeant",
+			text: "We've been using the team at Design2Tailwind for almost a year now and they have had an outsized impact on our ability to grow our web design agency. I absolutely cannot imagine not having them as a resource for us at this point. They're detailed oriented, efficient, and more than fair in their pricing. If you're looking for help turning your designs into HTML & Tailwind, you've found it!",
+			bgColor: "#F27AFF",
+		},
+		{
+			company: "Insight Media",
+			companyUrl: "/",
+			author: "Dries",
+			text: "Vivian and Daniela converted our website layout into a high-quality Tailwind project. Their code integrated perfectly into our Laravel project. We highly recommend their services!",
+			bgColor: "#52C1FF",
+		},
+	],
+} = Astro.props;
+---
+
+<div class="feedback-section-ten relative xl:pt-40 lg:pt-32 pt-24 xl:mb-36 lg:mb-28 mb-24">
+	<div class="container">
+		<div class="relative">
+			<div class="flex flex-wrap mx-[-12px]">
+				<div class="xl:w-5/12 lg:w-5/12 w-full flex-[0_0_auto] px-[12px] max-w-full">
+					<div class="title-style-ten text-center xl:text-left lg:text-left wow fadeInLeft">
+						<div class="sc-title text-[15px] tracking-[3px] uppercase text-(--prime-nine) pb-4 lg:text-[13px] lg:pb-2.5 md:text-[13px] md:pb-2.5 sm:text-[13px] sm:pb-2.5 xsm:text-[13px] xsm:pb-2.5">{subtitle}</div>
+						<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">{titlePart1} <span class="relative">{titlePart2} <img class=" absolute z-[-1] left-0 bottom-[9px]" src={titleImage} alt=""></span> think about us.</h2>
+					</div> <!-- /.title-style-ten -->
+				</div>
+			</div>
+
+			<div class="slider-wrapper pt-[70px] lg:pt-10 md:pt-10 sm:pt-10 xsm:pt-10 wow fadeInUp w-[calc(1320px+25vw)] m-[0_-30px] 2xl:w-[calc(1320px+15vw)] lg:m-[0_-12px] lg:w-auto md:m-[0_-12px] md:w-auto sm:m-[0_-12px] sm:w-auto xsm:m-[0_-12px] xsm:w-auto">
+				<div class="feedback_slider_ten">
+					{testimonials.map((testimonial) => (
+						<div class="item m-[0_30px] lg:m-[0_12px] md:m-[0_12px] sm:m-[0_12px] xsm:m-[0_12px]">
+							<div class="feedback-block-ten xl:p-[40px_50px_40px] lg:p-[25px_20px_30px] md:p-[25px_20px_30px] sm:p-[25px_20px_30px] xsm:p-[25px_20px_30px]" style={`background:${testimonial.bgColor};`}>
+								<a href={testimonial.companyUrl} class="font-medium font-Gordita text-black xl:text-3xl lg:text-3xl text-2xl hover:underline">{testimonial.company}</a>
+								<div class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] leading-[1.67em]  text-black ">{testimonial.author}</div>
+								<p class=" text-black mt-10 lg:mt-[30px] md:mt-[30px] sm:mt-[30px] xsm:mt-[30px] mb-4 text-[28px] leading-[1.78em] text-xl">
+									{testimonial.text}
+								</p>
+							</div> <!-- /.feedback-block-ten -->
+						</div>
+					))}
+				</div> <!-- /.feedback_slider_ten -->
+			</div> <!-- /.slider-wrapper -->
+
+			<ul class="slider-arrows slick-arrow-five flex justify-center mb-0 pl-0 list-none wow fadeInRight absolute border-2 border-solid border-black right-0 top-[90px] md:relative md:w-[114px] md:m-[60px_auto_0] md:top-0 sm:relative sm:w-[114px] sm:m-[60px_auto_0] sm:top-0 xsm:relative xsm:w-[114px] xsm:m-[60px_auto_0] xsm:top-0">
+				<li class="prev_f5 slick-arrow text-center tran3s text-[24px] w-[55px] h-[50px] leading-[48px] text-black cursor-pointer hover:text-white first:border-r-black first:border-r first:border-solid last:border-l-black last:border-l last:border-solid hover:bg-black" style=""><i class="bi bi-arrow-left"></i></li>
+				<li class="next_f5 slick-arrow text-center tran3s text-[24px] w-[55px] h-[50px] leading-[48px] text-black cursor-pointer hover:text-white first:border-r-black first:border-r first:border-solid last:border-l-black last:border-l last:border-solid hover:bg-black" style=""><i class="bi bi-arrow-right"></i></li>
+			</ul>
+		</div>
+	</div>
+	<img src="images/lazy.svg" data-src={shape1Image} alt="" class="lazy-img shapes shape-one absolute z-[-1] animate-[jumpTwo_5s_infinite_linear] left-[51%] top-[9%] md:hidden! sm:hidden! xsm:hidden!">
+	<img src="images/lazy.svg" data-src={shape2Image} alt="" class="lazy-img shapes shape-two absolute z-[-1] left-0 bottom-0">
+</div>
