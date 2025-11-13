@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import WhyUs from '@components/WhyUs.astro';
+import Advantages from '@components/Advantages.astro';
 ---
 
 <Layout title='Astro'>
@@ -30,46 +31,7 @@ import WhyUs from '@components/WhyUs.astro';
 
 	<WhyUs />
 
-	<div class="fancy-feature-twentyThree mt-16 md:mt-24 lg:mt-32 xl:mt-32 px-4 xl:mb-20 lg:mb-20 md:mb-14 mb-10">
-		<div class="container">
-			<div class="title-style-seven text-center pb-5 wow fadeInUp">
-				<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl"><span class="relative inline-block">Advantages <img class=" absolute z-[-1] w-48 xl:w-60 rotate-3 left-0 -bottom-2" src="images/shape/shape_188.svg" alt=""></span></h2>
-			</div> <!-- /.title-style-seven -->
-
-			<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-x-12 xl:gap-x-24 gap-y-6 lg:gap-y-10 pt-10 md:pt-14 xl:pt-20">
-				<div class="text-center xl:text-left lg:text-left w-full wow fadeInUp">
-					<div class="icon flex items-center justify-center relative rounded-[50%] w-[65px] h-[65px] lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] sm:w-[50px] sm:h-[50px] xsm:w-[50px] xsm:h-[50px] border-[3px] border-solid border-black before:content-[''] before:absolute before:w-[calc(100%+6px)] before:h-[calc(100%+6px)] before:top-[-3px] before:z-[-1] before:rounded-[50%] before:left-[5px] md:m-[0_auto] sm:m-[0_auto] xsm:m-[0_auto] before:bg-[#cac6fc]"><img src="images/lazy.svg" data-src="images/icon/icon-code.svg" alt="" class="lazy-img h-6 xl:h-7"></div>
-					<h4 class="mt-6 lg:mt-[30px] mb-5 lg:mb-[10px] md:mb-[10px] sm:mb-[10px] xsm:mb-[10px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">High Quality Code</h4>
-					<p>Integrating your apps couldn't be any easier through Installation.</p>
-				</div>
-				<div class="text-center xl:text-left lg:text-left w-full wow fadeInUp" data-wow-delay="0.2s">
-					<div class="icon flex items-center justify-center relative rounded-[50%] w-[65px] h-[65px] lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] sm:w-[50px] sm:h-[50px] xsm:w-[50px] xsm:h-[50px] border-[3px] border-solid border-black before:content-[''] before:absolute before:w-[calc(100%+6px)] before:h-[calc(100%+6px)] before:top-[-3px] before:z-[-1] before:rounded-[50%] before:left-[5px] md:m-[0_auto] sm:m-[0_auto] xsm:m-[0_auto] before:bg-[#cac6fc]"><img src="images/lazy.svg" data-src="images/icon/icon-seo.svg" alt="" class="lazy-img h-6 xl:h-7"></div>
-					<h4 class="mt-6 lg:mt-[30px] mb-5 lg:mb-[10px] md:mb-[10px] sm:mb-[10px] xsm:mb-[10px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">SEO & Speed Optimized </h4>
-					<p>Linking your site to your domain name has never been easier with GoDaddy registered domain.</p>
-				</div>
-				<div class="text-center xl:text-left lg:text-left w-full wow fadeInUp" data-wow-delay="0.4s">
-					<div class="icon flex items-center justify-center relative rounded-[50%] w-[65px] h-[65px] lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] sm:w-[50px] sm:h-[50px] xsm:w-[50px] xsm:h-[50px] border-[3px] border-solid border-black before:content-[''] before:absolute before:w-[calc(100%+6px)] before:h-[calc(100%+6px)] before:top-[-3px] before:z-[-1] before:rounded-[50%] before:left-[5px] md:m-[0_auto] sm:m-[0_auto] xsm:m-[0_auto] before:bg-[#cac6fc]"><img src="images/lazy.svg" data-src="images/icon/icon-accessibility.svg" alt="" class="lazy-img h-6 xl:h-7"></div>
-					<h4 class="mt-6 lg:mt-[30px] mb-5 lg:mb-[10px] md:mb-[10px] sm:mb-[10px] xsm:mb-[10px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">Accessible code</h4>
-					<p>Get peace of mind, knowing network dsu security and visitors</p>
-				</div>
-				<div class="text-center xl:text-left lg:text-left w-full wow fadeInUp">
-					<div class="icon flex items-center justify-center relative rounded-[50%] w-[65px] h-[65px] lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] sm:w-[50px] sm:h-[50px] xsm:w-[50px] xsm:h-[50px] border-[3px] border-solid border-black before:content-[''] before:absolute before:w-[calc(100%+6px)] before:h-[calc(100%+6px)] before:top-[-3px] before:z-[-1] before:rounded-[50%] before:left-[5px] md:m-[0_auto] sm:m-[0_auto] xsm:m-[0_auto] before:bg-[#cac6fc]"><img src="images/lazy.svg" data-src="images/icon/icon-organization.svg" alt="" class="lazy-img h-6 xl:h-7"></div>
-					<h4 class="mt-6 lg:mt-[30px] mb-5 lg:mb-[10px] md:mb-[10px] sm:mb-[10px] xsm:mb-[10px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">100% White Label</h4>
-					<p>Includes industry-standard cPanel to install apps, manage backups and security.</p>
-				</div>
-				<div class="text-center xl:text-left lg:text-left  w-full wow fadeInUp" data-wow-delay="0.2s">
-					<div class="icon flex items-center justify-center relative rounded-[50%] w-[65px] h-[65px] lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] sm:w-[50px] sm:h-[50px] xsm:w-[50px] xsm:h-[50px] border-[3px] border-solid border-black before:content-[''] before:absolute before:w-[calc(100%+6px)] before:h-[calc(100%+6px)] before:top-[-3px] before:z-[-1] before:rounded-[50%] before:left-[5px] md:m-[0_auto] sm:m-[0_auto] xsm:m-[0_auto] before:bg-[#cac6fc]"><img src="images/lazy.svg" data-src="images/icon/icon-structure.svg" alt="" class="lazy-img h-6 xl:h-7"></div>
-					<h4 class="mt-6 lg:mt-[30px] mb-5 lg:mb-[10px] md:mb-[10px] sm:mb-[10px] xsm:mb-[10px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">Component-Based Structure</h4>
-					<p>If you require more power for your site, seamlessly increase your CPU/RAM, I/O and storage with 1 click.</p>
-				</div>
-				<div class="text-center xl:text-left lg:text-left  w-full wow fadeInUp" data-wow-delay="0.4s">
-					<div class="icon flex items-center justify-center relative rounded-[50%] w-[65px] h-[65px] lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] sm:w-[50px] sm:h-[50px] xsm:w-[50px] xsm:h-[50px] border-[3px] border-solid border-black before:content-[''] before:absolute before:w-[calc(100%+6px)] before:h-[calc(100%+6px)] before:top-[-3px] before:z-[-1] before:rounded-[50%] before:left-[5px] md:m-[0_auto] sm:m-[0_auto] xsm:m-[0_auto] before:bg-[#cac6fc]"><img src="images/lazy.svg" data-src="images/icon/icon-communication.svg" alt="" class="lazy-img h-6 xl:h-7"></div>
-					<h4 class="mt-6 lg:mt-[30px] mb-5 lg:mb-[10px] md:mb-[10px] sm:mb-[10px] xsm:mb-[10px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">Fast and clear communication</h4>
-					<p>Get faster page loads & better customer experience with lorem.</p>
-				</div> <!-- /.card-style-eleven -->
-			</div>
-		</div> <!-- /.container -->
-	</div>
+	<Advantages />
 
 	<div class="fancy-feature-six relative" id="process">
 		<div class="container">
