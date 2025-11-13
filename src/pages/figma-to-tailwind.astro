@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import WhyUs from '@components/WhyUs.astro';
+import OurProcess from '@components/OurProcess.astro';
 ---
 
 <Layout title='Astro'>
@@ -23,56 +24,7 @@ import WhyUs from '@components/WhyUs.astro';
 
 	<WhyUs />
 
-	<div class="fancy-feature-six relative">
-		<div class="container">
-			<div class="flex flex-wrap items-center">
-				<div class="xl:w-4/12 lg:w-4/12 md:w-6/12 mt-10 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp">
-					<div class="">
-						<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">Let’s <br> <span class="inline-block relative z-1">Discover <span class="mark-bg absolute left-[-5px] -translate-y-2/4 w-[98%] h-[50px] z-[-1] top-2/4 md:h-[34px] sm:h-[34px] xsm:h-[34px]" style="background-color:#E1EDFF;"></span></span> our all features</h2>
-						<span class="mt-6 md:mt-12 lg:mt-12 xl:mt-12 block w-28 bg-black h-[3px]"></span>
-					</div> <!-- /.title-style-three -->
-				</div>
-				<div class="xl:w-4/12 lg:w-4/12 md:w-6/12 mt-10 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp" data-wow-delay="0.1s">
-					<div class="card-style-three border transition-all duration-[0.3s] ease-[ease-in-out] w-full p-[42px_10px_30px_45px] lg:p-[30px_10px_25px_15px] md:p-[30px_10px_25px_15px] sm:p-[30px_10px_25px_15px] xsm:p-[30px_10px_25px_15px] rounded-[10px] border-solid border-[#b1b2f4] hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:border-[#FF35D9] bg-white">
-						<div class="icon flex items-end h-[65px]"><img src="images/lazy.svg" data-src="images/icon/icon_13.svg" alt="" class="lazy-img max-h-full"></div>
-						<h4 class="mt-[25px] mb-5 2xl:text-[22px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">1- Welcome</h4>
-						<p class="md:min-h-[150px] lg:min-h-[150px] xl:min-h-[150px] mb-4 md:mb-0">Our deep understanding of project and program management has enabled the success of our clients.</p>
-					</div> <!-- /.card-style-three -->
-				</div>
-				<div class="xl:w-4/12 lg:w-4/12 md:w-6/12 mt-10 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp" data-wow-delay="0.2s">
-					<div class="card-style-three border transition-all duration-[0.3s] ease-[ease-in-out] w-full p-[42px_10px_30px_45px] lg:p-[30px_10px_25px_15px] md:p-[30px_10px_25px_15px] sm:p-[30px_10px_25px_15px] xsm:p-[30px_10px_25px_15px] rounded-[10px] border-solid border-[#b1b2f4] hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:border-[#FF35D9] bg-white">
-						<div class="icon flex items-end h-[65px]"><img src="images/lazy.svg" data-src="images/icon/icon_16.svg" alt="" class="lazy-img max-h-full"></div>
-						<h4 class="mt-[25px] mb-5 2xl:text-[22px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">2- We chat</h4>
-						<p class="md:min-h-[150px] lg:min-h-[150px] xl:min-h-[150px] mb-4 md:mb-0">Our deep understanding of project and program management has enabled the success of our clients.</p>
-					</div> <!-- /.card-style-three -->
-				</div>
-				<div class="xl:w-4/12 lg:w-4/12 md:w-6/12 mt-10 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp" data-wow-delay="0.05s">
-					<div class="card-style-three border transition-all duration-[0.3s] ease-[ease-in-out] w-full p-[42px_10px_30px_45px] lg:p-[30px_10px_25px_15px] md:p-[30px_10px_25px_15px] sm:p-[30px_10px_25px_15px] xsm:p-[30px_10px_25px_15px] rounded-[10px] border-solid border-[#b1b2f4] hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:border-[#FF35D9] bg-white">
-						<div class="icon flex items-end h-[65px]"><img src="images/lazy.svg" data-src="images/icon/icon_15.svg" alt="" class="lazy-img max-h-full"></div>
-						<h4 class="mt-[25px] mb-5 2xl:text-[22px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">3- Coding</h4>
-						<p class="md:min-h-[150px] lg:min-h-[150px] xl:min-h-[150px] mb-4 md:mb-0">Our deep understanding of project and program management has enabled the success of our clients.</p>
-					</div> <!-- /.card-style-three -->
-				</div>
-				<div class="xl:w-4/12 lg:w-4/12 md:w-6/12 mt-10 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp" data-wow-delay="0.1s">
-					<div class="card-style-three border transition-all duration-[0.3s] ease-[ease-in-out] w-full p-[42px_10px_30px_45px] lg:p-[30px_10px_25px_15px] md:p-[30px_10px_25px_15px] sm:p-[30px_10px_25px_15px] xsm:p-[30px_10px_25px_15px] rounded-[10px] border-solid border-[#b1b2f4] hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:border-[#FF35D9] bg-white">
-						<div class="icon flex items-end h-[65px]"><img src="images/lazy.svg" data-src="images/icon/icon_14.svg" alt="" class="lazy-img max-h-full"></div>
-						<h4 class="mt-[25px] mb-5 2xl:text-[22px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">4- Ta-da!</h4>
-						<p class="md:min-h-[150px] lg:min-h-[150px] xl:min-h-[150px] mb-4 md:mb-0">Our deep understanding of project and program management has enabled the success of our clients.</p>
-					</div> <!-- /.card-style-three -->
-				</div>
-				<div class="xl:w-4/12 lg:w-4/12 md:w-6/12 mt-10 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp" data-wow-delay="0.2s">
-					<div class="card-style-three border transition-all duration-[0.3s] ease-[ease-in-out] w-full p-[42px_10px_30px_45px] lg:p-[30px_10px_25px_15px] md:p-[30px_10px_25px_15px] sm:p-[30px_10px_25px_15px] xsm:p-[30px_10px_25px_15px] rounded-[10px] border-solid border-[#b1b2f4] hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:border-[#FF35D9] bg-white">
-						<div class="icon flex items-end h-[65px]"><img src="images/lazy.svg" data-src="images/icon/icon_17.svg" alt="" class="lazy-img max-h-full"></div>
-						<h4 class="mt-[25px] mb-5 2xl:text-[22px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">5- The end</h4>
-						<p class="md:min-h-[150px] lg:min-h-[150px] xl:min-h-[150px] mb-4 md:mb-0">Our deep understanding of project and program management has enabled the success of our clients.</p>
-					</div> <!-- /.card-style-three -->
-				</div>
-			</div>
-		</div>
-		<div class="shapes shape-one rounded-[50%] absolute z-[-1] w-[126px] h-[126px] left-[-50px] animate-[jumpThree_3s_infinite_linear] top-[4%] bg-[#FFC961]"></div>
-		<img src="images/lazy.svg" data-src="images/shape/shape_36.svg" alt="" class="lazy-img shapes shape-two absolute z-[-1] right-[3%] top-[30%]">
-		<div class="shapes shape-three rounded-[50%] absolute z-[-1] w-[300px] h-[300px] opacity-70 right-[-150px] animate-[jumpTwo_3s_infinite_linear] bottom-0 bg-[#FF35D9]"></div>
-	</div>
+	<OurProcess titleLine2="our all features" />
 
 	<div class="feedback-section-ten relative xl:pt-40 lg:pt-32 pt-24 xl:mb-36 lg:mb-28 mb-24">
 		<div class="container">
