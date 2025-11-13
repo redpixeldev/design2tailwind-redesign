@@ -1,0 +1,80 @@
+---
+interface Props {
+	subtitle?: string;
+	title?: string;
+	highlightColor?: string;
+	paragraph1?: string;
+	paragraph2?: string;
+	reasonsCount?: string;
+	reasonsText?: string;
+	tags?: Array<{ text: string; bgColor: string }>;
+}
+
+const {
+	subtitle = "Over 100+ clients",
+	title = "Why choose Us.",
+	highlightColor = "#D8FFE8",
+	paragraph1 = "We're a team of sisters, Vivian and Daniela, with more than 13 years of experience combined, doing front-end development.",
+	paragraph2 = "Even better yet, we've been using Tailwind CSS daily since 2018 and we love it.",
+	reasonsCount = "13+",
+	reasonsText = "Reason to choose us",
+	tags = [
+		{ text: "Great Interface", bgColor: "rgba(255, 130, 130, 0.13)" },
+		{ text: "Expereinced", bgColor: "rgba(73, 230, 213, 0.13)" },
+		{ text: "Low Price", bgColor: "rgba(73, 179, 230, 0.13)" },
+		{ text: "Customizable", bgColor: "rgba(251, 208, 80, 0.15)" },
+		{ text: "Trusted", bgColor: "rgba(213, 126, 255, 0.15)" },
+		{ text: "Great Support", bgColor: "rgba(189, 231, 122, 0.15)" },
+		{ text: "Safe", bgColor: "rgba(255, 152, 152, 0.15)" },
+	],
+} = Astro.props;
+---
+
+<div class="fancy-feature-five xl:mb-24 lg:mb-20 md:mb-16 mb-12">
+	<div class="container">
+		<div class="flex flex-wrap items-center">
+			<div class="xl:w-[45%] lg:w-[45%] md:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full xl:order-last lg:order-last md:order-last ml-auto!">
+				<div class="block-style-two xxl:pr-12! sm:mb-[50px] xsm:mb-[50px]  wow fadeInRight">
+					<div class="title-style-three">
+						<div class="sc-title uppercase text-[14px] lg:text-[13px] md:text-[13px] sm:text-[13px] xsm:text-[13px] tracking-[1px] text-[rgba(0,0,0,0.3)] pb-2.5">
+							Over <span class="underline" style="color:#a056fa;">{subtitle}</span>
+						</div>
+						<h2 class="main-title font-normal m-0 font-Recoleta text-black xl:text-6xl lg:text-5xl text-4xl">
+							{title.split('choose')[0]}<span class="inline-block relative z-1">choose <span class="mark-bg absolute left-[-5px] -translate-y-2/4 w-[98%] h-[50px] z-[-1] top-2/4 md:h-[34px] sm:h-[34px] xsm:h-[34px]" style={`background-color:${highlightColor};`}></span></span> {title.split('choose')[1]}
+						</h2>
+					</div>
+					<p class="font-gordita xl:text-[22px] lg:text-[19px] md:text-[19px] sm:text-[19px] xsm:text-[19px] leading-[1.67em] mt-8">
+						{paragraph1}
+					</p>
+					<p class="font-gordita xl:text-[22px] lg:text-[19px] md:text-[19px] sm:text-[19px] xsm:text-[19px] leading-[1.67em]">
+						{paragraph2}
+					</p>
+				</div>
+			</div>
+
+			<div class="xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full xl:order-first lg:order-first md:order-first wow fadeInLeft">
+				<div class="tags-wrapper relative p-[45px_65px_50px] 2xl:p-[35px_35px_40px] lg:p-[25px_15px_30px] md:p-[25px_15px_30px] sm:p-[25px_15px_30px] xsm:p-[25px_15px_30px] rounded-[25px] bg-[#F3F7F8]">
+					<img src="images/lazy.svg" data-src="images/shape/shape_35.svg" alt="" class="lazy-img shapes shape-one absolute w-3/12 z-0 animate-[jumpThree_3s_infinite_linear] right-[1%] top-[1%]">
+					<div class="h3 m-0! font-normal text-black">{reasonsCount}</div>
+					<p class="text-[24px] 2xl:text-[22px] lg:text-[19px] md:text-[19px] sm:text-[19px] xsm:text-[19px] leading-[1.67em] opacity-50 pb-[25px] lg:pb-[10px] md:pb-[10px] sm:pb-[10px] xsm:pb-[10px]">
+						{reasonsText}
+					</p>
+					<ul class="flex flex-wrap items-center mb-0 pl-0 list-none m-[0_-10px]">
+						{tags.map((tag) => (
+							<li class="text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]">
+								<a class="text-black text-[18px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] lg:p-3 md:p-3 sm:p-3 xsm:p-3 transition-all duration-[0.3s] ease-[ease-in-out] px-[30px] py-[22px] rounded-[10px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] bg-white" href="#">
+									<span class="inline-block leading-[25px] p-[0_3px] rounded-[5px]" style={`background-color: ${tag.bgColor};`}>
+										{tag.text}
+									</span>
+								</a>
+							</li>
+						))}
+						<li class="text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]">
+							& more…
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
