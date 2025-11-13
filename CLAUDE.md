@@ -16,15 +16,14 @@ pnpm install
 pnpm dev
 # Alternative commands: pnpm develop, pnpm start
 
-# Build for production
-pnpm build
-
 # Preview production build
 pnpm preview
 
 # Deploy to Cloudflare Pages
 wrangler pages deploy ./dist
 ```
+
+**IMPORTANT**: Do NOT run build commands (`pnpm build`) unless explicitly requested. The dev server is assumed to be running.
 
 ## Architecture & Structure
 
@@ -55,8 +54,9 @@ wrangler pages deploy ./dist
 
 ### Tailwind CSS v4 Setup
 - Configuration in `tailwind.config.js` with custom container queries and breakpoints
-- Main styles imported via `src/styles/main.css` using `@import 'tailwindcss'`
-- Custom PostCSS configuration using `@tailwindcss/postcss`
+- Main styles imported via `src/styles/main.css` using `@import 'tailwindcss'` with `@config` directive
+- PostCSS configured to use `@tailwindcss/postcss` plugin (implicitly via Tailwind v4)
+- Base layer includes custom resets and utility defaults (box-sizing, margins, paddings)
 
 ### Custom Breakpoints
 The project uses non-standard Tailwind breakpoints matching Bootstrap conventions:
@@ -76,16 +76,51 @@ Custom fonts are loaded via CSS files in `/public/fonts/`:
 - Font Awesome
 - Eustache, Noteworthy (decorative)
 
+### Astro-Specific Configuration
+- **HTML Compression**: Disabled (`compressHTML: false`) for readability
+- **Build Format**: File-based routing (not directory-based)
+- **Asset Bundling**: All assets output to `assets/` with specific filenames (`main.js`, `main.css`)
+- **Assets Inline Limit**: Set to 0 to prevent any inlining
+- **Script Loading**: Vendor scripts use `is:inline` attribute to bypass Astro's script processing
+
 ### Legacy Dependencies
-The site includes jQuery and several jQuery plugins loaded via script tags in the layout. These are marked with `is:inline` to prevent Astro processing.
+The site includes jQuery and several jQuery plugins loaded at the end of the `<body>` in Layout.astro:
+- jQuery core
+- Bootstrap JS (bundle)
+- Slick slider
+- Fancybox
+- WOW.js (scroll animations)
+- Isotope (filtering/sorting)
+- Nice Select (custom dropdowns)
+- jQuery Counter, Waypoints, Lazy loading
+- Custom theme.js
+
+All vendor scripts use `is:inline` to prevent Astro from processing/bundling them.
 
 ## Development Notes
 
 1. **No Test Suite**: Currently no testing framework is configured
-2. **No Linting/Formatting**: No ESLint or Prettier config files present (though Prettier is installed)
-3. **Image Optimization**: Uses lazy loading with placeholder SVG
-4. **Vendor Scripts**: Multiple jQuery plugins loaded globally - consider modern alternatives when refactoring
-5. **CSS Architecture**: Mix of Tailwind utilities and legacy CSS files - prioritize Tailwind for new features
+2. **Formatting**: Prettier is installed with plugins for Astro and Tailwind, but no explicit config file
+3. **Image Optimization**: Uses lazy loading with placeholder SVG via jQuery Lazy plugin
+4. **CSS Architecture**: Mix of Tailwind utilities and legacy CSS files in `/public/css/` - prioritize Tailwind for new features
+5. **CSS Custom Properties**: Uses CSS variables for theme colors (defined in `:root` in main.css):
+   - `--text-color`, `--heading`
+   - `--prime-one` through `--prime-twelve` for various accent colors
+6. **Container Sizing**: Custom container plugin with Bootstrap-style responsive max-widths (540px → 1320px)
+
+## Working with Tailwind CSS
+
+### Key Differences from Standard Tailwind
+- **Breakpoints**: Use Bootstrap-style breakpoints (`sm`, `md`, `lg`, `xl`, `2xl`, `xxl`, `xsm`) instead of default Tailwind breakpoints
+- **Custom Utilities**: Extensive custom utilities in `main.css` for transitions (`.tran3s`, `.tran4s`, etc.)
+- **CSS Variable Access**: Theme colors accessed via `text-(--prime-one)` syntax in utility classes
+- **Legacy CSS Mix**: Many components still use traditional CSS in `main.css` - gradually migrate to utilities when editing
+
+### Styling Approach
+- New features should use Tailwind utilities where possible
+- Complex animations and vendor-specific styles remain in `main.css` base layer
+- Use `@apply` directive sparingly (only in base layer for resets)
+- Prefer inline Tailwind classes in `.astro` components
 
 ## Cloudflare Deployment
 
