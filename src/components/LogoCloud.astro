@@ -1,0 +1,53 @@
+---
+interface Tool {
+	logo: string;
+	name: string;
+	logoClass?: string;
+}
+
+interface Props {
+	title?: string;
+	titleHighlight?: string;
+	highlightImage?: string;
+	tools?: Tool[];
+}
+
+const {
+	title = "Connected to the",
+	titleHighlight = "Tools",
+	highlightImage = "images/shape/shape_97.svg",
+	tools = [
+		{ logo: "images/logo/logo-figma.png", name: "Figma", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-adobe-xd.png", name: "Adobe XD", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-sketch.png", name: "Sketch", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-invision.jpeg", name: "invision", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-tailwind.svg", name: "Tailwind", logoClass: "h-8 md:h-10" },
+		{ logo: "images/logo/logo-html.svg", name: "HTML", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-css.png", name: "CSS", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-js.svg", name: "JavaScript", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-react.png", name: "React", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-vue.png", name: "Vue", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-astro.svg", name: "Astro", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-alpine.svg", name: "Alpine", logoClass: "h-8 md:h-10" },
+		{ logo: "images/logo/logo-statamic.svg", name: "Statamic", logoClass: "md:h-12 h-10" },
+		{ logo: "images/logo/logo-shopify.svg", name: "Shopify", logoClass: "md:h-12 h-10" },
+	],
+} = Astro.props;
+---
+
+<div class="fancy-feature-twentyThree mb-20 sm:mb-24 xl:mb-32">
+	<div class="container">
+		<div class="text-center pb-5 wow fadeInUp">
+			<h2 class="main-title font-normal font-Recoleta text-black xl:text-6xl lg:text-5xl text-4xl">{title} <span class="relative inline-block">{titleHighlight} <img class=" absolute z-[-1] max-w-[113%] -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4" src={highlightImage} alt=""></span> you love</h2>
+		</div> <!-- /.title-style-seven -->
+
+		<div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-10 gap-y-8 sm:gap-y-10 lg:gap-y-14 xl:gap-y-14 pt-10 md:pt-14">
+			{tools.map((tool) => (
+				<div class="flex gap-7 items-center justify-center sm:justify-start">
+					<img src="images/lazy.svg" data-src={tool.logo} alt="" class={`lazy-img ${tool.logoClass || 'md:h-12 h-10'}`}>
+					<h4 class="text-xl font-medium font-gordita">{tool.name}</h4>
+				</div>
+			))}
+		</div>
+	</div> <!-- /.container -->
+</div>
