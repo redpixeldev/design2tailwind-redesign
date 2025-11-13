@@ -6,6 +6,7 @@ import WhyUs from '@components/WhyUs.astro';
 import Advantages from '@components/Advantages.astro';
 import OurProcess from '@components/OurProcess.astro';
 import LogoCloud from '@components/LogoCloud.astro';
+import CTA from '@components/CTA.astro';
 import FAQ from '@components/FAQ.astro';
 import Testimonials from '@components/Testimonials.astro';
 import OurBlog from '@components/OurBlog.astro';
@@ -14,20 +15,53 @@ import OurBlog from '@components/OurBlog.astro';
 <Layout title='Astro'>
 	<Header />
 
-	<div class="hero-banner-two relative pt-36 lg:pt-44 xl:pt-52 xl:pb-28 lg:pb-24 md:pb-20 pb-16">
-		<img src="images/lazy.svg" data-src="images/shape/shape_26.svg" alt="" class="hidden sm:block lazy-img shapes shape-left absolute z-[-1] w-[11.9%] max-w-[248px] left-[8%] top-[40%]">
-		<img src="images/lazy.svg" data-src="images/shape/shape_27.svg" alt="" class="hidden sm:block lazy-img shapes shape-right absolute z-[-1] w-[9.1%] max-w-[193px] right-[9%] top-[39%]">
-		<div class="container">
-			<div class="flex flex-wrap">
-				<div class="xl:w-8/12 lg:w-8/12 md:w-9/12 w-full flex-[0_0_auto] px-[12px] max-w-full m-auto text-center wow fadeInUp">
-					<h1 class="hero-heading font-normal font-Recoleta relative text-[82px] 2xl:text-[70px] lg:text-[58px] md:text-[40px] md:leading-[1.2em] sm:text-[40px] sm:leading-[1.2em] xsm:text-4xl xsm:leading-[1.2em] leading-[1.09em]"><img src="images/lazy.svg" data-src="images/shape/shape_25.svg" alt="" class="lg:w-40 xl:w-auto lazy-img shapes line-shape absolute z-[-1] left-[3%] top-[45%] md:hidden! sm:hidden! xsm:hidden!">We convert your <span class="relative inline-block z-1 before:content-[''] before:absolute before:-translate-y-2/4 before:w-[73%] before:h-[81%] before:z-[-1] before:left-[31%] before:top-2/4 before:bg-[#FFEBE5]">design</span> to Tailwind CSS.</h1>
-					<p class=" text-base lg:text-lg xl:text-xl lg:text-[19px] leading-[1.67em] xl:mb-[50px] pt-5 lg:mb-[40px] mb-[30px] lg:pt-[10px] md:pt-[10px] sm:pt-[10px] xsm:pt-[10px]">Line by line, handcrafted by us.
-						<br/>
+	<div class='hero-banner-two relative pt-36 pb-16 md:pb-20 lg:pt-44 lg:pb-24 xl:pt-52 xl:pb-28'>
+		<img
+			src='images/lazy.svg'
+			data-src='images/shape/shape_26.svg'
+			alt=''
+			class='lazy-img shapes shape-left absolute top-[40%] left-[8%] z-[-1] hidden w-[11.9%] max-w-[248px] sm:block'
+		/>
+		<img
+			src='images/lazy.svg'
+			data-src='images/shape/shape_27.svg'
+			alt=''
+			class='lazy-img shapes shape-right absolute top-[39%] right-[9%] z-[-1] hidden w-[9.1%] max-w-[193px] sm:block'
+		/>
+		<div class='container'>
+			<div class='flex flex-wrap'>
+				<div
+					class='wow fadeInUp m-auto w-full max-w-full flex-[0_0_auto] px-[12px] text-center md:w-9/12 lg:w-8/12 xl:w-8/12'>
+					<h1
+						class='hero-heading font-Recoleta xsm:text-4xl xsm:leading-[1.2em] relative text-[82px] leading-[1.09em] font-normal sm:text-[40px] sm:leading-[1.2em] md:text-[40px] md:leading-[1.2em] lg:text-[58px] 2xl:text-[70px]'>
+						<img
+							src='images/lazy.svg'
+							data-src='images/shape/shape_25.svg'
+							alt=''
+							class='lazy-img shapes line-shape xsm:hidden! absolute top-[45%] left-[3%] z-[-1] sm:hidden! md:hidden! lg:w-40 xl:w-auto'
+						/>We convert your <span
+							class="relative z-1 inline-block before:absolute before:top-2/4 before:left-[31%] before:z-[-1] before:h-[81%] before:w-[73%] before:-translate-y-2/4 before:bg-[#FFEBE5] before:content-['']"
+							>design</span
+						> to Tailwind CSS.
+					</h1>
+					<p
+						class='xsm:pt-[10px] mb-[30px] pt-5 text-base leading-[1.67em] sm:pt-[10px] md:pt-[10px] lg:mb-[40px] lg:pt-[10px] lg:text-lg lg:text-[19px] xl:mb-[50px] xl:text-xl'>
+						Line by line, handcrafted by us.
+						<br />
 						We work with PSD, Figma, Adobe XD and Sketch designs and with design hand-off tools like Invision and Zeplin.
 					</p>
-					<div class="flex flex-col gap-3 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-6 xs:flex-row sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-center items-center">
-						<a href="/#quote" class="tran3s text-[17px] font-medium btn-three text-white leading-[52px] relative transition-all duration-[0.3s] ease-[ease-in-out] p-[0_40px] rounded-[28px] bg-[#BC46E2] hover:bg-[#4e257e] md:p-[0_35px] md:leading-[48px] sm:p-[0_35px] sm:leading-[48px] xsm:p-[0_35px] xsm:leading-[48px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px]">Get a Quote</a>
-						<a href="/#process" class="tran3s text-[17px] font-medium btn-three leading-[52px] relative transition-all duration-[0.3s] ease-[ease-in-out] p-[0_40px] rounded-[28px] border border-[#4e257e] text-[#4e257e] hover:bg-[#4e257e] hover:text-white md:p-[0_35px] md:leading-[48px] sm:p-[0_35px] sm:leading-[48px] xsm:p-[0_35px] xsm:leading-[48px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px]">Learn More</a>
+					<div
+						class='xs:flex-row flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6 md:flex-row md:gap-6 lg:flex-row lg:gap-6 xl:flex-row xl:gap-6'>
+						<a
+							href='/#quote'
+							class='tran3s btn-three xsm:p-[0_35px] xsm:leading-[48px] xsm:text-[15px] relative rounded-[28px] bg-[#BC46E2] p-[0_40px] text-[17px] leading-[52px] font-medium text-white transition-all duration-[0.3s] ease-[ease-in-out] hover:bg-[#4e257e] sm:p-[0_35px] sm:text-[15px] sm:leading-[48px] md:p-[0_35px] md:text-[15px] md:leading-[48px] lg:text-[15px]'
+							>Get a Quote</a
+						>
+						<a
+							href='/#process'
+							class='tran3s btn-three xsm:p-[0_35px] xsm:leading-[48px] xsm:text-[15px] relative rounded-[28px] border border-[#4e257e] p-[0_40px] text-[17px] leading-[52px] font-medium text-[#4e257e] transition-all duration-[0.3s] ease-[ease-in-out] hover:bg-[#4e257e] hover:text-white sm:p-[0_35px] sm:text-[15px] sm:leading-[48px] md:p-[0_35px] md:text-[15px] md:leading-[48px] lg:text-[15px]'
+							>Learn More</a
+						>
 					</div>
 				</div>
 			</div>
@@ -38,129 +72,156 @@ import OurBlog from '@components/OurBlog.astro';
 
 	<Advantages />
 
-	<OurProcess id="process" />
+	<OurProcess id='process' />
 
 	<Testimonials />
 
-	<div class="fancy-feature-thirtySeven mb-24 sm:mb-28 lg:mb-36 xl:mb-40 ">
-		<div class="container">
-			<div class="flex flex-wrap mx-[-12px] items-center">
-				<div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full">
-					<div class="block-style-four xxl:pr-12! xxl:ml-6 md:mb-[70px] sm:mb-[70px] xsm:mb-[70px] wow fadeInLeft">
-						<div class="title-style-six">
-							<div class="sc-title-two uppercase text-[15px] tracking-[2px] text-(--prime-ten) pb-4 md:text-[13px] sm:text-[13px] xsm:text-[13px]">WHY US</div>
-							<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">Here's what you gonna get.</h2>
-						</div> <!-- /.title-style-ten -->
-						<p class="lg:text-xl/[30px] xl:text-xl/[30px] text-black pt-5 pb-[30px] lg:pt-[10px] md:pt-[10px] sm:pt-[10px] xsm:pt-[10px] lg:pb-5 md:pb-5 sm:pb-5 xsm:pb-5 mb-0">Turn your business into a sales machine today with lorem Things go wrong have questions.</p>
-						<ul class=" mb-0 pl-0 list-none list-item">
-							<li class="lg:text-xl/[30px] xl:text-xl/[30px] text-black relative mb-5 pl-10 before:content-[url(../images/icon/icon_93.svg)] before:absolute before:left-0 before:top-0 lg:text-[18px] ">Very little custom CSS as we always try to keep everything inside the Tailwind config.
+	<div class='fancy-feature-thirtySeven mb-24 sm:mb-28 lg:mb-36 xl:mb-40'>
+		<div class='container'>
+			<div class='mx-[-12px] flex flex-wrap items-center'>
+				<div class='w-full max-w-full flex-[0_0_auto] px-[12px] lg:w-6/12 xl:w-6/12'>
+					<div class='block-style-four xxl:pr-12! xxl:ml-6 xsm:mb-[70px] wow fadeInLeft sm:mb-[70px] md:mb-[70px]'>
+						<div class='title-style-six'>
+							<div
+								class='sc-title-two xsm:text-[13px] pb-4 text-[15px] tracking-[2px] text-(--prime-ten) uppercase sm:text-[13px] md:text-[13px]'>
+								WHY US
+							</div>
+							<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
+								Here's what you gonna get.
+							</h2>
+						</div>
+						<!-- /.title-style-ten -->
+						<p
+							class='xsm:pt-[10px] xsm:pb-5 mb-0 pt-5 pb-[30px] text-black sm:pt-[10px] sm:pb-5 md:pt-[10px] md:pb-5 lg:pt-[10px] lg:pb-5 lg:text-xl/[30px] xl:text-xl/[30px]'>
+							Turn your business into a sales machine today with lorem Things go wrong have questions.
+						</p>
+						<ul class='mb-0 list-item list-none pl-0'>
+							<li
+								class='relative mb-5 pl-10 text-black before:absolute before:top-0 before:left-0 before:content-[url(../images/icon/icon_93.svg)] lg:text-xl/[30px] lg:text-[18px] xl:text-xl/[30px]'>
+								Very little custom CSS as we always try to keep everything inside the Tailwind config.
 							</li>
-							<li class="lg:text-xl/[30px] xl:text-xl/[30px] text-black relative mb-5 pl-10 before:content-[url(../images/icon/icon_93.svg)] before:absolute before:left-0 before:top-0 lg:text-[18px] ">HTML markup that is responsive and works on all modern browsers (Chrome, Safari, Firefox, iOS Safari, Chrome Android)
+							<li
+								class='relative mb-5 pl-10 text-black before:absolute before:top-0 before:left-0 before:content-[url(../images/icon/icon_93.svg)] lg:text-xl/[30px] lg:text-[18px] xl:text-xl/[30px]'>
+								HTML markup that is responsive and works on all modern browsers (Chrome, Safari, Firefox, iOS Safari,
+								Chrome Android)
 							</li>
-							<li class="lg:text-xl/[30px] xl:text-xl/[30px] text-black relative mb-5 pl-10 before:content-[url(../images/icon/icon_93.svg)] before:absolute before:left-0 before:top-0 lg:text-[18px] ">A zip file with all the files and a package.json that will run your project locally with just 1 command.
+							<li
+								class='relative mb-5 pl-10 text-black before:absolute before:top-0 before:left-0 before:content-[url(../images/icon/icon_93.svg)] lg:text-xl/[30px] lg:text-[18px] xl:text-xl/[30px]'>
+								A zip file with all the files and a package.json that will run your project locally with just 1 command.
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="xxl:w-5/12 xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full ml-auto!">
-					<div class="flex flex-wrap mx-[-12px] items-end">
-						<div class="xl:w-5/12 lg:w-5/12 md:w-5/12 sm:w-4/12 flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp">
-							<img src="images/lazy.svg" data-src="images/shape/shape_136.svg" alt="" class="lazy-img xsm:hidden! inline-block">
+				<div class='xxl:w-5/12 ml-auto! w-full max-w-full flex-[0_0_auto] px-[12px] lg:w-6/12 xl:w-6/12'>
+					<div class='mx-[-12px] flex flex-wrap items-end'>
+						<div class='wow fadeInUp max-w-full flex-[0_0_auto] px-[12px] sm:w-4/12 md:w-5/12 lg:w-5/12 xl:w-5/12'>
+							<img
+								src='images/lazy.svg'
+								data-src='images/shape/shape_136.svg'
+								alt=''
+								class='lazy-img xsm:hidden! inline-block'
+							/>
 						</div>
-						<div class="xl:w-7/12 lg:w-7/12 md:w-7/12 sm:w-8/12 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInDown">
-							<div class="block-wrapper block-one pl-[35px] pr-[15px] pt-[35px] pb-[30px] rounded-[45px_0_45px_0] border-[1.5px] border-solid border-[#FFAE10] bg-[#FFF3C9] xsm:p-[35px_15px_20px]">
-								<h3 class="text-[36px] leading-10 mb-3.5 lg:text-[26px] lg:leading-[1.16em] md:text-[26px] md:leading-[1.16em] sm:text-[26px] sm:leading-[1.16em] xsm:text-[26px] xsm:leading-[1.16em]" style="color:#FFAE10;">Friendly</h3>
-								<p class=" text-[18px] leading-[29px] text-[rgba(0,0,0,0.7)] lg:text-[16px] lg:leading-[30px] md:text-[16px] md:leading-[30px] sm:text-[16px] sm:leading-[30px] xsm:text-[16px] xsm:leading-[30px]">Customers trust us & have bought insurance.</p>
-							</div> <!-- /.block-wrapper -->
+						<div
+							class='wow fadeInDown w-full max-w-full flex-[0_0_auto] px-[12px] sm:w-8/12 md:w-7/12 lg:w-7/12 xl:w-7/12'>
+							<div
+								class='block-wrapper block-one xsm:p-[35px_15px_20px] rounded-[45px_0_45px_0] border-[1.5px] border-solid border-[#FFAE10] bg-[#FFF3C9] pt-[35px] pr-[15px] pb-[30px] pl-[35px]'>
+								<h3
+									class='xsm:text-[26px] xsm:leading-[1.16em] mb-3.5 text-[36px] leading-10 sm:text-[26px] sm:leading-[1.16em] md:text-[26px] md:leading-[1.16em] lg:text-[26px] lg:leading-[1.16em]'
+									style='color:#FFAE10;'>
+									Friendly
+								</h3>
+								<p
+									class='xsm:text-[16px] xsm:leading-[30px] text-[18px] leading-[29px] text-[rgba(0,0,0,0.7)] sm:text-[16px] sm:leading-[30px] md:text-[16px] md:leading-[30px] lg:text-[16px] lg:leading-[30px]'>
+									Customers trust us & have bought insurance.
+								</p>
+							</div>
+							<!-- /.block-wrapper -->
 						</div>
 					</div>
-					<div class="flex flex-wrap mx-[-12px] xxl:mx-[-24px]">
-						<div class="xl:w-7/12 lg:w-7/12 md:w-7/12 sm:w-7/12 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInDown">
-							<div class="block-wrapper block-two pl-[35px] pr-[15px] pt-[62px] pb-[50px] rounded-[45px_0_45px_0] border-[1.5px] border-solid border-[#9650EF] bg-[rgba(162,91,251,0.2)] relative mt-[50px] sm:mt-[30px] xsm:p-[35px_15px_20px]">
-								<h3 class="text-[36px] leading-10 mb-3.5 lg:text-[26px] lg:leading-[1.16em] md:text-[26px] md:leading-[1.16em] sm:text-[26px] sm:leading-[1.16em] xsm:text-[26px] xsm:leading-[1.16em]" style="color:#9650EF;">300+ <br><span class=" text-[0.77em]">Projects Delivered</span></h3>
-								<p class=" text-[18px] leading-[29px] text-[rgba(0,0,0,0.7)] lg:text-[16px] lg:leading-[30px] md:text-[16px] md:leading-[30px] sm:text-[16px] sm:leading-[30px] xsm:text-[16px] xsm:leading-[30px]">Partnered with us so that you can compare easily & transparently</p>
-								<img src="images/lazy.svg" data-src="images/shape/shape_138.svg" alt="" class="lazy-img shapes shape-one absolute z-[-1] bottom-[-45px] left-[-45px]">
-							</div> <!-- /.block-wrapper -->
+					<div class='xxl:mx-[-24px] mx-[-12px] flex flex-wrap'>
+						<div
+							class='wow fadeInDown w-full max-w-full flex-[0_0_auto] px-[12px] sm:w-7/12 md:w-7/12 lg:w-7/12 xl:w-7/12'>
+							<div
+								class='block-wrapper block-two xsm:p-[35px_15px_20px] relative mt-[50px] rounded-[45px_0_45px_0] border-[1.5px] border-solid border-[#9650EF] bg-[rgba(162,91,251,0.2)] pt-[62px] pr-[15px] pb-[50px] pl-[35px] sm:mt-[30px]'>
+								<h3
+									class='xsm:text-[26px] xsm:leading-[1.16em] mb-3.5 text-[36px] leading-10 sm:text-[26px] sm:leading-[1.16em] md:text-[26px] md:leading-[1.16em] lg:text-[26px] lg:leading-[1.16em]'
+									style='color:#9650EF;'>
+									300+ <br /><span class='text-[0.77em]'>Projects Delivered</span>
+								</h3>
+								<p
+									class='xsm:text-[16px] xsm:leading-[30px] text-[18px] leading-[29px] text-[rgba(0,0,0,0.7)] sm:text-[16px] sm:leading-[30px] md:text-[16px] md:leading-[30px] lg:text-[16px] lg:leading-[30px]'>
+									Partnered with us so that you can compare easily & transparently
+								</p>
+								<img
+									src='images/lazy.svg'
+									data-src='images/shape/shape_138.svg'
+									alt=''
+									class='lazy-img shapes shape-one absolute bottom-[-45px] left-[-45px] z-[-1]'
+								/>
+							</div>
+							<!-- /.block-wrapper -->
 						</div>
-						<div class="xl:w-5/12 lg:w-5/12 md:w-5/12 sm:w-5/12 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp">
-							<div class="block-wrapper block-three pl-[30px] pr-[15px] pt-[22px] pb-[15px] rounded-[0_30px_0_30px] border-[1.5px] border-solid border-[#00BDE5] bg-[rgba(0,209,255,0.2)] mt-[50px] sm:mt-[30px] xsm:p-[35px_15px_20px]">
-								<h3 class="text-[36px] leading-10 mb-3.5 lg:text-[26px] lg:leading-[1.16em] md:text-[26px] md:leading-[1.16em] sm:text-[26px] sm:leading-[1.16em] xsm:text-[26px] xsm:leading-[1.16em]" style="color:#00BDE6;"><span class=" text-[0.77em]">Quality</span></h3>
-								<p class=" text-[18px] leading-[29px] text-[rgba(0,0,0,0.7)] lg:text-[16px] lg:leading-[30px] md:text-[16px] md:leading-[30px] sm:text-[16px] sm:leading-[30px] xsm:text-[16px] xsm:leading-[30px]">Quality & fast support</p>
-							</div> <!-- /.block-wrapper -->
-							<img src="images/lazy.svg" data-src="images/shape/shape_137.svg" alt="" class="lazy-img mt-[30px] ml-auto! mr-auto! xsm:hidden! inline-block">
+						<div
+							class='wow fadeInUp w-full max-w-full flex-[0_0_auto] px-[12px] sm:w-5/12 md:w-5/12 lg:w-5/12 xl:w-5/12'>
+							<div
+								class='block-wrapper block-three xsm:p-[35px_15px_20px] mt-[50px] rounded-[0_30px_0_30px] border-[1.5px] border-solid border-[#00BDE5] bg-[rgba(0,209,255,0.2)] pt-[22px] pr-[15px] pb-[15px] pl-[30px] sm:mt-[30px]'>
+								<h3
+									class='xsm:text-[26px] xsm:leading-[1.16em] mb-3.5 text-[36px] leading-10 sm:text-[26px] sm:leading-[1.16em] md:text-[26px] md:leading-[1.16em] lg:text-[26px] lg:leading-[1.16em]'
+									style='color:#00BDE6;'>
+									<span class='text-[0.77em]'>Quality</span>
+								</h3>
+								<p
+									class='xsm:text-[16px] xsm:leading-[30px] text-[18px] leading-[29px] text-[rgba(0,0,0,0.7)] sm:text-[16px] sm:leading-[30px] md:text-[16px] md:leading-[30px] lg:text-[16px] lg:leading-[30px]'>
+									Quality & fast support
+								</p>
+							</div>
+							<!-- /.block-wrapper -->
+							<img
+								src='images/lazy.svg'
+								data-src='images/shape/shape_137.svg'
+								alt=''
+								class='lazy-img xsm:hidden! mt-[30px] mr-auto! ml-auto! inline-block'
+							/>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="w-full xl:w-5/6 pt-16 sm:pt-20 md:pt-20 lg:pt-28 xl:pt-28">
-				<h3 class="text-black xl:text-3xl lg:text-3xl text-2xl font-medium pb-5">Modern React code that’s clean, scalable, and production-ready</h3>
-				<p class="lg:text-xl/[32px] xl:text-xl/[32px] text-black">We build modern, component-based React front-ends using tools like TypeScript, Tailwind, and Storybook. Code is structured for clarity and maintainability—whether you’re launching a new app, building out marketing pages, or extending an existing system.</p>
-				<p class="lg:text-xl/[32px] xl:text-xl/[32px] text-black">Every line is thoughtfully written and organized to support collaboration, scalability, and long-term performance. This is React development done with purpose—built to support your team now and down the line.</p>
+			<div class='w-full pt-16 sm:pt-20 md:pt-20 lg:pt-28 xl:w-5/6 xl:pt-28'>
+				<h3 class='pb-5 text-2xl font-medium text-black lg:text-3xl xl:text-3xl'>
+					Modern React code that’s clean, scalable, and production-ready
+				</h3>
+				<p class='text-black lg:text-xl/[32px] xl:text-xl/[32px]'>
+					We build modern, component-based React front-ends using tools like TypeScript, Tailwind, and Storybook. Code
+					is structured for clarity and maintainability—whether you’re launching a new app, building out marketing
+					pages, or extending an existing system.
+				</p>
+				<p class='text-black lg:text-xl/[32px] xl:text-xl/[32px]'>
+					Every line is thoughtfully written and organized to support collaboration, scalability, and long-term
+					performance. This is React development done with purpose—built to support your team now and down the line.
+				</p>
 			</div>
-			<div class="w-full xl:w-5/6 pt-7 lg:pt-10 xl:pt-10">
-				<h3 class="text-black xl:text-3xl lg:text-3xl text-2xl font-medium pb-5">Modern React code that’s clean, scalable, and production-ready</h3>
-				<p class="lg:text-xl/[32px] xl:text-xl/[32px] text-black">We build modern, component-based React front-ends using tools like TypeScript, Tailwind, and Storybook. Code is structured for clarity and maintainability—whether you’re launching a new app, building out marketing pages, or extending an existing system.</p>
-				<p class="lg:text-xl/[32px] xl:text-xl/[32px] text-black">Every line is thoughtfully written and organized to support collaboration, scalability, and long-term performance. This is React development done with purpose—built to support your team now and down the line.</p>
+			<div class='w-full pt-7 lg:pt-10 xl:w-5/6 xl:pt-10'>
+				<h3 class='pb-5 text-2xl font-medium text-black lg:text-3xl xl:text-3xl'>
+					Modern React code that’s clean, scalable, and production-ready
+				</h3>
+				<p class='text-black lg:text-xl/[32px] xl:text-xl/[32px]'>
+					We build modern, component-based React front-ends using tools like TypeScript, Tailwind, and Storybook. Code
+					is structured for clarity and maintainability—whether you’re launching a new app, building out marketing
+					pages, or extending an existing system.
+				</p>
+				<p class='text-black lg:text-xl/[32px] xl:text-xl/[32px]'>
+					Every line is thoughtfully written and organized to support collaboration, scalability, and long-term
+					performance. This is React development done with purpose—built to support your team now and down the line.
+				</p>
 			</div>
-		</div> <!-- /.container -->
+		</div>
+		<!-- /.container -->
 	</div>
 
 	<LogoCloud />
 
-	<div id="quote" class="fancy-short-banner-thirteen py-[170px] lg:py-20 md:py-20 sm:py-20 xsm:py-20 bg-[#F6F9FB] wow fadeInUp">
-		<div class="container">
-			<div class="bg-wrapper z-2 bg-white relative px-3 py-0 rounded-[10px]">
-				<div class="flex flex-wrap mx-[-12px]">
-					<div class="xl:w-11/12 w-full flex-[0_0_auto] px-[12px] max-w-full m-auto">
-						<div class="flex flex-wrap mx-[-12px] items-center">
-							<div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full ml-auto! xl:order-last lg:order-last">
-								<div class="text-wrapper pl-20 pr-0 pt-[60px] pb-20 border-l-[#E9E9E9] border-l border-solid md:p-[50px_0] md:border-l-0 sm:p-[50px_0] sm:border-l-0 xsm:p-[50px_0] xsm:border-l-0">
-									<img src="images/lazy.svg" data-src="images/icon/icon_114.svg" alt="" class="lazy-img mb-[30px]">
-									<div class="title-style-one">
-										<h2 class="font-Recoleta font-normal text-black xl:text-6xl/[66px] lg:text-5xl/[56px] text-4xl">Let’s talk with expereince advisors.</h2>
-									</div>
-									<p class="text-[20px] lg:text-[18px] md:text-[18px] sm:text-[18px] xsm:text-[18px] text-black pt-5 m-0!">eiusmod tempor incididunt. Ut enim mim veniam, quis nostrud elit lorem dolor.</p>
-								</div>
-							</div>
-							<div class="xl:w-5/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full xl:order-first lg:order-first">
-								<div class="form-style-two md:mb-10 sm:mb-10 xsm:mb-10 ">
-									<form action="inc/contact.php" id="contact-form" data-toggle="validator">
-										<div class="messages"></div>
-										<div class="flex flex-wrap mx-[-12px] controls">
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-												<div class="input-group-meta relative form-group mb-5">
-													<input class=" h-[60px] p-[0_20px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" type="text" placeholder="Your name*" name="name" required="required" data-error="Name is required.">
-													<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
-												</div>
-											</div>
-
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-												<div class="input-group-meta relative form-group mb-5">
-													<input class=" h-[60px] p-[0_20px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" type="email" placeholder="Email*" name="email" required="required" data-error="Valid email is required.">
-													<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
-												</div>
-											</div>
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-												<div class="input-group-meta relative form-group mb-[15px] ">
-													<textarea class=" h-[120px] max-h-[120px] px-5 py-[15px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" placeholder="Your message*" name="message" required="required" data-error="Please,leave us a message."></textarea>
-													<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
-												</div>
-											</div>
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full"><button class="btn-twentyTwo w-full font-medium tran3s uppercase text-[14px] leading-[55px] text-white tracking-[0.88px] px-[42px] py-0 rounded-[7px] hover:bg-(--prime-ten) bg-[#a056fa]">SEND MESSAGE</button></div>
-										</div>
-										<div class="text-[16px] text-center mt-[25px] "><span class="opacity-75">Been here before?</span> <a href="#" class=" text-black font-medium hover:text-[#0a58ca]">Check your query</a></div>
-									</form>
-								</div> <!-- /.form-style-two -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="shapes shape-text font-medium text-[20px] text-black text-center absolute z-[-1] leading-6 top-[-62px] rotate-[-10deg] lg:rotate-20 xl:rotate-[-15deg] left-10 lg:left-5 xl:-left-10">Fill the <br>form</div>
-				<img src="images/lazy.svg" data-src="images/shape/shape_90.svg" alt="" class="lazy-img shapes shape-one absolute z-1 rotate-100 lg:rotate-70 xl:rotate-0 left-20 lg:-left-2 xl:left-1 -top-2.5 block scale-y-[-1] lg:scale-100 xl:scale-100">
-				<img src="images/lazy.svg" data-src="images/shape/shape_91.svg" alt="" class="lazy-img shapes shape-two absolute z-[-1] left-[-60px] bottom-[-60px]">
-			</div> <!-- /.bg-wrapper -->
-		</div>
-	</div>
+	<CTA sectionId='quote' />
 
 	<FAQ />
 

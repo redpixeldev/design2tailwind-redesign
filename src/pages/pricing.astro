@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import CTA from '@components/CTA.astro';
 import FAQ from '@components/FAQ.astro';
 import Testimonials from '@components/Testimonials.astro';
 ---
@@ -9,171 +10,240 @@ import Testimonials from '@components/Testimonials.astro';
 <Layout title='Astro'>
 	<Header />
 
-	<div class="pt-36 lg:pt-44 xl:pt-52">
-		<div class="fancy-feature-fiftyOne relative">
-			<div class="container">
-				<div class="flex flex-wrap">
-					<div class="xl:w-7/12 lg:w-7/12 w-full flex-[0_0_auto] px-[12px] max-w-full m-auto wow fadeInLeft">
-						<div class="title-style-five text-center mb-[65px] lg:mb-10 md:mb-10 sm:mb-10 xsm:mb-10">
-							<div class="sc-title-two italic relative inline-block text-[17px] text-(--prime-ten) mb-5 pl-10 before:content-[''] before:absolute before:w-6 before:h-px before:left-0 before:top-3.5 before:bg-(--prime-ten)">Our Pricing</div>
-							<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">No hidden charges, <br/> Choose your plan.</h2>
+	<div class='pt-36 lg:pt-44 xl:pt-52'>
+		<div class='fancy-feature-fiftyOne relative'>
+			<div class='container'>
+				<div class='flex flex-wrap'>
+					<div class='wow fadeInLeft m-auto w-full max-w-full flex-[0_0_auto] px-[12px] lg:w-7/12 xl:w-7/12'>
+						<div class='title-style-five xsm:mb-10 mb-[65px] text-center sm:mb-10 md:mb-10 lg:mb-10'>
+							<div
+								class="sc-title-two relative mb-5 inline-block pl-10 text-[17px] text-(--prime-ten) italic before:absolute before:top-3.5 before:left-0 before:h-px before:w-6 before:bg-(--prime-ten) before:content-['']">
+								Our Pricing
+							</div>
+							<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
+								No hidden charges, <br /> Choose your plan.
+							</h2>
 						</div>
 					</div>
 				</div>
-			</div> <!-- /.container -->
-			<img src="images/lazy.svg" data-src="images/shape/shape_172.svg" alt="" class="lazy-img shapes shape-two absolute z-[-1] right-[17%] 2xl:right-[8%] lg:right-[6%] md:hidden! sm:hidden! xsm:hidden! top-[4%]">
+			</div>
+			<!-- /.container -->
+			<img
+				src='images/lazy.svg'
+				data-src='images/shape/shape_172.svg'
+				alt=''
+				class='lazy-img shapes shape-two xsm:hidden! absolute top-[4%] right-[17%] z-[-1] sm:hidden! md:hidden! lg:right-[6%] 2xl:right-[8%]'
+			/>
 		</div>
 	</div>
 
-	<div class="pricing-section-three relative">
-		<div class="container">
-			<div class="pricing-table-area-three mt-6 md:mt-14 lg:mt-24 xl:mt-24 wow fadeInUp">
-				<div class="tab-content">
-					<div class="tab-pane show active">
-							<div class="flex flex-wrap items-center">
-								<div class="xl:w-3/12 lg:w-3/12 md:w-6/12 sm:w-6/12 w-full flex-[0_0_auto] max-w-full xsm:px-[12px]">
-									<div class="pr-column border relative 2xl:pl-[30px] p-[60px_10px_50px_45px] border-solid border-[#b1b2f4] lg:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] sm:p-[30px_10px_30px_20px] xsm:p-[30px_10px_30px_20px] pr-one rounded-[15px_0_0_15px] border-r-0 xsm:rounded-[15px] xsm:border-r-[#b1b2f4] xsm:border-r xsm:border-solid">
-										<img src="images/icon/icon_56.svg" alt="" class="icon h-[25px]">
-										<div class="plan  text-[32px] lg:text-[24px] md:text-[24px] sm:text-[24px] xsm:text-[24px] m-[26px_0_22px] lg:m-[20px_0_18px] md:m-[20px_0_18px] sm:m-[20px_0_18px] xsm:m-[20px_0_18px] text-black ">Starter Plan</div>
-									<div class="pr-body">
-										<ul class=" mb-0 pl-0 list-none  text-left ">
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">Unlimited Email</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">5gb Hosting & Domain</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">Email & Live chat.</li>
+	<div class='pricing-section-three relative'>
+		<div class='container'>
+			<div class='pricing-table-area-three wow fadeInUp mt-6 md:mt-14 lg:mt-24 xl:mt-24'>
+				<div class='tab-content'>
+					<div class='tab-pane show active'>
+						<div class='flex flex-wrap items-center'>
+							<div class='xsm:px-[12px] w-full max-w-full flex-[0_0_auto] sm:w-6/12 md:w-6/12 lg:w-3/12 xl:w-3/12'>
+								<div
+									class='pr-column xsm:p-[30px_10px_30px_20px] pr-one xsm:rounded-[15px] xsm:border-r-[#b1b2f4] xsm:border-r xsm:border-solid relative rounded-[15px_0_0_15px] border border-r-0 border-solid border-[#b1b2f4] p-[60px_10px_50px_45px] sm:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] lg:p-[30px_10px_30px_20px] 2xl:pl-[30px]'>
+									<img
+										src='images/icon/icon_56.svg'
+										alt=''
+										class='icon h-[25px]'
+									/>
+									<div
+										class='plan xsm:text-[24px] xsm:m-[20px_0_18px] m-[26px_0_22px] text-[32px] text-black sm:m-[20px_0_18px] sm:text-[24px] md:m-[20px_0_18px] md:text-[24px] lg:m-[20px_0_18px] lg:text-[24px]'>
+										Starter Plan
+									</div>
+									<div class='pr-body'>
+										<ul class='mb-0 list-none pl-0 text-left'>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												Unlimited Email
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												5gb Hosting & Domain
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												Email & Live chat.
+											</li>
 										</ul>
 									</div>
-									<div class="pr-footer  pt-[45px]  lg:pt-[30px] md:pt-[30px] sm:pt-[30px] xsm:pt-[30px] ">
-										<div class="price  text-black  text-[28px] lg:text-[26px] md:text-[26px] sm:text-[26px] xsm:text-[26px] ">$9.99</div>
-										<div class="trial-text text-[17px] opacity-75 mb-[30px]">up to 3 user + 1.99 per user</div>
-										<a href="#" class="btn-twelve font-medium tran3s leading-[43px] border border-[#BC46E2] text-[#BC46E2] px-[45px] py-0 rounded-[23px] border-solid hover:text-white hover:bg-[#BC46E2]">Get Started</a>
+									<div class='pr-footer xsm:pt-[30px] pt-[45px] sm:pt-[30px] md:pt-[30px] lg:pt-[30px]'>
+										<div
+											class='price xsm:text-[26px] text-[28px] text-black sm:text-[26px] md:text-[26px] lg:text-[26px]'>
+											$9.99
+										</div>
+										<div class='trial-text mb-[30px] text-[17px] opacity-75'>up to 3 user + 1.99 per user</div>
+										<a
+											href='#'
+											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-[45px] py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
+											>Get Started</a
+										>
 									</div>
-								</div> <!-- /.pr-column -->
 								</div>
-								<div class="xl:w-3/12 lg:w-3/12 md:w-6/12 sm:w-6/12 w-full flex-[0_0_auto] max-w-full xsm:px-[12px]">
-									<div class="pr-column relative 2xl:pl-[30px] p-[60px_10px_50px_45px] lg:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] sm:p-[30px_10px_30px_20px] xsm:p-[30px_10px_30px_20px] active">
-										<img src="images/icon/icon_57.svg" alt="" class="icon h-[25px]">
-										<div class="plan  text-[32px] lg:text-[24px] md:text-[24px] sm:text-[24px] xsm:text-[24px] m-[26px_0_22px] lg:m-[20px_0_18px] md:m-[20px_0_18px] sm:m-[20px_0_18px] xsm:m-[20px_0_18px] text-black ">Silver Plan</div>
-									<div class="pr-body pt-[10px]">
-										<ul class=" mb-0 pl-0 list-none  text-left ">
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">Unlimited Email</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">5gb Hosting & Domain</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">2 website 3 sub domain</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">Email & Live chat.</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">Backling</li>
+								<!-- /.pr-column -->
+							</div>
+							<div class='xsm:px-[12px] w-full max-w-full flex-[0_0_auto] sm:w-6/12 md:w-6/12 lg:w-3/12 xl:w-3/12'>
+								<div
+									class='pr-column xsm:p-[30px_10px_30px_20px] active relative p-[60px_10px_50px_45px] sm:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] lg:p-[30px_10px_30px_20px] 2xl:pl-[30px]'>
+									<img
+										src='images/icon/icon_57.svg'
+										alt=''
+										class='icon h-[25px]'
+									/>
+									<div
+										class='plan xsm:text-[24px] xsm:m-[20px_0_18px] m-[26px_0_22px] text-[32px] text-black sm:m-[20px_0_18px] sm:text-[24px] md:m-[20px_0_18px] md:text-[24px] lg:m-[20px_0_18px] lg:text-[24px]'>
+										Silver Plan
+									</div>
+									<div class='pr-body pt-[10px]'>
+										<ul class='mb-0 list-none pl-0 text-left'>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												Unlimited Email
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												5gb Hosting & Domain
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												2 website 3 sub domain
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												Email & Live chat.
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												Backling
+											</li>
 										</ul>
 									</div>
-									<div class="pr-footer  pt-[45px]  lg:pt-[30px] md:pt-[30px] sm:pt-[30px] xsm:pt-[30px] ">
-										<div class="price  text-black  text-[28px] lg:text-[26px] md:text-[26px] sm:text-[26px] xsm:text-[26px] ">$19.99</div>
-										<div class="trial-text text-[17px] opacity-75 mb-[30px]">up to 5 user + 1.99 per user</div>
-										<a href="#" class="btn-twelve font-medium tran3s leading-[43px] border border-[#BC46E2] text-[#BC46E2] px-[45px] py-0 rounded-[23px] border-solid hover:text-white hover:bg-[#BC46E2]">Get Started</a>
+									<div class='pr-footer xsm:pt-[30px] pt-[45px] sm:pt-[30px] md:pt-[30px] lg:pt-[30px]'>
+										<div
+											class='price xsm:text-[26px] text-[28px] text-black sm:text-[26px] md:text-[26px] lg:text-[26px]'>
+											$19.99
+										</div>
+										<div class='trial-text mb-[30px] text-[17px] opacity-75'>up to 5 user + 1.99 per user</div>
+										<a
+											href='#'
+											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-[45px] py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
+											>Get Started</a
+										>
 									</div>
-								</div> <!-- /.pr-column -->
 								</div>
-								<div class="xl:w-3/12 lg:w-3/12 md:w-6/12 sm:w-6/12 w-full flex-[0_0_auto] max-w-full xsm:px-[12px]">
-									<div class="pr-column border relative 2xl:pl-[30px] p-[60px_10px_50px_45px] border-solid border-[#b1b2f4] lg:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] sm:p-[30px_10px_30px_20px] xsm:p-[30px_10px_30px_20px] pr-two border-l-0 md:border-l-[#b1b2f4] md:border-l md:border-solid sm:border-l-[#b1b2f4] sm:border-l sm:border-solid xsm:border-l-[#b1b2f4] xsm:border-l xsm:border-solid xsm:rounded-[15px] xsm:border-b-[none]">
-										<img src="images/icon/icon_58.svg" alt="" class="icon h-[25px]">
-										<div class="plan  text-[32px] lg:text-[24px] md:text-[24px] sm:text-[24px] xsm:text-[24px] m-[26px_0_22px] lg:m-[20px_0_18px] md:m-[20px_0_18px] sm:m-[20px_0_18px] xsm:m-[20px_0_18px] text-black ">Gold Plan</div>
-									<div class="pr-body">
-										<ul class=" mb-0 pl-0 list-none  text-left ">
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">Unlimited Email</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">5gb Hosting & Domain</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">Email & Live chat.</li>
+								<!-- /.pr-column -->
+							</div>
+							<div class='xsm:px-[12px] w-full max-w-full flex-[0_0_auto] sm:w-6/12 md:w-6/12 lg:w-3/12 xl:w-3/12'>
+								<div
+									class='pr-column xsm:p-[30px_10px_30px_20px] pr-two xsm:border-l-[#b1b2f4] xsm:border-l xsm:border-solid xsm:rounded-[15px] xsm:border-b-[none] relative border border-l-0 border-solid border-[#b1b2f4] p-[60px_10px_50px_45px] sm:border-l sm:border-solid sm:border-l-[#b1b2f4] sm:p-[30px_10px_30px_20px] md:border-l md:border-solid md:border-l-[#b1b2f4] md:p-[30px_10px_30px_20px] lg:p-[30px_10px_30px_20px] 2xl:pl-[30px]'>
+									<img
+										src='images/icon/icon_58.svg'
+										alt=''
+										class='icon h-[25px]'
+									/>
+									<div
+										class='plan xsm:text-[24px] xsm:m-[20px_0_18px] m-[26px_0_22px] text-[32px] text-black sm:m-[20px_0_18px] sm:text-[24px] md:m-[20px_0_18px] md:text-[24px] lg:m-[20px_0_18px] lg:text-[24px]'>
+										Gold Plan
+									</div>
+									<div class='pr-body'>
+										<ul class='mb-0 list-none pl-0 text-left'>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												Unlimited Email
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												5gb Hosting & Domain
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												Email & Live chat.
+											</li>
 										</ul>
 									</div>
-									<div class="pr-footer  pt-[45px]  lg:pt-[30px] md:pt-[30px] sm:pt-[30px] xsm:pt-[30px] ">
-										<div class="price  text-black  text-[28px] lg:text-[26px] md:text-[26px] sm:text-[26px] xsm:text-[26px] ">$29.99</div>
-										<div class="trial-text text-[17px] opacity-75 mb-[30px]">up to 7 user + 1.99 per user</div>
-										<a href="#" class="btn-twelve font-medium tran3s leading-[43px] border border-[#BC46E2] text-[#BC46E2] px-[45px] py-0 rounded-[23px] border-solid hover:text-white hover:bg-[#BC46E2]">Get Started</a>
+									<div class='pr-footer xsm:pt-[30px] pt-[45px] sm:pt-[30px] md:pt-[30px] lg:pt-[30px]'>
+										<div
+											class='price xsm:text-[26px] text-[28px] text-black sm:text-[26px] md:text-[26px] lg:text-[26px]'>
+											$29.99
+										</div>
+										<div class='trial-text mb-[30px] text-[17px] opacity-75'>up to 7 user + 1.99 per user</div>
+										<a
+											href='#'
+											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-[45px] py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
+											>Get Started</a
+										>
 									</div>
-								</div> <!-- /.pr-column -->
 								</div>
-								<div class="xl:w-3/12 lg:w-3/12 md:w-6/12 sm:w-6/12 w-full flex-[0_0_auto] max-w-full xsm:px-[12px]">
-									<div class="pr-column border relative 2xl:pl-[30px] p-[60px_10px_50px_45px] border-solid border-[#b1b2f4] lg:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] sm:p-[30px_10px_30px_20px] xsm:p-[30px_10px_30px_20px] pr-three rounded-[0_15px_15px_0] border-l-0 xsm:rounded-[15px] xsm:border-l-[#b1b2f4] xsm:border-l xsm:border-solid">
-										<img src="images/icon/icon_59.svg" alt="" class="icon h-[25px]">
-										<div class="plan  text-[32px] lg:text-[24px] md:text-[24px] sm:text-[24px] xsm:text-[24px] m-[26px_0_22px] lg:m-[20px_0_18px] md:m-[20px_0_18px] sm:m-[20px_0_18px] xsm:m-[20px_0_18px] text-black ">Dimond Plan</div>
-									<div class="pr-body">
-										<ul class=" mb-0 pl-0 list-none  text-left ">
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">Unlimited Email</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">5gb Hosting & Domain</li>
-											<li class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] relative mb-[15px] pl-7 before:content-['\f272'] before:font-bold before:absolute before:text-(--prime-two) before:left-0 before:top-0 before:font-Bootstrap">Email & Live chat.</li>
+								<!-- /.pr-column -->
+							</div>
+							<div class='xsm:px-[12px] w-full max-w-full flex-[0_0_auto] sm:w-6/12 md:w-6/12 lg:w-3/12 xl:w-3/12'>
+								<div
+									class='pr-column xsm:p-[30px_10px_30px_20px] pr-three xsm:rounded-[15px] xsm:border-l-[#b1b2f4] xsm:border-l xsm:border-solid relative rounded-[0_15px_15px_0] border border-l-0 border-solid border-[#b1b2f4] p-[60px_10px_50px_45px] sm:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] lg:p-[30px_10px_30px_20px] 2xl:pl-[30px]'>
+									<img
+										src='images/icon/icon_59.svg'
+										alt=''
+										class='icon h-[25px]'
+									/>
+									<div
+										class='plan xsm:text-[24px] xsm:m-[20px_0_18px] m-[26px_0_22px] text-[32px] text-black sm:m-[20px_0_18px] sm:text-[24px] md:m-[20px_0_18px] md:text-[24px] lg:m-[20px_0_18px] lg:text-[24px]'>
+										Dimond Plan
+									</div>
+									<div class='pr-body'>
+										<ul class='mb-0 list-none pl-0 text-left'>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												Unlimited Email
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												5gb Hosting & Domain
+											</li>
+											<li
+												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pl-7 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												Email & Live chat.
+											</li>
 										</ul>
 									</div>
-									<div class="pr-footer  pt-[45px]  lg:pt-[30px] md:pt-[30px] sm:pt-[30px] xsm:pt-[30px] ">
-										<div class="price  text-black  text-[28px] lg:text-[26px] md:text-[26px] sm:text-[26px] xsm:text-[26px] ">$59.99</div>
-										<div class="trial-text text-[17px] opacity-75 mb-[30px]">up to 10 user + 1.99 per user</div>
-										<a href="#" class="btn-twelve font-medium tran3s leading-[43px] border border-[#BC46E2] text-[#BC46E2] px-[45px] py-0 rounded-[23px] border-solid hover:text-white hover:bg-[#BC46E2]">Get Started</a>
+									<div class='pr-footer xsm:pt-[30px] pt-[45px] sm:pt-[30px] md:pt-[30px] lg:pt-[30px]'>
+										<div
+											class='price xsm:text-[26px] text-[28px] text-black sm:text-[26px] md:text-[26px] lg:text-[26px]'>
+											$59.99
+										</div>
+										<div class='trial-text mb-[30px] text-[17px] opacity-75'>up to 10 user + 1.99 per user</div>
+										<a
+											href='#'
+											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-[45px] py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
+											>Get Started</a
+										>
 									</div>
-								</div> <!-- /.pr-column -->
 								</div>
-							</div> <!-- /.row -->
-					</div> <!-- /.tab-pane -->
+								<!-- /.pr-column -->
+							</div>
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.tab-pane -->
 				</div>
-			</div> <!-- /.pricing-table-area-three -->
+			</div>
+			<!-- /.pricing-table-area-three -->
 		</div>
-		<div class="shapes shape-one rounded-[50%] absolute z-[-1] w-3 h-3 animate-[jumpThree_5s_infinite_linear] left-[12%] top-[18%] bg-[#74E2CD]"></div>
-		<div class="shapes shape-two rounded-[50%] absolute z-[-1] w-[27px] h-[27px] animate-[jumpTwo_5s_infinite_linear] right-[10%] top-[29%] bg-[#007BFF]"></div>
+		<div
+			class='shapes shape-one absolute top-[18%] left-[12%] z-[-1] h-3 w-3 animate-[jumpThree_5s_infinite_linear] rounded-[50%] bg-[#74E2CD]'>
+		</div>
+		<div
+			class='shapes shape-two absolute top-[29%] right-[10%] z-[-1] h-[27px] w-[27px] animate-[jumpTwo_5s_infinite_linear] rounded-[50%] bg-[#007BFF]'>
+		</div>
 	</div>
-
 
 	<Testimonials />
 
-	<div class="fancy-short-banner-thirteen py-[170px] lg:py-20 md:py-20 sm:py-20 xsm:py-20 bg-[#F6F9FB] wow fadeInUp">
-		<div class="container">
-			<div class="bg-wrapper z-2 bg-white relative px-3 py-0 rounded-[10px]">
-				<div class="flex flex-wrap mx-[-12px]">
-					<div class="xl:w-11/12 w-full flex-[0_0_auto] px-[12px] max-w-full m-auto">
-						<div class="flex flex-wrap mx-[-12px] items-center">
-							<div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full ml-auto! xl:order-last lg:order-last">
-								<div class="text-wrapper pl-20 pr-0 pt-[60px] pb-20 border-l-[#E9E9E9] border-l border-solid md:p-[50px_0] md:border-l-0 sm:p-[50px_0] sm:border-l-0 xsm:p-[50px_0] xsm:border-l-0">
-									<img src="images/lazy.svg" data-src="images/icon/icon_114.svg" alt="" class="lazy-img mb-[30px]">
-									<div class="title-style-one">
-										<h2 class="font-Recoleta font-normal text-black xl:text-6xl/[66px] lg:text-5xl/[56px] text-4xl">Let’s talk with expereince advisors.</h2>
-									</div>
-									<p class="text-[20px] lg:text-[18px] md:text-[18px] sm:text-[18px] xsm:text-[18px] text-black pt-5 m-0!">eiusmod tempor incididunt. Ut enim mim veniam, quis nostrud elit lorem dolor.</p>
-								</div>
-							</div>
-							<div class="xl:w-5/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full xl:order-first lg:order-first">
-								<div class="form-style-two md:mb-10 sm:mb-10 xsm:mb-10 ">
-									<form action="inc/contact.php" id="contact-form" data-toggle="validator">
-										<div class="messages"></div>
-										<div class="flex flex-wrap mx-[-12px] controls">
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-												<div class="input-group-meta relative form-group mb-5">
-													<input class=" h-[60px] p-[0_20px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" type="text" placeholder="Your name*" name="name" required="required" data-error="Name is required.">
-													<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
-												</div>
-											</div>
-
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-												<div class="input-group-meta relative form-group mb-5">
-													<input class=" h-[60px] p-[0_20px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" type="email" placeholder="Email*" name="email" required="required" data-error="Valid email is required.">
-													<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
-												</div>
-											</div>
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-												<div class="input-group-meta relative form-group mb-[15px] ">
-													<textarea class=" h-[120px] max-h-[120px] px-5 py-[15px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" placeholder="Your message*" name="message" required="required" data-error="Please,leave us a message."></textarea>
-													<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
-												</div>
-											</div>
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full"><button class="btn-twentyTwo w-full font-medium tran3s uppercase text-[14px] leading-[55px] text-white tracking-[0.88px] px-[42px] py-0 rounded-[7px] hover:bg-(--prime-ten) bg-[#a056fa]">SEND MESSAGE</button></div>
-										</div>
-										<div class="text-[16px] text-center mt-[25px] "><span class="opacity-75">Been here before?</span> <a href="#" class=" text-black font-medium hover:text-[#0a58ca]">Check your query</a></div>
-									</form>
-								</div> <!-- /.form-style-two -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="shapes shape-text font-medium text-[20px] text-black text-center absolute z-[-1] leading-6 top-[-62px] rotate-[-10deg] lg:rotate-20 xl:rotate-[-15deg] left-10 lg:left-5 xl:-left-10">Fill the <br>form</div>
-				<img src="images/lazy.svg" data-src="images/shape/shape_90.svg" alt="" class="lazy-img shapes shape-one absolute z-1 rotate-100 lg:rotate-70 xl:rotate-0 left-20 lg:-left-2 xl:left-1 -top-2.5 block scale-y-[-1] lg:scale-100 xl:scale-100">
-				<img src="images/lazy.svg" data-src="images/shape/shape_91.svg" alt="" class="lazy-img shapes shape-two absolute z-[-1] left-[-60px] bottom-[-60px]">
-			</div> <!-- /.bg-wrapper -->
-		</div>
-	</div>
+	<CTA />
 
 	<FAQ />
-
 
 	<Footer />
 </Layout>

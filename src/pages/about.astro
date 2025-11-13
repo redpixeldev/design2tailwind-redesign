@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import WhyUs from '@components/WhyUs.astro';
 import Advantages from '@components/Advantages.astro';
 import OurValues from '@components/OurValues.astro';
 ---
@@ -9,58 +10,36 @@ import OurValues from '@components/OurValues.astro';
 <Layout title='Astro'>
 	<Header />
 
-	<div class="pt-32 md:pt-36 lg:pt-44 xl:pt-52 mb-16 md:mb-20 lg:mb-24 xl:mb-24">
-		<div class="fancy-feature-fiftyOne relative">
-			<div class="container">
-				<div class="flex flex-wrap">
-					<div class="xl:w-7/12 lg:w-7/12 w-full flex-[0_0_auto] px-[12px] max-w-full m-auto wow fadeInLeft">
-						<div class="title-style-five text-center">
-							<div class="sc-title-two italic relative inline-block text-[17px] text-(--prime-ten) mb-5 pl-10 before:content-[''] before:absolute before:w-6 before:h-px before:left-0 before:top-3.5 before:bg-(--prime-ten)">About</div>
-							<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">A little about Us</h2>
-							<p class=" text-base lg:text-lg xl:text-xl pt-7 mb-0">We're a team of sisters, Vivian and Daniela, with more than 10 years of experience combined, doing front-end development. Even better yet, we've been using Tailwind CSS daily since 2018 and we love it.
+	<div class='mb-16 pt-32 md:mb-20 md:pt-36 lg:mb-24 lg:pt-44 xl:mb-24 xl:pt-52'>
+		<div class='fancy-feature-fiftyOne relative'>
+			<div class='container'>
+				<div class='flex flex-wrap'>
+					<div class='wow fadeInLeft m-auto w-full max-w-full flex-[0_0_auto] px-[12px] lg:w-7/12 xl:w-7/12'>
+						<div class='title-style-five text-center'>
+							<div
+								class="sc-title-two relative mb-5 inline-block pl-10 text-[17px] text-(--prime-ten) italic before:absolute before:top-3.5 before:left-0 before:h-px before:w-6 before:bg-(--prime-ten) before:content-['']">
+								About
+							</div>
+							<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>A little about Us</h2>
+							<p class='mb-0 pt-7 text-base lg:text-lg xl:text-xl'>
+								We're a team of sisters, Vivian and Daniela, with more than 10 years of experience combined, doing
+								front-end development. Even better yet, we've been using Tailwind CSS daily since 2018 and we love it.
 							</p>
 						</div>
 					</div>
 				</div>
-			</div> <!-- /.container -->
-			<img src="images/lazy.svg" data-src="images/shape/shape_172.svg" alt="" class="lazy-img shapes shape-two absolute z-[-1] right-[17%] 2xl:right-[8%] lg:right-[6%] md:hidden! sm:hidden! xsm:hidden! top-[4%]">
+			</div>
+			<!-- /.container -->
+			<img
+				src='images/lazy.svg'
+				data-src='images/shape/shape_172.svg'
+				alt=''
+				class='lazy-img shapes shape-two xsm:hidden! absolute top-[4%] right-[17%] z-[-1] sm:hidden! md:hidden! lg:right-[6%] 2xl:right-[8%]'
+			/>
 		</div>
 	</div>
 
-	<div class="fancy-feature-five xl:mb-24 lg:mb-24 md:mb-20 mb-16">
-		<div class="container">
-			<div class="flex flex-wrap items-center">
-				<div class="xl:w-[45%] lg:w-[45%] md:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full xl:order-last lg:order-last md:order-last ml-auto!">
-					<div class="block-style-two xxl:pr-12! sm:mb-[50px] xsm:mb-[50px]  wow fadeInRight">
-						<div class="title-style-three">
-							<div class="sc-title uppercase text-[14px] lg:text-[13px] md:text-[13px] sm:text-[13px] xsm:text-[13px] tracking-[1px] text-[rgba(0,0,0,0.3)] pb-2.5">Over <span class=" underline " style="color:#a056fa;">100+ clients</span></div>
-							<h2 class="main-title font-normal m-0 font-Recoleta text-black xl:text-6xl lg:text-5xl text-4xl">Why <span class="inline-block relative z-1">choose <span class="mark-bg absolute left-[-5px] -translate-y-2/4 w-[98%] h-[50px] z-[-1] top-2/4 md:h-[34px] sm:h-[34px] xsm:h-[34px]" style="background-color:#D8FFE8;"></span></span> Us.</h2>
-						</div> <!-- /.title-style-three -->
-						<p class="font-gordita xl:text-[22px] lg:text-[19px] md:text-[19px] sm:text-[19px] xsm:text-[19px] leading-[1.67em] mt-8">We're a team of sisters, Vivian and Daniela, with more than 13 years of experience combined, doing front-end development.</p>
-						<p class="font-gordita xl:text-[22px] lg:text-[19px] md:text-[19px] sm:text-[19px] xsm:text-[19px] leading-[1.67em]">Even better yet, we've been using Tailwind CSS daily since 2018 and we love it.</p>
-					</div> <!-- /.block-style-two -->
-				</div>
-
-				<div class="xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full xl:order-first lg:order-first md:order-first wow fadeInLeft">
-					<div class="tags-wrapper relative p-[45px_65px_50px] 2xl:p-[35px_35px_40px] lg:p-[25px_15px_30px] md:p-[25px_15px_30px] sm:p-[25px_15px_30px] xsm:p-[25px_15px_30px] rounded-[25px] bg-[#F3F7F8]">
-						<img src="images/lazy.svg" data-src="images/shape/shape_35.svg" alt="" class="lazy-img shapes shape-one absolute w-3/12 z-0 animate-[jumpThree_3s_infinite_linear] right-[1%] top-[1%]">
-						<div class="h3 m-0! font-normal text-black ">13+</div>
-						<p class=" text-[24px] 2xl:text-[22px] lg:text-[19px] md:text-[19px] sm:text-[19px] xsm:text-[19px] leading-[1.67em] opacity-50 pb-[25px] lg:pb-[10px] md:pb-[10px] sm:pb-[10px] xsm:pb-[10px]">Reason to choose us</p>
-						<ul class="flex flex-wrap items-center mb-0 pl-0 list-none m-[0_-10px]">
-							<li class=" text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]"><a class=" text-black text-[18px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] lg:p-3 md:p-3 sm:p-3 xsm:p-3 transition-all duration-[0.3s] ease-[ease-in-out] px-[30px] py-[22px] rounded-[10px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] bg-white" href="#"><span class=" inline-block leading-[25px] p-[0_3px] rounded-[5px]" style="background-color: rgba(255, 130, 130, 0.13);">Great Interface</span></a></li>
-							<li class=" text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]"><a class=" text-black text-[18px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] lg:p-3 md:p-3 sm:p-3 xsm:p-3 transition-all duration-[0.3s] ease-[ease-in-out] px-[30px] py-[22px] rounded-[10px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] bg-white" href="#"><span class=" inline-block leading-[25px] p-[0_3px] rounded-[5px]" style="background-color: rgba(73, 230, 213, 0.13);">Expereinced</span></a></li>
-							<li class=" text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]"><a class=" text-black text-[18px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] lg:p-3 md:p-3 sm:p-3 xsm:p-3 transition-all duration-[0.3s] ease-[ease-in-out] px-[30px] py-[22px] rounded-[10px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] bg-white" href="#"><span class=" inline-block leading-[25px] p-[0_3px] rounded-[5px]" style="background-color: rgba(73, 179, 230, 0.13);">Low Price</span></a></li>
-							<li class=" text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]"><a class=" text-black text-[18px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] lg:p-3 md:p-3 sm:p-3 xsm:p-3 transition-all duration-[0.3s] ease-[ease-in-out] px-[30px] py-[22px] rounded-[10px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] bg-white" href="#"><span class=" inline-block leading-[25px] p-[0_3px] rounded-[5px]" style="background-color: rgba(251, 208, 80, 0.15);">Customizable</span></a></li>
-							<li class=" text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]"><a class=" text-black text-[18px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] lg:p-3 md:p-3 sm:p-3 xsm:p-3 transition-all duration-[0.3s] ease-[ease-in-out] px-[30px] py-[22px] rounded-[10px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] bg-white" href="#"><span class=" inline-block leading-[25px] p-[0_3px] rounded-[5px]" style="background-color: rgba(213, 126, 255, 0.15);">Trusted</span></a></li>
-							<li class=" text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]"><a class=" text-black text-[18px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] lg:p-3 md:p-3 sm:p-3 xsm:p-3 transition-all duration-[0.3s] ease-[ease-in-out] px-[30px] py-[22px] rounded-[10px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] bg-white" href="#"><span class=" inline-block leading-[25px] p-[0_3px] rounded-[5px]" style="background-color: rgba(189, 231, 122, 0.15);">Great Support</span></a></li>
-							<li class=" text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]"><a class=" text-black text-[18px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] lg:p-3 md:p-3 sm:p-3 xsm:p-3 transition-all duration-[0.3s] ease-[ease-in-out] px-[30px] py-[22px] rounded-[10px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] bg-white" href="#"><span class=" inline-block leading-[25px] p-[0_3px] rounded-[5px]" style="background-color: rgba(255, 152, 152, 0.15);">Safe</span></a></li>
-							<li class=" text-[24px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px] text-black m-[10px_0] p-[0_10px] lg:m-[5px_0] md:m-[5px_0] sm:m-[5px_0] xsm:m-[5px_0]">& more…</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div> <!-- /.container -->
-	</div>
+	<WhyUs />
 
 	<Advantages />
 

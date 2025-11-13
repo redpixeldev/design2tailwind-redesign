@@ -5,6 +5,7 @@ import Footer from '@components/Footer.astro';
 import WhyUs from '@components/WhyUs.astro';
 import OurProcess from '@components/OurProcess.astro';
 import LogoCloud from '@components/LogoCloud.astro';
+import CTA from '@components/CTA.astro';
 import FAQ from '@components/FAQ.astro';
 import Testimonials from '@components/Testimonials.astro';
 ---
@@ -12,45 +13,93 @@ import Testimonials from '@components/Testimonials.astro';
 <Layout title='Astro'>
 	<Header />
 
-	<div class="hero-banner-two relative pt-36 lg:pt-44 xl:pt-52 xl:pb-24 lg:pb-20 md:pb-16 pb-12">
-		<div class="container">
-			<div class="flex flex-wrap">
-				<div class="w-full lg:w-5/6 xl:w-2/3 mx-auto text-center wow fadeInUp">
-					<h1 class="hero-heading font-normal font-Recoleta relative text-[82px] 2xl:text-[70px] lg:text-[58px] md:text-[40px] md:leading-[1.2em] sm:text-[40px] sm:leading-[1.2em] xsm:text-4xl xsm:leading-[1.2em] leading-[1.09em]"><img src="images/lazy.svg" data-src="images/shape/shape_25.svg" alt="" class="lg:w-36 xl:w-36 lazy-img shapes line-shape absolute z-[-1] left-28 xl:left-40 -bottom-1 md:hidden! sm:hidden! xsm:hidden!">For <span class="relative inline-block z-1 before:content-[''] before:absolute before:-translate-y-2/4 before:w-[73%] before:h-[81%] before:z-[-1] before:left-[31%] before:top-2/4 before:bg-[#FFEBE5]">Agencies</span></h1>
-					<p class=" text-base xl:text-xl lg:text-[19px] leading-[1.67em] xl:pt-10 lg:pt-[10px] md:pt-[10px] sm:pt-[10px] xsm:pt-[10px]">Line by line, handcrafted by us. We work with PSD, Figma, Adobe XD and Sketch designs and with design hand-off tools like Invision and Zeplin.Line by line, handcrafted by us. We work with PSD, Figma, Adobe XD and Sketch designs and with design hand-off tools like Invision and Zeplin.Line by line, handcrafted by us.
+	<div class='hero-banner-two relative pt-36 pb-12 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-52 xl:pb-24'>
+		<div class='container'>
+			<div class='flex flex-wrap'>
+				<div class='wow fadeInUp mx-auto w-full text-center lg:w-5/6 xl:w-2/3'>
+					<h1
+						class='hero-heading font-Recoleta xsm:text-4xl xsm:leading-[1.2em] relative text-[82px] leading-[1.09em] font-normal sm:text-[40px] sm:leading-[1.2em] md:text-[40px] md:leading-[1.2em] lg:text-[58px] 2xl:text-[70px]'>
+						<img
+							src='images/lazy.svg'
+							data-src='images/shape/shape_25.svg'
+							alt=''
+							class='lazy-img shapes line-shape xsm:hidden! absolute -bottom-1 left-28 z-[-1] sm:hidden! md:hidden! lg:w-36 xl:left-40 xl:w-36'
+						/>For <span
+							class="relative z-1 inline-block before:absolute before:top-2/4 before:left-[31%] before:z-[-1] before:h-[81%] before:w-[73%] before:-translate-y-2/4 before:bg-[#FFEBE5] before:content-['']"
+							>Agencies</span>
+					</h1>
+					<p
+						class='xsm:pt-[10px] text-base leading-[1.67em] sm:pt-[10px] md:pt-[10px] lg:pt-[10px] lg:text-[19px] xl:pt-10 xl:text-xl'>
+						Line by line, handcrafted by us. We work with PSD, Figma, Adobe XD and Sketch designs and with design
+						hand-off tools like Invision and Zeplin.Line by line, handcrafted by us. We work with PSD, Figma, Adobe XD
+						and Sketch designs and with design hand-off tools like Invision and Zeplin.Line by line, handcrafted by us.
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="partner-section-six xl:mb-28 lg:mb-20 md:mb-16 mb-12 wow fadeInUp">
-		<div class="container">
-			<div class="top-header p-[0_0_70px] lg:pb-[45px] md:pb-[45px] sm:pb-[45px] xsm:pb-[45px] border-b-2 border-b-black border-solid">
-				<div class="flex items-center justify-between">
-					<span class="lines inline-block h-0.5 w-full md:w-[33%] sm:w-[33%] xsm:w-[33%] grow bg-black"></span>
-					<div class="title uppercase text-black text-center text-[16px] lg:text-[14px] md:text-[14px] sm:text-[14px] xsm:text-[14px] tracking-[2px] w-full px-2.5 py-0">Agencies we've worked with</div>
-					<span class="lines inline-block h-0.5 w-full md:w-[33%] sm:w-[33%] xsm:w-[33%] grow bg-black"></span>
+	<div class='partner-section-six wow fadeInUp mb-12 md:mb-16 lg:mb-20 xl:mb-28'>
+		<div class='container'>
+			<div
+				class='top-header xsm:pb-[45px] border-b-2 border-solid border-b-black p-[0_0_70px] sm:pb-[45px] md:pb-[45px] lg:pb-[45px]'>
+				<div class='flex items-center justify-between'>
+					<span class='lines xsm:w-[33%] inline-block h-0.5 w-full grow bg-black sm:w-[33%] md:w-[33%]'></span>
+					<div
+						class='title xsm:text-[14px] w-full px-2.5 py-0 text-center text-[16px] tracking-[2px] text-black uppercase sm:text-[14px] md:text-[14px] lg:text-[14px]'>
+						Agencies we've worked with
+					</div>
+					<span class='lines xsm:w-[33%] inline-block h-0.5 w-full grow bg-black sm:w-[33%] md:w-[33%]'></span>
 				</div>
 
-				<div class="partner_slider_one mt-[65px] lg:mt-10 md:mt-10 sm:mt-10 xsm:mt-10 ">
-					<div class="item m-[0_12px]">
-						<div class="icon flex items-center justify-center h-[50px]"><img src="images/logo/Plogo-37.png" alt=""></div>
+				<div class='partner_slider_one xsm:mt-10 mt-[65px] sm:mt-10 md:mt-10 lg:mt-10'>
+					<div class='item m-[0_12px]'>
+						<div class='icon flex h-[50px] items-center justify-center'>
+							<img
+								src='images/logo/Plogo-37.png'
+								alt=''
+							/>
+						</div>
 					</div>
-					<div class="item m-[0_12px]">
-						<div class="icon flex items-center justify-center h-[50px]"><img src="images/logo/Plogo-38.png" alt=""></div>
+					<div class='item m-[0_12px]'>
+						<div class='icon flex h-[50px] items-center justify-center'>
+							<img
+								src='images/logo/Plogo-38.png'
+								alt=''
+							/>
+						</div>
 					</div>
-					<div class="item m-[0_12px]">
-						<div class="icon flex items-center justify-center h-[50px]"><img src="images/logo/Plogo-39.png" alt=""></div>
+					<div class='item m-[0_12px]'>
+						<div class='icon flex h-[50px] items-center justify-center'>
+							<img
+								src='images/logo/Plogo-39.png'
+								alt=''
+							/>
+						</div>
 					</div>
-					<div class="item m-[0_12px]">
-						<div class="icon flex items-center justify-center h-[50px]"><img src="images/logo/Plogo-40.png" alt=""></div>
+					<div class='item m-[0_12px]'>
+						<div class='icon flex h-[50px] items-center justify-center'>
+							<img
+								src='images/logo/Plogo-40.png'
+								alt=''
+							/>
+						</div>
 					</div>
-					<div class="item m-[0_12px]">
-						<div class="icon flex items-center justify-center h-[50px]"><img src="images/logo/Plogo-41.png" alt=""></div>
+					<div class='item m-[0_12px]'>
+						<div class='icon flex h-[50px] items-center justify-center'>
+							<img
+								src='images/logo/Plogo-41.png'
+								alt=''
+							/>
+						</div>
 					</div>
-					<div class="item m-[0_12px]">
-						<div class="icon flex items-center justify-center h-[50px]"><img src="images/logo/Plogo-39.png" alt=""></div>
+					<div class='item m-[0_12px]'>
+						<div class='icon flex h-[50px] items-center justify-center'>
+							<img
+								src='images/logo/Plogo-39.png'
+								alt=''
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -59,69 +108,15 @@ import Testimonials from '@components/Testimonials.astro';
 
 	<WhyUs />
 
-	<OurProcess titleLine2="our all features" />
+	<OurProcess titleLine2='our all features' />
 
 	<Testimonials />
 
 	<LogoCloud />
 
-	<div class="fancy-short-banner-thirteen py-[170px] lg:py-20 md:py-20 sm:py-20 xsm:py-20 bg-[#F6F9FB] wow fadeInUp">
-		<div class="container">
-			<div class="bg-wrapper z-2 bg-white relative px-3 py-0 rounded-[10px]">
-				<div class="flex flex-wrap mx-[-12px]">
-					<div class="xl:w-11/12 w-full flex-[0_0_auto] px-[12px] max-w-full m-auto">
-						<div class="flex flex-wrap mx-[-12px] items-center">
-							<div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full ml-auto! xl:order-last lg:order-last">
-								<div class="text-wrapper pl-20 pr-0 pt-[60px] pb-20 border-l-[#E9E9E9] border-l border-solid md:p-[50px_0] md:border-l-0 sm:p-[50px_0] sm:border-l-0 xsm:p-[50px_0] xsm:border-l-0">
-									<img src="images/lazy.svg" data-src="images/icon/icon_114.svg" alt="" class="lazy-img mb-[30px]">
-									<div class="title-style-one">
-										<h2 class="font-Recoleta font-normal text-black xl:text-6xl/[66px] lg:text-5xl/[56px] text-4xl">Let’s talk with expereince advisors.</h2>
-									</div>
-									<p class="text-[20px] lg:text-[18px] md:text-[18px] sm:text-[18px] xsm:text-[18px] text-black pt-5 m-0!">eiusmod tempor incididunt. Ut enim mim veniam, quis nostrud elit lorem dolor.</p>
-								</div>
-							</div>
-							<div class="xl:w-5/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full xl:order-first lg:order-first">
-								<div class="form-style-two md:mb-10 sm:mb-10 xsm:mb-10 ">
-									<form action="inc/contact.php" id="contact-form" data-toggle="validator">
-										<div class="messages"></div>
-										<div class="flex flex-wrap mx-[-12px] controls">
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-												<div class="input-group-meta relative form-group mb-5">
-													<input class=" h-[60px] p-[0_20px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" type="text" placeholder="Your name*" name="name" required="required" data-error="Name is required.">
-													<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
-												</div>
-											</div>
-
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-												<div class="input-group-meta relative form-group mb-5">
-													<input class=" h-[60px] p-[0_20px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" type="email" placeholder="Email*" name="email" required="required" data-error="Valid email is required.">
-													<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
-												</div>
-											</div>
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-												<div class="input-group-meta relative form-group mb-[15px] ">
-													<textarea class=" h-[120px] max-h-[120px] px-5 py-[15px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" placeholder="Your message*" name="message" required="required" data-error="Please,leave us a message."></textarea>
-													<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
-												</div>
-											</div>
-											<div class="w-full flex-[0_0_auto] px-[12px] max-w-full"><button class="btn-twentyTwo w-full font-medium tran3s uppercase text-[14px] leading-[55px] text-white tracking-[0.88px] px-[42px] py-0 rounded-[7px] hover:bg-(--prime-ten) bg-[#a056fa]">SEND MESSAGE</button></div>
-										</div>
-										<div class="text-[16px] text-center mt-[25px] "><span class="opacity-75">Been here before?</span> <a href="#" class=" text-black font-medium hover:text-[#0a58ca]">Check your query</a></div>
-									</form>
-								</div> <!-- /.form-style-two -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="shapes shape-text font-medium text-[20px] text-black text-center absolute z-[-1] leading-6 top-[-62px] rotate-[-10deg] lg:rotate-20 xl:rotate-[-15deg] left-10 lg:left-5 xl:-left-10">Fill the <br>form</div>
-				<img src="images/lazy.svg" data-src="images/shape/shape_90.svg" alt="" class="lazy-img shapes shape-one absolute z-1 rotate-100 lg:rotate-70 xl:rotate-0 left-20 lg:-left-2 xl:left-1 -top-2.5 block scale-y-[-1] lg:scale-100 xl:scale-100">
-				<img src="images/lazy.svg" data-src="images/shape/shape_91.svg" alt="" class="lazy-img shapes shape-two absolute z-[-1] left-[-60px] bottom-[-60px]">
-			</div> <!-- /.bg-wrapper -->
-		</div>
-	</div>
+	<CTA />
 
 	<FAQ />
-
 
 	<Footer />
 </Layout>
