@@ -13,75 +13,86 @@ interface Props {
 }
 
 const {
-	title = "Advantages",
-	titleImage = "images/shape/shape_188.svg",
+	title = 'Advantages',
+	titleImage = 'images/shape/shape_188.svg',
 	advantages = [
 		{
-			icon: "images/icon/icon-code.svg",
-			title: "High Quality Code",
-			description: "Integrating your apps couldn't be any easier through Installation.",
+			icon: 'images/icon/icon-hand-heart.svg',
+			title: 'Tailwind Experts Since 2018',
+			description: "We've been using Tailwind CSS daily since 2018. We know it inside and out.",
 			delay: undefined,
 		},
 		{
-			icon: "images/icon/icon-seo.svg",
-			title: "SEO & Speed Optimized ",
-			description: "Linking your site to your domain name has never been easier with GoDaddy registered domain.",
-			delay: "0.2s",
-		},
-		{
-			icon: "images/icon/icon-accessibility.svg",
-			title: "Accessible code",
-			description: "Get peace of mind, knowing network dsu security and visitors",
-			delay: "0.4s",
-		},
-		{
-			icon: "images/icon/icon-organization.svg",
-			title: "100% White Label",
-			description: "Includes industry-standard cPanel to install apps, manage backups and security.",
+			icon: 'images/icon/icon-communication.svg',
+			title: 'Fast and clear communication',
+			description: 'We communicate clearly and promptly, ensuring a smooth development process.',
 			delay: undefined,
 		},
 		{
-			icon: "images/icon/icon-structure.svg",
-			title: "Component-Based Structure",
-			description: "If you require more power for your site, seamlessly increase your CPU/RAM, I/O and storage with 1 click.",
-			delay: "0.2s",
+			icon: 'images/icon/icon-organization.svg',
+			title: 'Cross-Browser Testing',
+			description: 'Works flawlessly on Chrome, Safari, Firefox, Edge, iOS Safari, and Chrome Android.',
+			delay: undefined,
 		},
 		{
-			icon: "images/icon/icon-communication.svg",
-			title: "Fast and clear communication",
-			description: "Get faster page loads & better customer experience with lorem.",
-			delay: "0.4s",
+			icon: 'images/icon/icon-accessibility.svg',
+			title: 'Fully Responsive Design',
+			description: 'Every pixel perfect across desktop, tablet, and mobile. Tested on all screen sizes.',
+			delay: undefined,
+		},
+		{
+			icon: 'images/icon/icon-code.svg',
+			title: 'Modern Tech Stack',
+			description: 'Built with Alpine.js for interactivity, scaffolded with Astro for clean structure.',
+			delay: undefined,
+		},
+		{
+			icon: 'images/icon/icon-organization.svg',
+			title: 'Framework Flexible',
+			description: 'Need React or Vue? We can adapt our work to your preferred framework.',
+			delay: undefined,
 		},
 	],
 } = Astro.props;
 ---
 
-<div class="fancy-feature-twentyThree mt-16 md:mt-24 lg:mt-32 xl:mt-32 px-4 xl:mb-20 lg:mb-20 md:mb-14 mb-10">
-	<div class="container">
-		<div class="title-style-seven text-center pb-5 wow fadeInUp">
-			<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">
-				<span class="relative inline-block">
+<div class='fancy-feature-twentyThree mt-16 mb-10 px-4 md:mt-24 md:mb-14 lg:mt-32 lg:mb-20 xl:mt-32 xl:mb-20'>
+	<div class='container'>
+		<div class='title-style-seven wow fadeInUp pb-5 text-center'>
+			<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
+				<span class='relative inline-block'>
 					{title}
-					<img class="absolute z-[-1] w-48 xl:w-60 rotate-3 left-0 -bottom-2" src={titleImage} alt="">
+					<img
+						class='absolute -bottom-2 left-0 z-[-1] w-48 rotate-3 xl:w-60'
+						src={titleImage}
+						alt=''
+					/>
 				</span>
 			</h2>
 		</div>
 
-		<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-x-12 xl:gap-x-24 gap-y-6 lg:gap-y-10 pt-10 md:pt-14 xl:pt-20">
-			{advantages.map((advantage) => (
-				<div
-					class="text-center xl:text-left lg:text-left w-full wow fadeInUp"
-					data-wow-delay={advantage.delay}
-				>
-					<div class="icon flex items-center justify-center relative rounded-[50%] w-[65px] h-[65px] lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] sm:w-[50px] sm:h-[50px] xsm:w-[50px] xsm:h-[50px] border-[3px] border-solid border-black before:content-[''] before:absolute before:w-[calc(100%+6px)] before:h-[calc(100%+6px)] before:top-[-3px] before:z-[-1] before:rounded-[50%] before:left-[5px] md:m-[0_auto] sm:m-[0_auto] xsm:m-[0_auto] before:bg-[#cac6fc]">
-						<img src="images/lazy.svg" data-src={advantage.icon} alt="" class="lazy-img h-6 xl:h-7">
+		<div
+			class='grid gap-x-12 gap-y-6 pt-10 md:grid-cols-2 md:pt-14 lg:grid-cols-3 lg:gap-y-10 xl:grid-cols-3 xl:gap-x-24 xl:pt-20'>
+			{
+				advantages.map((advantage) => (
+					<div
+						class='wow fadeInUp w-full text-center lg:text-left xl:text-left'
+						data-wow-delay={advantage.delay}>
+						<div class="icon xsm:w-[50px] xsm:h-[50px] xsm:m-[0_auto] relative flex h-[65px] w-[65px] items-center justify-center rounded-[50%] border-[3px] border-solid border-black before:absolute before:top-[-3px] before:left-[5px] before:z-[-1] before:h-[calc(100%+6px)] before:w-[calc(100%+6px)] before:rounded-[50%] before:bg-[#cac6fc] before:content-[''] sm:m-[0_auto] sm:h-[50px] sm:w-[50px] md:m-[0_auto] md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px]">
+							<img
+								src='images/lazy.svg'
+								data-src={advantage.icon}
+								alt=''
+								class='lazy-img h-6 xl:h-7'
+							/>
+						</div>
+						<h4 class='xsm:mb-[10px] xsm:text-[20px] mt-6 mb-5 sm:mb-[10px] sm:text-[20px] md:mb-[10px] md:text-[20px] lg:mt-[30px] lg:mb-[10px] lg:text-[20px]'>
+							{advantage.title}
+						</h4>
+						<p>{advantage.description}</p>
 					</div>
-					<h4 class="mt-6 lg:mt-[30px] mb-5 lg:mb-[10px] md:mb-[10px] sm:mb-[10px] xsm:mb-[10px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">
-						{advantage.title}
-					</h4>
-					<p>{advantage.description}</p>
-				</div>
-			))}
+				))
+			}
 		</div>
 	</div>
 </div>

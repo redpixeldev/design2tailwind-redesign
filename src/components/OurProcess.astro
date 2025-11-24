@@ -16,84 +16,98 @@ interface Props {
 
 const {
 	id,
-	titleLine1 = "Let's",
-	titleLine2 = "our process",
-	highlightColor = "#E1EDFF",
+	titleLine1 = 'Know our',
+	titleLine2 = ' process',
+	highlightColor = '#E1EDFF',
 	steps = [
 		{
-			icon: "images/icon/icon_13.svg",
-			title: "1- Welcome",
-			description: "Our deep understanding of project and program management has enabled the success of our clients.",
-			delay: "0.1s",
+			icon: 'images/icon/icon_13.svg',
+			title: '1. Welcome & Analysis',
+			description: 'You fill out our form, give us access to the design, and we send you a quote range.',
+			delay: '0.1s',
 		},
 		{
-			icon: "images/icon/icon_16.svg",
-			title: "2- We chat",
-			description: "Our deep understanding of project and program management has enabled the success of our clients.",
-			delay: "0.2s",
+			icon: 'images/icon/icon_16.svg',
+			title: '2. We chat',
+			description: 'We request a quick meeting to talk about details and set a kick off date.',
+			delay: '0.2s',
 		},
 		{
-			icon: "images/icon/icon_15.svg",
-			title: "3- Coding",
-			description: "Our deep understanding of project and program management has enabled the success of our clients.",
-			delay: "0.05s",
+			icon: 'images/icon/icon_15.svg',
+			title: '3. Coding',
+			description: 'We start working and keep you updated as we go.',
+			delay: '0.05s',
 		},
 		{
-			icon: "images/icon/icon_14.svg",
-			title: "4- Ta-da!",
-			description: "Our deep understanding of project and program management has enabled the success of our clients.",
-			delay: "0.1s",
+			icon: 'images/icon/icon_14.svg',
+			title: '4. Ta-da!',
+			description: 'We demo you the finished product and start the feedback round.',
+			delay: '0.1s',
 		},
 		{
-			icon: "images/icon/icon_17.svg",
-			title: "5- The end",
-			description: "Our deep understanding of project and program management has enabled the success of our clients.",
-			delay: "0.2s",
+			icon: 'images/icon/icon_17.svg',
+			title: '5. Delivery',
+			description: 'We finish with the feedback and deliver the code to you.',
+			delay: '0.2s',
 		},
 	],
 } = Astro.props;
 ---
 
-<div class="fancy-feature-six relative" id={id}>
-	<div class="container">
-		<div class="flex flex-wrap items-center">
-			<div class="xl:w-4/12 lg:w-4/12 md:w-6/12 mt-10 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp">
-				<div class="">
-					<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">
-						{titleLine1} <br />
-						<span class="inline-block relative z-1">
-							Discover
+<div
+	class='fancy-feature-six relative'
+	id={id}>
+	<div class='container'>
+		<div class='flex flex-wrap items-center'>
+			<div class='wow fadeInUp mt-10 w-full max-w-full flex-[0_0_auto] px-[12px] md:w-6/12 lg:w-4/12 xl:w-4/12'>
+				<div class=''>
+					<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
+						{titleLine1}
+						<span class='relative z-1 inline-block'>
+							{titleLine2}
 							<span
-								class="mark-bg absolute left-[-5px] -translate-y-2/4 w-[98%] h-[50px] z-[-1] top-2/4 md:h-[34px] sm:h-[34px] xsm:h-[34px]"
+								class='mark-bg xsm:h-[34px] absolute top-2/4 left-[-5px] z-[-1] h-[50px] w-[98%] -translate-y-2/4 sm:h-[34px] md:h-[34px]'
 								style={`background-color:${highlightColor};`}
 							></span>
 						</span>
-						{titleLine2}
 					</h2>
-					<span class="mt-6 md:mt-12 lg:mt-12 xl:mt-12 block w-28 bg-black h-[3px]"></span>
+					<span class='mt-6 block h-[3px] w-28 bg-black md:mt-12 lg:mt-12 xl:mt-12'></span>
 				</div>
 			</div>
-			{steps.map((step) => (
-				<div
-					class="xl:w-4/12 lg:w-4/12 md:w-6/12 mt-10 w-full flex-[0_0_auto] px-[12px] max-w-full wow fadeInUp"
-					data-wow-delay={step.delay}
-				>
-					<div class="card-style-three border transition-all duration-[0.3s] ease-[ease-in-out] w-full p-[42px_10px_30px_45px] lg:p-[30px_10px_25px_15px] md:p-[30px_10px_25px_15px] sm:p-[30px_10px_25px_15px] xsm:p-[30px_10px_25px_15px] rounded-[10px] border-solid border-[#b1b2f4] hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:border-[#FF35D9] bg-white">
-						<div class="icon flex items-end h-[65px]">
-							<img src="images/lazy.svg" data-src={step.icon} alt="" class="lazy-img max-h-full">
+			{
+				steps.map((step) => (
+					<div
+						class='wow fadeInUp mt-10 w-full max-w-full flex-[0_0_auto] px-[12px] md:w-6/12 lg:w-4/12 xl:w-4/12'
+						data-wow-delay={step.delay}>
+						<div class='card-style-three xsm:p-[30px_10px_25px_15px] w-full rounded-[10px] border border-solid border-[#b1b2f4] bg-white p-[42px_10px_30px_45px] transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#FF35D9] hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] sm:p-[30px_10px_25px_15px] md:p-[30px_10px_25px_15px] lg:p-[30px_10px_25px_15px]'>
+							<div class='icon flex h-[65px] items-end'>
+								<img
+									src='images/lazy.svg'
+									data-src={step.icon}
+									alt=''
+									class='lazy-img max-h-full'
+								/>
+							</div>
+							<h4 class='xsm:text-[20px] mt-[25px] mb-5 sm:text-[20px] md:text-[20px] lg:text-[20px] 2xl:text-[22px]'>
+								{step.title}
+							</h4>
+							<p class='mb-4 md:mb-0 md:min-h-[80px] lg:min-h-[80px] xl:min-h-[80px]'>{step.description}</p>
 						</div>
-						<h4 class="mt-[25px] mb-5 2xl:text-[22px] lg:text-[20px] md:text-[20px] sm:text-[20px] xsm:text-[20px]">
-							{step.title}
-						</h4>
-						<p class="md:min-h-[150px] lg:min-h-[150px] xl:min-h-[150px] mb-4 md:mb-0">
-							{step.description}
-						</p>
 					</div>
-				</div>
-			))}
+				))
+			}
 		</div>
 	</div>
-	<div class="shapes shape-one rounded-[50%] absolute z-[-1] w-[126px] h-[126px] left-[-50px] animate-[jumpThree_3s_infinite_linear] top-[4%] bg-[#FFC961]"></div>
-	<img src="images/lazy.svg" data-src="images/shape/shape_36.svg" alt="" class="lazy-img shapes shape-two absolute z-[-1] right-[3%] top-[30%]">
-	<div class="shapes shape-three rounded-[50%] absolute z-[-1] w-[300px] h-[300px] opacity-70 right-[-150px] animate-[jumpTwo_3s_infinite_linear] bottom-0 bg-[#FF35D9]"></div>
+	<div
+		class='shapes shape-one absolute top-[4%] left-[-50px] z-[-1] h-[126px] w-[126px] animate-[jumpThree_3s_infinite_linear] rounded-[50%] bg-[#FFC961]'>
+	</div>
+	<img
+		src='images/lazy.svg'
+		data-src='images/shape/shape_36.svg'
+		alt=''
+		class='lazy-img shapes shape-two absolute top-[30%] right-[3%] z-[-1]'
+	/>
+	<div
+		class='shapes shape-three absolute right-[-150px] bottom-0 z-[-1] h-[300px] w-[300px] animate-[jumpTwo_3s_infinite_linear] rounded-[50%] bg-[#FF35D9] opacity-70'>
+	</div>
 </div>

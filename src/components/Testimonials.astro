@@ -27,32 +27,32 @@ const {
 	testimonials = [
 		{
 			company: "FLX Websites",
-			companyUrl: "/",
+			companyUrl: "https://flxwebsites.com",
 			author: "Nick Sergeant",
 			text: "We've been using the team at Design2Tailwind for almost a year now and they have had an outsized impact on our ability to grow our web design agency. I absolutely cannot imagine not having them as a resource for us at this point. They're detailed oriented, efficient, and more than fair in their pricing. If you're looking for help turning your designs into HTML & Tailwind, you've found it!",
 			bgColor: "#FFED4E",
 		},
 		{
 			company: "Insight Media",
-			companyUrl: "/",
+			companyUrl: "https://insight-media.be",
 			author: "Dries",
 			text: "Vivian and Daniela converted our website layout into a high-quality Tailwind project. Their code integrated perfectly into our Laravel project. We highly recommend their services!",
 			bgColor: "#00FCFC",
 		},
 		{
-			company: "FLX Websites",
+			company: "Side Ventures",
 			companyUrl: "/",
-			author: "Nick Sergeant",
-			text: "We've been using the team at Design2Tailwind for almost a year now and they have had an outsized impact on our ability to grow our web design agency. I absolutely cannot imagine not having them as a resource for us at this point. They're detailed oriented, efficient, and more than fair in their pricing. If you're looking for help turning your designs into HTML & Tailwind, you've found it!",
+			author: "Matt Farley",
+			text: "",
 			bgColor: "#F27AFF",
 		},
-		{
-			company: "Insight Media",
-			companyUrl: "/",
-			author: "Dries",
-			text: "Vivian and Daniela converted our website layout into a high-quality Tailwind project. Their code integrated perfectly into our Laravel project. We highly recommend their services!",
-			bgColor: "#52C1FF",
-		},
+		// {
+		// 	company: "Insight Media",
+		// 	companyUrl: "/",
+		// 	author: "Dries",
+		// 	text: "Vivian and Daniela converted our website layout into a high-quality Tailwind project. Their code integrated perfectly into our Laravel project. We highly recommend their services!",
+		// 	bgColor: "#52C1FF",
+		// },
 	],
 } = Astro.props;
 ---
@@ -76,7 +76,7 @@ const {
 							<div class="feedback-block-ten xl:p-[40px_50px_40px] lg:p-[25px_20px_30px] md:p-[25px_20px_30px] sm:p-[25px_20px_30px] xsm:p-[25px_20px_30px]" style={`background:${testimonial.bgColor};`}>
 								<a href={testimonial.companyUrl} class="font-medium font-Gordita text-black xl:text-3xl lg:text-3xl text-2xl hover:underline">{testimonial.company}</a>
 								<div class=" text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] leading-[1.67em]  text-black ">{testimonial.author}</div>
-								<p class=" text-black mt-10 lg:mt-[30px] md:mt-[30px] sm:mt-[30px] xsm:mt-[30px] mb-4 text-[28px] leading-[1.78em] text-xl">
+								<p class=" text-black mt-10 lg:mt-[30px] md:mt-[30px] sm:mt-[30px] xsm:mt-[30px] mb-4 text-[20px] leading-[1.78em]">
 									{testimonial.text}
 								</p>
 							</div> <!-- /.feedback-block-ten -->
