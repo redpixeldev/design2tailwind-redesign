@@ -11,13 +11,13 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
 }
 
 @layer base {
@@ -521,7 +521,7 @@ body .btn-seventeen:before {
 	-webkit-text-fill-color: transparent;
 }
 .accordion-style-four .accordion-item .accordion-button:not(.collapsed) {
-	@apply bg-[#0F0F0F] pt-10 pb-5 text-white;
+	@apply bg-[#0F0F0F] py-[30px] text-white;
 }
 .accordion-style-four .accordion-item:last-child .accordion-button {
 	@apply border-0;

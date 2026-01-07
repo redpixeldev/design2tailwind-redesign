@@ -17,92 +17,161 @@ interface Props {
 }
 
 const {
-	subtitle = "FAQ",
-	titlePart1 = "Questions &",
-	titlePart2 = "Answers",
-	titleImage = "images/shape/shape_132.svg",
-	accordionId = "accordionOne",
-	decorativeImage = "images/shape/shape_133.svg",
+	subtitle = 'FAQ',
+	titlePart1 = 'Questions &',
+	titlePart2 = 'Answers',
+	titleImage = 'images/shape/shape_132.svg',
+	accordionId = 'accordionOne',
+	decorativeImage = 'images/shape/shape_133.svg',
 	faqs = [
 		{
-			number: "01.",
-			question: "What are our prices?",
-			answer: "Our pricing starts at $250 for the first page and $120 per additional page after and will vary depending on the complexity of the design and the amount of pages or \"screens\" we need to code.",
+			number: '01.',
+			question: 'What are your prices?',
+			answer:
+				'Our pricing starts at $250 for the first page and $120 per additional page after and will vary depending on the complexity of the design and the amount of pages or "screens" we need to code.',
 			isDefaultOpen: false,
 		},
 		{
-			number: "02.",
-			question: "How do you find different criteria in your process?",
-			answer: "What are your turnaround times on projects?\n\nThe best way to get an ETA is to fill out the form above and we'll get back to you with a quote and ETA ASAP.",
+			number: '02.',
+			question: 'What are your turnaround times?',
+			answer:
+				"The best way to get an ETA is to fill out the form above and we'll get back to you with a quote within 24 hours.",
 			isDefaultOpen: false,
 		},
 		{
-			number: "03.",
-			question: "What design file formats can you work with?",
-			answer: "We work with Photoshop (PSD), Figma, Adobe XD and Sketch designs and with design hand-off tools like Invision and Zeplin.",
-			isDefaultOpen: true,
-		},
-		{
-			number: "04.",
-			question: "What browsers do you support?",
-			answer: "We currently support the latest versions of Google Chrome, Safari, Firefox, and Edge.",
+			number: '03.',
+			question: 'What design file formats can you work with?',
+			answer:
+				'We work with Photoshop (PSD), Figma, Adobe XD and Sketch designs and with design hand-off tools like Zeplin.',
 			isDefaultOpen: false,
 		},
 		{
-			number: "05.",
-			question: "Do you offer revisions?",
-			answer: "We offer 3 round of revisions. Any bug fixes and small changes are free. Any other change will be billed separately.",
+			number: '04.',
+			question: 'What browsers do you support?',
+			answer: 'We currently support the latest versions of Google Chrome, Safari, Firefox, and Edge.',
 			isDefaultOpen: false,
 		},
 		{
-			number: "06.",
-			question: "Do you also do React/Vue/Svelte work?",
-			answer: "Yes, we can do React/Vue/Svelte work as well for an additional fee per page but keep in mind we keep the logic to a minimum since our main focus is on the markup, not the business logic of the components.",
+			number: '05.',
+			question: 'Do you offer revisions?',
+			answer:
+				'We offer 3 round of revisions. Any bug fixes and small changes are free. Any other change will be billed separately.',
+			isDefaultOpen: false,
+		},
+		{
+			number: '06.',
+			question: 'Do you also do React/Vue work?',
+			answer:
+				'Yes, we can do React/Vue work as well for an additional fee per page but keep in mind we keep the logic to a minimum since our main focus is on the markup, not the business logic of the components.',
 			isDefaultOpen: false,
 		},
 	],
 } = Astro.props;
 ---
 
-<div class="fancy-feature-thirtyThree mt-16 sm:mt-20 md:mt-20 lg:mt-24 xl:mt-32 mb-20 sm:mb-24 md:mb-24 lg:mb-28 xl:mb-32">
-	<div class="container">
-		<div class="title-style-ten text-center wow fadeInUp">
-			<div class="sc-title text-[15px] tracking-[3px] uppercase text-(--prime-nine) pb-4 lg:text-[13px] lg:pb-2.5 md:text-[13px] md:pb-2.5 sm:text-[13px] sm:pb-2.5 xsm:text-[13px] xsm:pb-2.5">{subtitle}</div>
-			<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">{titlePart1} <span class="relative">{titlePart2} <img class=" absolute z-[-1] left-0 bottom-[9px]" src={titleImage} alt=""></span></h2>
-		</div> <!-- /.title-style-ten -->
+<div
+	class='fancy-feature-thirtyThree mt-16 mb-20 sm:mt-20 sm:mb-24 md:mt-20 md:mb-24 lg:mt-24 lg:mb-28 xl:mt-32 xl:mb-32'>
+	<div class='container'>
+		<div class='title-style-ten wow fadeInUp text-center'>
+			<div
+				class='sc-title xsm:text-[13px] xsm:pb-2.5 pb-4 text-[15px] tracking-[3px] text-(--prime-nine) uppercase sm:pb-2.5 sm:text-[13px] md:pb-2.5 md:text-[13px] lg:pb-2.5 lg:text-[13px]'>
+				{subtitle}
+			</div>
+			<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
+				{titlePart1}
+				<span class='relative'
+					>{titlePart2}
+					<img
+						class='absolute bottom-[9px] left-0 z-[-1]'
+						src={titleImage}
+						alt=''
+					/></span
+				>
+			</h2>
+		</div>
+		<!-- /.title-style-ten -->
 
-			<div class="bg-wrapper relative p-[10px_50px] lg:p-[10px] md:p-[10px] sm:p-[10px] xsm:p-[10px] bg-[#F6F6F6] mt-20 lg:mt-10 md:mt-10 sm:mt-10 xsm:mt-10 wow fadeInUp">
-				<div class="accordion accordion-style-four" id={accordionId}>
-					{faqs.map((faq, index) => {
-						const headingId = index === 0 ? "headingOne" : index === 1 ? "headingTwo" : index === 2 ? "headingThree" : index === 3 ? "headingFour" : "headingFive";
-						const collapseId = index === 0 ? "collapseOne" : index === 1 ? "collapseTwo" : index === 2 ? "collapseThree" : index === 3 ? "collapseFour" : "collapseFive";
+		<div
+			class='bg-wrapper xsm:p-[10px] xsm:mt-10 wow fadeInUp relative mt-20 bg-[#F6F6F6] p-[10px_50px] sm:mt-10 sm:p-[10px] md:mt-10 md:p-[10px] lg:mt-10 lg:p-[10px]'>
+			<div
+				class='accordion accordion-style-four'
+				id={accordionId}>
+				{
+					faqs.map((faq, index) => {
+						const headingId =
+							index === 0
+								? 'headingOne'
+								: index === 1
+									? 'headingTwo'
+									: index === 2
+										? 'headingThree'
+										: index === 3
+											? 'headingFour'
+											: index === 4
+												? 'headingFive'
+												: 'headingSix	';
+						const collapseId =
+							index === 0
+								? 'collapseOne'
+								: index === 1
+									? 'collapseTwo'
+									: index === 2
+										? 'collapseThree'
+										: index === 3
+											? 'collapseFour'
+											: index === 4
+												? 'collapseFive'
+												: 'collapseSix';
 						const buttonClasses = faq.isDefaultOpen
 							? "accordion-button text-[24px] font-medium text-black shadow-none transition-all duration-[0.2s] ease-[ease-in-out] pl-10 pr-[45px] py-[30px] border-b-[rgba(0,0,0,0.08)] border-b border-solid bg-transparent outline-0 after:content-['+'] after:text-[24px] after:w-[30px] after:h-[30px] after:text-center after:font-normal after:leading-[30px] after:bg-white after:ml-auto relative flex items-center w-full text-left rounded-none border-0 lg:text-[18px] lg:p-[18px_15px] md:text-[18px] md:p-[18px_15px] sm:text-[18px] sm:p-[18px_15px] xsm:text-[18px] leading-[1.67em] xsm:p-[18px_15px]"
 							: "accordion-button collapsed text-[24px] font-medium text-black shadow-none transition-all duration-[0.2s] ease-[ease-in-out] pl-10 pr-[45px] py-[30px] border-b-[rgba(0,0,0,0.08)] border-b border-solid bg-transparent outline-0 after:content-['+'] after:text-[24px] after:w-[30px] after:h-[30px] after:text-center after:font-normal after:leading-[30px] after:bg-white after:ml-auto relative flex items-center w-full text-left rounded-none border-0 lg:text-[18px] lg:p-[18px_15px] md:text-[18px] md:p-[18px_15px] sm:text-[18px] sm:p-[18px_15px] xsm:text-[18px] leading-[1.67em] xsm:p-[18px_15px]";
 						const collapseClasses = faq.isDefaultOpen
-							? "accordion-collapse collapse show"
-							: "accordion-collapse collapse";
-						const lastItemButton = index === 4 || index === 5
-							? "accordion-button collapsed text-[24px] font-medium text-black shadow-none transition-all duration-[0.2s] ease-[ease-in-out] pl-10 pr-[45px] py-[30px] bg-transparent outline-0 after:content-['+'] after:text-[24px] after:w-[30px] after:h-[30px] after:text-center after:font-normal after:leading-[30px] after:bg-white after:ml-auto relative flex items-center w-full text-left rounded-none lg:text-[18px] lg:p-[18px_15px] md:text-[18px] md:p-[18px_15px] sm:text-[18px] sm:p-[18px_15px] xsm:text-[18px] leading-[1.67em] xsm:p-[18px_15px]"
-							: buttonClasses;
+							? 'accordion-collapse collapse show'
+							: 'accordion-collapse collapse';
+						const lastItemButton =
+							index === 5
+								? "accordion-button collapsed text-[24px] font-medium text-black shadow-none transition-all duration-[0.2s] ease-[ease-in-out] pl-10 pr-[45px] py-[30px] bg-transparent outline-0 after:content-['+'] after:text-[24px] after:w-[30px] after:h-[30px] after:text-center after:font-normal after:leading-[30px] after:bg-white after:ml-auto relative flex items-center w-full text-left rounded-none lg:text-[18px] lg:p-[18px_15px] md:text-[18px] md:p-[18px_15px] sm:text-[18px] sm:p-[18px_15px] xsm:text-[18px] leading-[1.67em] xsm:p-[18px_15px]"
+								: buttonClasses;
 
 						return (
-							<div class="accordion-item rounded-none border-0  bg-transparent ">
-								<div class="accordion-header" id={headingId}>
-									<button class={lastItemButton} type="button" data-bs-toggle="collapse" data-bs-target={`#${collapseId}`} aria-expanded={faq.isDefaultOpen ? "true" : "false"} aria-controls={collapseId}>
-										<span class=" mr-5">{faq.number}</span> {faq.question}
+							<div class='accordion-item rounded-none border-0 bg-transparent'>
+								<div
+									class='accordion-header'
+									id={headingId}>
+									<button
+										class={lastItemButton}
+										type='button'
+										data-bs-toggle='collapse'
+										data-bs-target={`#${collapseId}`}
+										aria-expanded={faq.isDefaultOpen ? 'true' : 'false'}
+										aria-controls={collapseId}>
+										<span class='mr-5'>{faq.number}</span> {faq.question}
 									</button>
 								</div>
-								<div id={collapseId} class={collapseClasses} aria-labelledby={headingId} data-bs-parent={`#${accordionId}`}>
-									<div class="accordion-body text-[rgba(255,255,255,0.8)] p-[0_100px_40px_103px] bg-[#0F0F0F] lg:p-[0_45px_25px_60px] md:p-[0_45px_25px_60px] sm:p-[0_45px_25px_60px] xsm:p-[0_45px_25px_60px]">
-										<p class=" text-[18px] leading-[1.67em] m-0" set:html={faq.answer.replace(/\n\n/g, '<br><br>')}></p>
+								<div
+									id={collapseId}
+									class={collapseClasses}
+									aria-labelledby={headingId}
+									data-bs-parent={`#${accordionId}`}>
+									<div class='accordion-body xsm:p-[0_45px_25px_60px] bg-[#0F0F0F] p-[0_100px_40px_100px] text-[rgba(255,255,255,0.8)] sm:p-[0_45px_25px_60px] md:p-[0_45px_25px_60px] lg:p-[0_45px_25px_60px]'>
+										<p
+											class='m-0 text-[18px] leading-[1.67em]'
+											set:html={faq.answer.replace(/\n\n/g, '<br><br>')}
+										/>
 									</div>
 								</div>
 							</div>
 						);
-					})}
-				</div>
-				<img src="images/lazy.svg" data-src={decorativeImage} alt="" class="lazy-img shapes shape-one absolute z-[-1] -right-16 -top-16">
-			</div> <!-- /.bg-wrapper -->
+					})
+				}
+			</div>
+			<img
+				src='images/lazy.svg'
+				data-src={decorativeImage}
+				alt=''
+				class='lazy-img shapes shape-one absolute -top-16 -right-16 z-[-1]'
+			/>
+		</div>
+		<!-- /.bg-wrapper -->
 	</div>
 </div>

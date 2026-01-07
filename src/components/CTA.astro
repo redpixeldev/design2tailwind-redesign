@@ -19,76 +19,138 @@ interface Props {
 }
 
 const {
-	icon = "images/icon/icon_114.svg",
-	title = "Let's talk with expereince advisors.",
-	description = "eiusmod tempor incididunt. Ut enim mim veniam, quis nostrud elit lorem dolor.",
-	formAction = "inc/contact.php",
-	formId = "contact-form",
-	namePlaceholder = "Your name*",
-	emailPlaceholder = "Email*",
-	messagePlaceholder = "Your message*",
-	buttonText = "SEND MESSAGE",
-	footerText = "Been here before?",
-	footerLinkText = "Check your query",
-	footerLink = "#",
-	shapeText = "Fill the <br>form",
-	shape1Image = "images/shape/shape_90.svg",
-	shape2Image = "images/shape/shape_91.svg",
-	sectionId = "",
+	icon = 'images/icon/icon_114.svg',
+	title = 'Let’s talk about your project.',
+	description = 'Send us your design and requirements. We’ll take a look and reply with a quote and timeline.',
+	formAction = 'inc/contact.php',
+	formId = 'contact-form',
+	namePlaceholder = 'Your name*',
+	emailPlaceholder = 'Email*',
+	messagePlaceholder = 'Your message*',
+	buttonText = 'Get a free quote',
+	footerText = 'Been here before?',
+	footerLinkText = 'Check your query',
+	footerLink = '#',
+	shapeText = 'Fill the <br>form',
+	shape1Image = 'images/shape/shape_90.svg',
+	shape2Image = 'images/shape/shape_91.svg',
+	sectionId = '',
 } = Astro.props;
 ---
 
-<div id={sectionId} class="fancy-short-banner-thirteen py-[170px] lg:py-20 md:py-20 sm:py-20 xsm:py-20 bg-[#F6F9FB] wow fadeInUp">
-	<div class="container">
-		<div class="bg-wrapper z-2 bg-white relative px-3 py-0 rounded-[10px]">
-			<div class="flex flex-wrap mx-[-12px]">
-				<div class="xl:w-11/12 w-full flex-[0_0_auto] px-[12px] max-w-full m-auto">
-					<div class="flex flex-wrap mx-[-12px] items-center">
-						<div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full ml-auto! xl:order-last lg:order-last">
-							<div class="text-wrapper pl-20 pr-0 pt-[60px] pb-20 border-l-[#E9E9E9] border-l border-solid md:p-[50px_0] md:border-l-0 sm:p-[50px_0] sm:border-l-0 xsm:p-[50px_0] xsm:border-l-0">
-								<img src="images/lazy.svg" data-src={icon} alt="" class="lazy-img mb-[30px]">
-								<div class="title-style-one">
-									<h2 class="font-Recoleta font-normal text-black xl:text-6xl/[66px] lg:text-5xl/[56px] text-4xl">{title}</h2>
+<div
+	id={sectionId}
+	class='fancy-short-banner-thirteen xsm:py-20 wow fadeInUp bg-[#F6F9FB] py-[170px] sm:py-20 md:py-20 lg:py-20'>
+	<div class='container'>
+		<div class='bg-wrapper relative z-2 rounded-[10px] bg-white px-3 py-0'>
+			<div class='mx-[-12px] flex flex-wrap'>
+				<div class='m-auto w-full max-w-full flex-[0_0_auto] px-[12px] xl:w-11/12'>
+					<div class='mx-[-12px] flex flex-wrap items-center'>
+						<div
+							class='ml-auto! w-full max-w-full flex-[0_0_auto] px-[12px] lg:order-last lg:w-6/12 xl:order-last xl:w-6/12'>
+							<div
+								class='text-wrapper xsm:p-[50px_0] xsm:border-l-0 border-l border-solid border-l-[#E9E9E9] pt-[60px] pr-0 pb-20 pl-20 sm:border-l-0 sm:p-[50px_0] md:border-l-0 md:p-[50px_0]'>
+								<img
+									src='images/lazy.svg'
+									data-src={icon}
+									alt=''
+									class='lazy-img mb-[30px]'
+								/>
+								<div class='title-style-one'>
+									<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl/[56px] xl:text-6xl/[66px]'>
+										{title}
+									</h2>
 								</div>
-								<p class="text-[20px] lg:text-[18px] md:text-[18px] sm:text-[18px] xsm:text-[18px] text-black pt-5 m-0!">{description}</p>
+								<p
+									class='xsm:text-[18px] m-0! pt-5 text-[20px] text-black sm:text-[18px] md:text-[18px] lg:text-[18px]'>
+									{description}
+								</p>
 							</div>
 						</div>
-						<div class="xl:w-5/12 lg:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full xl:order-first lg:order-first">
-							<div class="form-style-two md:mb-10 sm:mb-10 xsm:mb-10 ">
-								<form action={formAction} id={formId} data-toggle="validator">
-									<div class="messages"></div>
-									<div class="flex flex-wrap mx-[-12px] controls">
-										<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-											<div class="input-group-meta relative form-group mb-5">
-												<input class=" h-[60px] p-[0_20px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" type="text" placeholder={namePlaceholder} name="name" required="required" data-error="Name is required.">
-												<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
+						<div class='w-full max-w-full flex-[0_0_auto] px-[12px] lg:order-first lg:w-6/12 xl:order-first xl:w-5/12'>
+							<div class='form-style-two xsm:mb-10 sm:mb-10 md:mb-10'>
+								<form
+									action={formAction}
+									id={formId}
+									data-toggle='validator'>
+									<div class='messages'></div>
+									<div class='controls mx-[-12px] flex flex-wrap'>
+										<div class='w-full max-w-full flex-[0_0_auto] px-[12px]'>
+											<div class='input-group-meta form-group relative mb-5'>
+												<input
+													class='h-[60px] w-full max-w-full rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)] p-[0_20px] text-[15px] text-black'
+													type='text'
+													placeholder={namePlaceholder}
+													name='name'
+													required='required'
+													data-error='Name is required.'
+												/>
+												<div
+													class='help-block with-errors absolute bottom-[-17px] left-0 text-[13px] leading-5 text-[#ff4d44]'>
+												</div>
 											</div>
 										</div>
 
-										<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-											<div class="input-group-meta relative form-group mb-5">
-												<input class=" h-[60px] p-[0_20px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" type="email" placeholder={emailPlaceholder} name="email" required="required" data-error="Valid email is required.">
-												<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
+										<div class='w-full max-w-full flex-[0_0_auto] px-[12px]'>
+											<div class='input-group-meta form-group relative mb-5'>
+												<input
+													class='h-[60px] w-full max-w-full rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)] p-[0_20px] text-[15px] text-black'
+													type='email'
+													placeholder={emailPlaceholder}
+													name='email'
+													required='required'
+													data-error='Valid email is required.'
+												/>
+												<div
+													class='help-block with-errors absolute bottom-[-17px] left-0 text-[13px] leading-5 text-[#ff4d44]'>
+												</div>
 											</div>
 										</div>
-										<div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-											<div class="input-group-meta relative form-group mb-[15px] ">
-												<textarea class=" h-[120px] max-h-[120px] px-5 py-[15px] w-full max-w-full text-black text-[15px] rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)]" placeholder={messagePlaceholder} name="message" required="required" data-error="Please,leave us a message."></textarea>
-												<div class="help-block with-errors absolute bottom-[-17px] text-[13px] leading-5 text-[#ff4d44] left-0"></div>
+										<div class='w-full max-w-full flex-[0_0_auto] px-[12px]'>
+											<div class='input-group-meta form-group relative mb-[15px]'>
+												<textarea
+													class='h-[120px] max-h-[120px] w-full max-w-full rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)] px-5 py-[15px] text-[15px] text-black'
+													placeholder={messagePlaceholder}
+													name='message'
+													required='required'
+													data-error='Please,leave us a message.'
+												></textarea>
+												<div
+													class='help-block with-errors absolute bottom-[-17px] left-0 text-[13px] leading-5 text-[#ff4d44]'>
+												</div>
 											</div>
 										</div>
-										<div class="w-full flex-[0_0_auto] px-[12px] max-w-full"><button class="btn-twentyTwo w-full font-medium tran3s uppercase text-[14px] leading-[55px] text-white tracking-[0.88px] px-[42px] py-0 rounded-[7px] hover:bg-(--prime-ten) bg-[#a056fa]">{buttonText}</button></div>
+										<div class='w-full max-w-full flex-[0_0_auto] px-[12px]'>
+											<button
+												class='btn-twentyTwo tran3s w-full rounded-[7px] bg-[#a056fa] px-[42px] py-0 text-[14px] leading-[55px] font-medium tracking-[0.88px] text-white uppercase hover:bg-(--prime-ten)'
+												>{buttonText}</button
+											>
+										</div>
 									</div>
-									<div class="text-[16px] text-center mt-[25px] "><span class="opacity-75">{footerText}</span> <a href={footerLink} class=" text-black font-medium hover:text-[#0a58ca]">{footerLinkText}</a></div>
 								</form>
-							</div> <!-- /.form-style-two -->
+							</div>
+							<!-- /.form-style-two -->
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="shapes shape-text font-medium text-[20px] text-black text-center absolute z-[-1] leading-6 top-[-62px] rotate-[-10deg] lg:rotate-20 xl:rotate-[-15deg] left-10 lg:left-5 xl:-left-10" set:html={shapeText}></div>
-			<img src="images/lazy.svg" data-src={shape1Image} alt="" class="lazy-img shapes shape-one absolute z-1 rotate-100 lg:rotate-70 xl:rotate-0 left-20 lg:-left-2 xl:left-1 -top-2.5 block scale-y-[-1] lg:scale-100 xl:scale-100">
-			<img src="images/lazy.svg" data-src={shape2Image} alt="" class="lazy-img shapes shape-two absolute z-[-1] left-[-60px] bottom-[-60px]">
-		</div> <!-- /.bg-wrapper -->
+			<div
+				class='shapes shape-text absolute top-[-62px] left-10 z-[-1] rotate-[-10deg] text-center text-[20px] leading-6 font-medium text-black lg:left-5 lg:rotate-20 xl:-left-10 xl:rotate-[-15deg]'
+				set:html={shapeText}
+			/>
+			<img
+				src='images/lazy.svg'
+				data-src={shape1Image}
+				alt=''
+				class='lazy-img shapes shape-one absolute -top-2.5 left-20 z-1 block scale-y-[-1] rotate-100 lg:-left-2 lg:scale-100 lg:rotate-70 xl:left-1 xl:scale-100 xl:rotate-0'
+			/>
+			<img
+				src='images/lazy.svg'
+				data-src={shape2Image}
+				alt=''
+				class='lazy-img shapes shape-two absolute bottom-[-60px] left-[-60px] z-[-1]'
+			/>
+		</div>
+		<!-- /.bg-wrapper -->
 	</div>
 </div>
