@@ -1,5 +1,0 @@
-name = "astro-starter"
-pages_build_output_dir = "./dist"
-
-[vars]
-PROD = true
