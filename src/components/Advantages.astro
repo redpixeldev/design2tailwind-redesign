@@ -57,14 +57,14 @@ const {
 } = Astro.props;
 ---
 
-<div class='fancy-feature-twentyThree mt-16 mb-10 px-4 md:mt-24 md:mb-14 lg:mt-32 lg:mb-20 xl:mt-32 xl:mb-20'>
+<div class='fancy-feature-twentyThree mt-16 mb-10 px-4 min-[768px]:mt-24 min-[768px]:mb-14 min-[1024px]:mt-32 min-[1024px]:mb-20'>
 	<div class='container'>
 		<div class='title-style-seven wow fadeInUp pb-5 text-center'>
-			<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
+			<h2 class='font-Recoleta text-4xl font-normal text-black min-[1024px]:text-5xl min-[1280px]:text-6xl'>
 				<span class='relative inline-block'>
 					{title}
 					<img
-						class='absolute -bottom-2 left-0 z-[-1] w-48 rotate-3 xl:w-60'
+						class='absolute -bottom-2 left-0 -z-1 w-48 rotate-3 min-[1280px]:w-60'
 						src={titleImage}
 						alt=''
 					/>
@@ -73,21 +73,21 @@ const {
 		</div>
 
 		<div
-			class='grid gap-x-12 gap-y-6 pt-10 md:grid-cols-2 md:pt-14 lg:grid-cols-3 lg:gap-y-10 xl:grid-cols-3 xl:gap-x-24 xl:pt-20'>
+			class='grid gap-x-12 gap-y-6 pt-10 min-[768px]:grid-cols-2 min-[768px]:pt-14 min-[1024px]:grid-cols-3 min-[1024px]:gap-y-10 min-[1280px]:gap-x-24 min-[1280px]:pt-20'>
 			{
 				advantages.map((advantage) => (
 					<div
-						class='wow fadeInUp w-full text-center lg:text-left xl:text-left'
+						class='wow fadeInUp w-full text-center min-[1024px]:text-left'
 						data-wow-delay={advantage.delay}>
-						<div class="icon xsm:w-[50px] xsm:h-[50px] xsm:m-[0_auto] relative flex h-[65px] w-[65px] items-center justify-center rounded-[50%] border-[3px] border-solid border-black before:absolute before:top-[-3px] before:left-[5px] before:z-[-1] before:h-[calc(100%+6px)] before:w-[calc(100%+6px)] before:rounded-[50%] before:bg-[#cac6fc] before:content-[''] sm:m-[0_auto] sm:h-[50px] sm:w-[50px] md:m-[0_auto] md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px]">
+						<div class="icon relative mx-auto flex size-12.5 items-center justify-center rounded-full border-[3px] border-solid border-black before:absolute before:-top-0.75 before:left-1.25 before:-z-1 before:size-[calc(100%+6px)] before:rounded-full before:bg-[#cac6fc] before:content-[''] min-[1024px]:mx-0 min-[1024px]:size-15 min-[1280px]:size-16.25">
 							<img
 								src='images/lazy.svg'
 								data-src={advantage.icon}
 								alt=''
-								class='lazy-img h-6 xl:h-7'
+								class='lazy-img h-6 min-[1280px]:h-7'
 							/>
 						</div>
-						<h4 class='xsm:mb-[10px] xsm:text-[20px] mt-6 mb-5 sm:mb-[10px] sm:text-[20px] md:mb-[10px] md:text-[20px] lg:mt-[30px] lg:mb-[10px] lg:text-[20px]'>
+						<h4 class='mt-6 mb-2.5 text-xl min-[1024px]:mt-7.5 min-[1280px]:mb-5'>
 							{advantage.title}
 						</h4>
 						<p>{advantage.description}</p>

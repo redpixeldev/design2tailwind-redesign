@@ -7,56 +7,56 @@ import Footer from '@components/Footer.astro';
 <Layout title='Astro'>
 	<Header />
 
-	<div class="pt-36 lg:pt-44 xl:pt-52">
+	<div class="pt-36 min-[1024px]:pt-44 min-[1280px]:pt-52">
 		<div class="fancy-feature-fiftyOne relative">
 			<div class="container">
 				<div class="flex flex-wrap">
 					<div class="wow fadeInLeft">
-						<div class="title-style-five xl:mb-16 lg:mb-16 md:mb-16 sm:mb-10 xsm:mb-10">
+						<div class="title-style-five mb-10 min-[768px]:mb-16">
 							<div class="sc-title-two italic relative inline-block text-[17px] text-(--prime-ten) mb-5 pl-10 before:content-[''] before:absolute before:w-6 before:h-px before:left-0 before:top-3.5 before:bg-(--prime-ten)">Blog</div>
-							<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">Latest posts</h2>
+							<h2 class="font-Recoleta font-normal text-black text-4xl min-[1024px]:text-5xl min-[1280px]:text-6xl">Latest posts</h2>
 							<p class="text-black text-xl pt-7">Check out our posts for the latest news, tutorials, <br/> tips and tricks for Tailwind CSS
 							</p>
 						</div>
 					</div>
 				</div>
 			</div> <!-- /.container -->
-			<img src="images/lazy.svg" data-src="images/shape/shape_172.svg" alt="" class="lazy-img shapes shape-two absolute z-[-1] right-[17%] 2xl:right-[8%] lg:right-[6%] md:hidden! sm:hidden! xsm:hidden! top-[4%]">
+			<img src="images/lazy.svg" data-src="images/shape/shape_172.svg" alt="" class="lazy-img shapes shape-two hidden absolute -z-1 top-[4%] min-[1024px]:block min-[1024px]:right-[6%] min-[1536px]:right-[8%]">
 		</div>
 	</div>
 
 	<div class="container relative z-30">
-		<div class="lg:w-5/6 xl:w-5/6 mb-20">
+		<div class="mb-20 min-[1024px]:w-5/6">
 			<div class="flex flex-col gap-8">
 				<a
 					href="/post"
-					class="border-[#b1b2f4] bg-white group flex flex-col overflow-hidden rounded-xl border shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 md:flex-row md:items-center"
+					class="border-[#b1b2f4] bg-white group flex flex-col overflow-hidden rounded-xl border shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center"
 				>
-					<div class="w-full px-5 py-6 md:px-8 md:py-8">
+					<div class="w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8">
 						<div class="flex">
-							<p class="text-black font-body text-sm md:text-base">
+							<p class="text-black font-body text-sm min-[768px]:text-base">
 								By
 								<span class="font-bold">Vivian</span>
 							</p>
-							<span class="text-black px-2 text-sm md:text-base">/</span>
-							<p class="text-black font-body text-sm md:text-base">
+							<span class="text-black px-2 text-sm min-[768px]:text-base">/</span>
+							<p class="text-black font-body text-sm min-[768px]:text-base">
 								Septembre 18,2024
 							</p>
 						</div>
 						<h3
-							class="text-black group-hover:text-[#a056fa] md:pt-2 lg:pt-2 xl:pt-2 font-body text-lg font-Recoleta font-medium transition-colors duration-300 md:text-xl lg:text-2xl xl:text-2xl"
+							class="text-black group-hover:text-[#a056fa] font-body text-lg font-Recoleta font-medium transition-colors duration-300 min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl"
 						>
 						How to use box shadows with Tailwind CSS, including custom and arbitrary values
 						</h3>
 						<p
-							class="text-black line-clamp-2 pt-1.5 md:pt-3 lg:pt-3 xl:pt-3 text-sm md:text-base lg:text-base xl:text-base font-body md:line-clamp-1 lg:xl:line-clamp-2 xl:line-clamp-2"
+							class="text-black text-sm line-clamp-2 pt-1.5 font-body min-[768px]:pt-3 min-[768px]:text-base min-[768px]:line-clamp-1 min-[1024px]:line-clamp-2"
 						>
 
 						Learn how to use box shadows to add some flair to your designs.
 
 						</p>
 						<p
-							class="text-[#4e257e] font-medium  pt-1 md:pt-2 lg:pt-2 xl:pt-2 font-body transition-colors duration-300 mb-0"
+							class="text-[#4e257e] font-medium pt-1 font-body transition-colors duration-300 mb-0 min-[768px]:pt-2"
 						>
 							Read More »
 						</p>
@@ -64,33 +64,33 @@ import Footer from '@components/Footer.astro';
 				</a>
 				<a
 					href="/post"
-					class="border-[#b1b2f4] bg-white flex group flex-col overflow-hidden rounded-xl border shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 md:flex-row md:items-center"
+					class="border-[#b1b2f4] bg-white flex group flex-col overflow-hidden rounded-xl border shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center"
 				>
-					<div class="w-full px-5 py-6 md:px-8 md:py-8">
+					<div class="w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8">
 						<div class="flex">
-							<p class="text-black font-body text-sm md:text-base">
+							<p class="text-black font-body text-sm min-[768px]:text-base">
 								By
 								<span class="font-bold">Vivian</span>
 							</p>
-							<span class="text-black px-2 text-sm md:text-base">/</span>
-							<p class="text-black font-body text-sm md:text-base">
+							<span class="text-black px-2 text-sm min-[768px]:text-base">/</span>
+							<p class="text-black font-body text-sm min-[768px]:text-base">
 								Septembre 18,2024
 							</p>
 						</div>
 						<h3
-							class="text-black group-hover:text-[#a056fa] md:pt-2 lg:pt-2 xl:pt-2 font-body text-lg font-Recoleta font-medium transition-colors duration-300 md:text-xl lg:text-2xl xl:text-2xl"
+							class="text-black group-hover:text-[#a056fa] font-body text-lg font-Recoleta font-medium transition-colors duration-300 min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl"
 						>
 						How to use box shadows with Tailwind CSS, including custom and arbitrary values
 						</h3>
 						<p
-							class="text-black line-clamp-2 pt-1.5 md:pt-3 lg:pt-3 xl:pt-3 text-sm md:text-base lg:text-base xl:text-base font-body md:line-clamp-1 lg:xl:line-clamp-2 xl:line-clamp-2"
+							class="text-black text-sm line-clamp-2 pt-1.5 font-body min-[768px]:pt-3 min-[768px]:text-base min-[768px]:line-clamp-1 min-[1024px]:line-clamp-2"
 						>
 
 						Learn how to use box shadows to add some flair to your designs.
 
 						</p>
 						<p
-							class="text-[#4e257e] font-medium pt-1 md:pt-2 lg:pt-2 xl:pt-2 font-body transition-colors duration-300 mb-0"
+							class="text-[#4e257e] font-medium pt-1 font-body transition-colors duration-300 mb-0 min-[768px]:pt-2"
 						>
 							Read More »
 						</p>
@@ -98,33 +98,33 @@ import Footer from '@components/Footer.astro';
 				</a>
 				<a
 					href="/post"
-					class="border-[#b1b2f4] flex bg-white group flex-col overflow-hidden rounded-xl border shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 md:flex-row md:items-center"
+					class="border-[#b1b2f4] flex bg-white group flex-col overflow-hidden rounded-xl border shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center"
 				>
-					<div class="w-full px-5 py-6 md:px-8 md:py-8">
+					<div class="w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8">
 						<div class="flex">
-							<p class="text-black font-body text-sm md:text-base">
+							<p class="text-black font-body text-sm min-[768px]:text-base">
 								By
 								<span class="font-bold">Vivian</span>
 							</p>
-							<span class="text-black px-2 text-sm md:text-base">/</span>
-							<p class="text-black font-body text-sm md:text-base">
+							<span class="text-black px-2 text-sm min-[768px]:text-base">/</span>
+							<p class="text-black font-body text-sm min-[768px]:text-base">
 								Septembre 18,2024
 							</p>
 						</div>
 						<h3
-							class="text-black group-hover:text-[#a056fa] md:pt-2 lg:pt-2 xl:pt-2 font-body text-lg font-Recoleta font-medium transition-colors duration-300 md:text-xl lg:text-2xl xl:text-2xl"
+							class="text-black group-hover:text-[#a056fa] font-body text-lg font-Recoleta font-medium transition-colors duration-300 min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl"
 						>
 						How to use box shadows with Tailwind CSS, including custom and arbitrary values
 						</h3>
 						<p
-							class="text-black line-clamp-2 pt-1.5 md:pt-3 lg:pt-3 xl:pt-3 text-sm md:text-base lg:text-base xl:text-base font-body md:line-clamp-1 lg:xl:line-clamp-2 xl:line-clamp-2"
+							class="text-black text-sm line-clamp-2 pt-1.5 font-body min-[768px]:pt-3 min-[768px]:text-base min-[768px]:line-clamp-1 min-[1024px]:line-clamp-2"
 						>
 
 						Learn how to use box shadows to add some flair to your designs.
 
 						</p>
 						<p
-							class="text-[#4e257e] font-medium pt-1 md:pt-2 lg:pt-2 xl:pt-2 font-body transition-colors duration-300 mb-0"
+							class="text-[#4e257e] font-medium pt-1 font-body transition-colors duration-300 mb-0 min-[768px]:pt-2"
 						>
 							Read More »
 						</p>

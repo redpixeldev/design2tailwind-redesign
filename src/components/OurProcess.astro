@@ -59,28 +59,28 @@ const {
 	id={id}>
 	<div class='container'>
 		<div class='flex flex-wrap items-center'>
-			<div class='wow fadeInUp mt-10 w-full max-w-full flex-[0_0_auto] px-[12px] md:w-6/12 lg:w-4/12 xl:w-4/12'>
+			<div class='wow fadeInUp mt-10 w-full max-w-full flex-[0_0_auto] px-3 min-[768px]:w-6/12 min-[1024px]:w-4/12'>
 				<div class=''>
-					<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
+					<h2 class='font-Recoleta text-4xl font-normal text-black min-[1024px]:text-5xl min-[1280px]:text-6xl'>
 						{titleLine1}
 						<span class='relative z-1 inline-block'>
 							{titleLine2}
 							<span
-								class='mark-bg xsm:h-[34px] absolute top-2/4 left-[-5px] z-[-1] h-[50px] w-[98%] -translate-y-2/4 sm:h-[34px] md:h-[34px]'
+								class='mark-bg absolute top-1/2 -left-1.25 -z-1 h-8.5 w-[98%] -translate-y-1/2 min-[1024px]:h-12.5'
 								style={`background-color:${highlightColor};`}
 							></span>
 						</span>
 					</h2>
-					<span class='mt-6 block h-[3px] w-28 bg-black md:mt-12 lg:mt-12 xl:mt-12'></span>
+					<span class='mt-6 block h-0.75 w-28 bg-black min-[768px]:mt-12'></span>
 				</div>
 			</div>
 			{
 				steps.map((step) => (
 					<div
-						class='wow fadeInUp mt-10 w-full max-w-full flex-[0_0_auto] px-[12px] md:w-6/12 lg:w-4/12 xl:w-4/12'
+						class='wow fadeInUp mt-10 w-full max-w-full flex-[0_0_auto] px-3 min-[768px]:w-6/12 min-[1024px]:w-4/12'
 						data-wow-delay={step.delay}>
-						<div class='card-style-three xsm:p-[30px_10px_25px_15px] w-full rounded-[10px] border border-solid border-[#b1b2f4] bg-white p-[42px_45px_30px_45px] transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#FF35D9] hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] sm:p-[30px_10px_25px_15px] md:p-[30px_10px_25px_15px] lg:p-[30px_10px_25px_15px]'>
-							<div class='icon flex h-[65px] items-end'>
+						<div class='card-style-three w-full rounded-[10px] border border-solid border-[#b1b2f4] bg-white pt-7.5 pr-2.5 pb-6.25 pl-3.75 transition-all duration-300 ease-in-out hover:border-[#FF35D9] hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] min-[1280px]:pt-10.5 min-[1280px]:pr-11.25 min-[1280px]:pb-7.5 min-[1280px]:pl-11.25'>
+							<div class='icon flex h-16.25 items-end'>
 								<img
 									src='images/lazy.svg'
 									data-src={step.icon}
@@ -88,10 +88,10 @@ const {
 									class='lazy-img max-h-full'
 								/>
 							</div>
-							<h4 class='xsm:text-[20px] mt-[25px] mb-5 sm:text-[20px] md:text-[20px] lg:text-[20px] 2xl:text-[22px]'>
+							<h4 class='mt-6.25 mb-5 text-xl min-[1280px]:text-[22px]'>
 								{step.title}
 							</h4>
-							<p class='mb-4 md:mb-0 md:min-h-[80px] lg:min-h-[80px] xl:min-h-[80px]'>{step.description}</p>
+							<p class='mb-4 min-[768px]:mb-0 min-[768px]:min-h-20'>{step.description}</p>
 						</div>
 					</div>
 				))
@@ -99,15 +99,15 @@ const {
 		</div>
 	</div>
 	<div
-		class='shapes shape-one absolute top-[4%] left-[-50px] z-[-1] h-[126px] w-[126px] animate-[jumpThree_3s_infinite_linear] rounded-[50%] bg-[#FFC961]'>
+		class='shapes shape-one absolute top-[4%] -left-12.5 -z-1 size-31.5 animate-[jumpThree_3s_infinite_linear] rounded-full bg-[#FFC961]'>
 	</div>
 	<img
 		src='images/lazy.svg'
 		data-src='images/shape/shape_36.svg'
 		alt=''
-		class='lazy-img shapes shape-two absolute top-[30%] right-[3%] z-[-1]'
+		class='lazy-img shapes shape-two absolute top-[30%] right-[3%] -z-1'
 	/>
 	<div
-		class='shapes shape-three absolute right-[-150px] bottom-0 z-[-1] h-[300px] w-[300px] animate-[jumpTwo_3s_infinite_linear] rounded-[50%] bg-[#FF35D9] opacity-70'>
+		class='shapes shape-three absolute -right-37.5 bottom-0 -z-1 size-75 animate-[jumpTwo_3s_infinite_linear] rounded-full bg-[#FF35D9] opacity-70'>
 	</div>
 </div>

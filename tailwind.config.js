@@ -19,6 +19,7 @@ module.exports = {
     },
     extend: {
       screens: {
+        // Legacy Bootstrap-style breakpoints (to be removed gradually)
         '2xl': {
           'min': '1200px',
           'max': '1399px'
@@ -44,6 +45,8 @@ module.exports = {
         'xsm': {
           'max': '575.98px'
         },
+        // Custom mobile-first breakpoint for small mobile
+        'xs': '480px',
       },
     },
   },

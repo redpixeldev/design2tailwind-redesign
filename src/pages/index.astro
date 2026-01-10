@@ -15,51 +15,51 @@ import OurBlog from '@components/OurBlog.astro';
 <Layout title='Astro'>
 	<Header />
 
-	<div class='hero-banner-two relative pt-36 pb-16 md:pb-20 lg:pt-44 lg:pb-24 xl:pt-52 xl:pb-28'>
+	<div
+		class='hero-banner-two relative pt-36 pb-16 min-[768px]:pb-20 min-[1024px]:pt-44 min-[1024px]:pb-24 min-[1280px]:pt-52 min-[1280px]:pb-28'>
 		<img
 			src='images/lazy.svg'
 			data-src='images/shape/shape_26.svg'
 			alt=''
-			class='lazy-img shapes shape-left absolute top-[40%] left-[8%] z-[-1] hidden w-[11.9%] max-w-[248px] sm:block'
+			class='lazy-img shapes shape-left absolute top-[40%] left-[8%] -z-1 hidden w-[11.9%] max-w-[248px] min-[640px]:block'
 		/>
 		<img
 			src='images/lazy.svg'
 			data-src='images/shape/shape_27.svg'
 			alt=''
-			class='lazy-img shapes shape-right absolute top-[39%] right-[9%] z-[-1] hidden w-[9.1%] max-w-[193px] sm:block'
+			class='lazy-img shapes shape-right absolute top-[39%] right-[9%] -z-1 hidden w-[9.1%] max-w-[193px] min-[640px]:block'
 		/>
 		<div class='container'>
 			<div class='flex flex-wrap'>
 				<div
-					class='wow fadeInUp m-auto w-full max-w-full flex-[0_0_auto] px-[12px] text-center md:w-9/12 lg:w-8/12 xl:w-8/12'>
+					class='wow fadeInUp m-auto w-full max-w-full flex-[0_0_auto] px-3 text-center min-[768px]:w-9/12 min-[1024px]:w-8/12'>
 					<h1
-						class='hero-heading font-Recoleta xsm:text-4xl xsm:leading-[1.2em] relative text-[82px] leading-[1.09em] font-normal sm:text-[40px] sm:leading-[1.2em] md:text-[40px] md:leading-[1.2em] lg:text-[58px] 2xl:text-[70px]'>
+						class='hero-heading font-Recoleta relative text-4xl leading-[1.2em] font-normal min-[640px]:text-[40px] min-[1024px]:text-[58px] min-[1024px]:leading-[1.09em] min-[1280px]:text-[70px] min-[1536px]:text-[82px]'>
 						<img
 							src='images/lazy.svg'
 							data-src='images/shape/shape_25.svg'
 							alt=''
-							class='lazy-img shapes line-shape xsm:hidden! absolute top-[45%] left-[3%] z-[-1] sm:hidden! md:hidden! lg:w-40 xl:w-auto'
+							class='lazy-img shapes line-shape absolute top-[45%] left-[3%] -z-1 hidden min-[1024px]:block min-[1024px]:w-40 min-[1280px]:w-auto'
 						/>We convert your <span
-							class="relative z-1 inline-block before:absolute before:top-2/4 before:left-[31%] before:z-[-1] before:h-[81%] before:w-[73%] before:-translate-y-2/4 before:bg-[#FFEBE5] before:content-['']"
+							class="relative z-1 inline-block before:absolute before:top-1/2 before:left-[31%] before:-z-1 before:h-[81%] before:w-[73%] before:-translate-y-1/2 before:bg-[#FFEBE5] before:content-['']"
 							>design</span
 						> to Tailwind CSS.
 					</h1>
 					<p
-						class='xsm:pt-[10px] mb-[30px] pt-5 text-base leading-[1.67em] sm:pt-[10px] md:pt-[10px] lg:mb-[40px] lg:pt-[10px] lg:text-lg lg:text-[19px] xl:mb-[50px] xl:text-xl'>
+						class='mb-7.5 pt-2.5 text-base leading-[1.67em] min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:mb-12.5 min-[1280px]:pt-5 min-[1280px]:text-xl'>
 						Tailwind-first markup designed to drop straight into your stack.
 						<br />
 						We work from Figma, PSD, XD, and Sketch, and deliver code that fits seamlessly into modern stacks.
 					</p>
-					<div
-						class='xs:flex-row flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6 md:flex-row md:gap-6 lg:flex-row lg:gap-6 xl:flex-row xl:gap-6'>
+					<div class='flex flex-col items-center justify-center gap-3 min-[640px]:flex-row min-[640px]:gap-6'>
 						<a
 							href='/#quote'
-							class='tran3s btn-three xsm:p-[0_35px] xsm:leading-[48px] xsm:text-[15px] relative rounded-[28px] bg-[#BC46E2] p-[0_40px] text-[17px] leading-[52px] font-medium text-white transition-all duration-[0.3s] ease-[ease-in-out] hover:bg-[#4e257e] sm:p-[0_35px] sm:text-[15px] sm:leading-[48px] md:p-[0_35px] md:text-[15px] md:leading-[48px] lg:text-[15px]'
+							class='tran3s btn-three relative rounded-[28px] bg-[#BC46E2] px-8.75 text-[15px]/[48px] font-medium text-white transition-all duration-300 ease-in-out hover:bg-[#4e257e] min-[1280px]:px-10 min-[1280px]:text-[17px]/[52px]'
 							>Get a Free Quote</a
 						>
 						<a
 							href='/#process'
-							class='tran3s btn-three xsm:p-[0_35px] xsm:leading-[48px] xsm:text-[15px] relative rounded-[28px] border border-[#4e257e] p-[0_40px] text-[17px] leading-[52px] font-medium text-[#4e257e] transition-all duration-[0.3s] ease-[ease-in-out] hover:bg-[#4e257e] hover:text-white sm:p-[0_35px] sm:text-[15px] sm:leading-[48px] md:p-[0_35px] md:text-[15px] md:leading-[48px] lg:text-[15px]'
+							class='tran3s btn-three relative rounded-[28px] border border-[#4e257e] px-8.75 text-[15px]/[48px] font-medium text-[#4e257e] transition-all duration-300 ease-in-out hover:bg-[#4e257e] hover:text-white min-[1280px]:px-10 min-[1280px]:text-[17px]/[52px]'
 							>Learn More</a
 						>
 					</div>
@@ -76,100 +76,81 @@ import OurBlog from '@components/OurBlog.astro';
 
 	<Testimonials />
 
-	<div class='fancy-feature-thirtySeven mb-24 sm:mb-28 lg:mb-36 xl:mb-40'>
+	<div class='fancy-feature-thirtySeven mb-24 min-[640px]:mb-28 min-[1024px]:mb-36 min-[1280px]:mb-40'>
 		<div class='container'>
-			<div class='mx-[-12px] flex flex-wrap items-center'>
-				<div class='w-full max-w-full flex-[0_0_auto] px-[12px] lg:w-6/12 xl:w-6/12'>
-					<div class='block-style-four xxl:pr-12! xxl:ml-6 xsm:mb-[70px] wow fadeInLeft sm:mb-[70px] md:mb-[70px]'>
+			<div class='-mx-3 flex flex-wrap items-center'>
+				<div class='w-full max-w-full flex-[0_0_auto] px-3 min-[1024px]:w-6/12'>
+					<div class='block-style-four mb-17.5 wow fadeInLeft min-[1024px]:mb-0 min-[1536px]:pr-12 min-[1536px]:ml-6'>
 						<div class='title-style-six'>
-							<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
-								What you’ll receive (and why teams keep coming back)
+							<h2 class='font-Recoleta text-4xl font-normal text-black min-[1024px]:text-5xl min-[1280px]:text-6xl'>
+								What you'll receive (and why teams keep coming back)
 							</h2>
 						</div>
 						<!-- /.title-style-ten -->
-						<p
-							class='xsm:pt-[10px] xsm:pb-5 mb-0 pt-5 pb-[30px] text-black sm:pt-[10px] sm:pb-5 md:pt-[10px] md:pb-5 lg:pt-[10px] lg:pb-5 lg:text-xl/[30px] xl:text-xl/[30px]'>
+						<p class='mb-0 pt-2.5 pb-5 text-black min-[1024px]:text-xl/7.5 min-[1536px]:pt-5 min-[1536px]:pb-7.5'>
 							We turn your designs into production-ready Tailwind CSS, written to be easy to maintain, extend, and ship.
 						</p>
 						<ul class='mb-0 list-item list-none pl-0'>
-							<li
-								class='relative mb-5 pl-10 text-black before:absolute before:top-0 before:left-0 before:content-[url(../images/icon/icon_93.svg)] lg:text-xl/[30px] lg:text-[18px] xl:text-xl/[30px]'>
+							<li class='relative mb-5 pl-10 text-black before:absolute before:top-0 before:left-0 before:content-[url(../images/icon/icon_93.svg)] min-[1024px]:text-lg/7.5'>
 								Minimal custom CSS. Design tokens, spacing, and colors live in the Tailwind @theme where they belong.
 							</li>
-							<li
-								class='relative mb-5 pl-10 text-black before:absolute before:top-0 before:left-0 before:content-[url(../images/icon/icon_93.svg)] lg:text-xl/[30px] lg:text-[18px] xl:text-xl/[30px]'>
+							<li class='relative mb-5 pl-10 text-black before:absolute before:top-0 before:left-0 before:content-[url(../images/icon/icon_93.svg)] min-[1024px]:text-lg/7.5'>
 								Hand-crafted HTML that matches your design exactly and works across all modern browsers and devices
 								(Chrome, Safari, Firefox, iOS Safari, Chrome Android)
 							</li>
-							<li
-								class='relative mb-5 pl-10 text-black before:absolute before:top-0 before:left-0 before:content-[url(../images/icon/icon_93.svg)] lg:text-xl/[30px] lg:text-[18px] xl:text-xl/[30px]'>
+							<li class='relative mb-5 pl-10 text-black before:absolute before:top-0 before:left-0 before:content-[url(../images/icon/icon_93.svg)] min-[1024px]:text-lg/7.5'>
 								A ready-to-run project with all files included. Install dependencies and run locally with a single
 								command.
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class='xxl:w-5/12 ml-auto! w-full max-w-full flex-[0_0_auto] px-[12px] lg:w-6/12 xl:w-6/12'>
-					<div class='mx-[-12px] flex flex-wrap items-end'>
-						<div class='wow fadeInUp max-w-full flex-[0_0_auto] px-[12px] sm:w-4/12 md:w-5/12 lg:w-5/12 xl:w-5/12'>
+				<div class='ml-auto w-full max-w-full flex-[0_0_auto] px-3 min-[1024px]:w-6/12 min-[1536px]:w-5/12'>
+					<div class='-mx-3 flex flex-wrap items-end'>
+						<div class='wow fadeInUp w-full max-w-full flex-[0_0_auto] px-3 min-[640px]:w-4/12 min-[768px]:w-5/12'>
 							<img
 								src='images/lazy.svg'
 								data-src='images/shape/shape_136.svg'
 								alt=''
-								class='lazy-img xsm:hidden! inline-block'
+								class='lazy-img hidden min-[640px]:inline-block'
 							/>
 						</div>
-						<div
-							class='wow fadeInDown w-full max-w-full flex-[0_0_auto] px-[12px] sm:w-8/12 md:w-7/12 lg:w-7/12 xl:w-7/12'>
-							<div
-								class='block-wrapper block-one xsm:p-[35px_15px_20px] rounded-[45px_0_45px_0] border-[1.5px] border-solid border-[#FFAE10] bg-[#FFF3C9] pt-[35px] pr-[15px] pb-[30px] pl-[35px]'>
-								<h3
-									class='xsm:text-[26px] xsm:leading-[1.16em] mb-3.5 text-[36px] leading-10 sm:text-[26px] sm:leading-[1.16em] md:text-[26px] md:leading-[1.16em] lg:text-[26px] lg:leading-[1.16em]'
-									style='color:#FFAE10;'>
+						<div class='wow fadeInDown w-full max-w-full flex-[0_0_auto] px-3 min-[640px]:w-8/12 min-[768px]:w-7/12'>
+							<div class='block-wrapper block-one rounded-[45px_0_45px_0] border-[1.5px] border-solid border-[#FFAE10] bg-[#FFF3C9] pt-8.75 pr-3.75 pb-5 pl-3.75 min-[640px]:pb-7.5 min-[640px]:pl-8.75'>
+								<h3 class='mb-3.5 text-[26px]/[1.16em] min-[1280px]:text-4xl min-[1280px]:leading-10' style='color:#FFAE10;'>
 									Friendly
 								</h3>
-								<p
-									class='xsm:text-[16px] xsm:leading-[30px] text-[18px] leading-[29px] text-[rgba(0,0,0,0.7)] sm:text-[16px] sm:leading-[30px] md:text-[16px] md:leading-[30px] lg:text-[16px] lg:leading-[30px]'>
-									You’ll work directly with us. Clear communication, fast replies, no hand-offs or middlemen.
+								<p class='text-base/7.5 text-black/70 min-[1280px]:text-lg/[29px]'>
+									You'll work directly with us. Clear communication, fast replies, no hand-offs or middlemen.
 								</p>
 							</div>
 							<!-- /.block-wrapper -->
 						</div>
 					</div>
-					<div class='xxl:mx-[-24px] mx-[-12px] flex flex-wrap'>
-						<div
-							class='wow fadeInDown w-full max-w-full flex-[0_0_auto] px-[20px] sm:w-7/12 md:w-7/12 lg:w-7/12 xl:w-6/12'>
-							<div
-								class='block-wrapper block-two xsm:p-[20px_15px_20px] relative mt-[50px] rounded-[45px_0_45px_0] border-[1.5px] border-solid border-[#9650EF] bg-[rgba(162,91,251,0.2)] pt-[40px] pr-[20px] pb-[20px] pl-[30px] sm:mt-[30px]'>
-								<h3
-									class='xsm:text-[26px] xsm:leading-[1.16em] mb-3.5 text-[36px] leading-10 sm:text-[26px] sm:leading-[1.16em] md:text-[26px] md:leading-[1.16em] lg:text-[26px] lg:leading-[1.16em]'
-									style='color:#9650EF;'>
+					<div class='-mx-3 flex flex-wrap min-[1536px]:-mx-6'>
+						<div class='wow fadeInDown w-full max-w-full flex-[0_0_auto] px-5 min-[640px]:w-7/12 min-[1280px]:w-6/12'>
+							<div class='block-wrapper block-two relative mt-7.5 rounded-[45px_0_45px_0] border-[1.5px] border-solid border-[#9650EF] bg-[rgba(162,91,251,0.2)] pt-5 pr-3.75 pb-5 pl-3.75 min-[640px]:pt-10 min-[640px]:pr-5 min-[640px]:pl-7.5 min-[768px]:mt-12.5'>
+								<h3 class='mb-3.5 text-[26px]/[1.16em] min-[1280px]:text-4xl min-[1280px]:leading-10' style='color:#9650EF;'>
 									Proven
 								</h3>
-								<p
-									class='xsm:text-[16px] xsm:leading-[30px] text-[18px] leading-[29px] text-[rgba(0,0,0,0.7)] sm:text-[16px] sm:leading-[30px] md:text-[16px] md:leading-[30px] lg:text-[16px] lg:leading-[30px]'>
+								<p class='text-base/7.5 text-black/70 min-[1280px]:text-lg/[29px]'>
 									100+ projects delivered for agencies and product teams who care about clean, reusable front-end code.
 								</p>
 								<img
 									src='images/lazy.svg'
 									data-src='images/shape/shape_138.svg'
 									alt=''
-									class='lazy-img shapes shape-one absolute bottom-[-45px] left-[-45px] z-[-1]'
+									class='lazy-img shapes shape-one absolute -bottom-11.25 -left-11.25 -z-1'
 								/>
 							</div>
 							<!-- /.block-wrapper -->
 						</div>
-						<div
-							class='wow fadeInUp w-full max-w-full flex-[0_0_auto] px-[20px] sm:w-5/12 md:w-5/12 lg:w-5/12 xl:w-6/12'>
-							<div
-								class='block-wrapper block-three xsm:p-[35px_15px_20px] mt-[50px] rounded-[0_30px_0_30px] border-[1.5px] border-solid border-[#00BDE5] bg-[rgba(0,209,255,0.2)] pt-[22px] pr-[15px] pb-[15px] pl-[30px] sm:mt-[30px]'>
-								<h3
-									class='xsm:text-[26px] xsm:leading-[1.16em] mb-3.5 text-[36px] leading-10 sm:text-[26px] sm:leading-[1.16em] md:text-[26px] md:leading-[1.16em] lg:text-[26px] lg:leading-[1.16em]'
-									style='color:#00BDE6;'>
+						<div class='wow fadeInUp w-full max-w-full flex-[0_0_auto] px-5 min-[640px]:w-5/12 min-[1280px]:w-6/12'>
+							<div class='block-wrapper block-three mt-7.5 rounded-[0_30px_0_30px] border-[1.5px] border-solid border-[#00BDE5] bg-[rgba(0,209,255,0.2)] pt-8.75 pr-3.75 pb-5 pl-3.75 min-[640px]:pt-5.5 min-[640px]:pb-3.75 min-[640px]:pl-7.5 min-[768px]:mt-12.5'>
+								<h3 class='mb-3.5 text-[26px]/[1.16em] min-[1280px]:text-4xl min-[1280px]:leading-10' style='color:#00BDE6;'>
 									Quality
 								</h3>
-								<p
-									class='xsm:text-[16px] xsm:leading-[30px] text-[18px] leading-[29px] text-[rgba(0,0,0,0.7)] sm:text-[16px] sm:leading-[30px] md:text-[16px] md:leading-[30px] lg:text-[16px] lg:leading-[30px]'>
+								<p class='text-base/7.5 text-black/70 min-[1280px]:text-lg/[29px]'>
 									Well-structured markup, sensible class composition, and thoughtful components built to last.
 								</p>
 							</div>
@@ -178,7 +159,7 @@ import OurBlog from '@components/OurBlog.astro';
 								src='images/lazy.svg'
 								data-src='images/shape/shape_137.svg'
 								alt=''
-								class='lazy-img xsm:hidden! mt-[30px] mr-auto! ml-auto! inline-block'
+								class='lazy-img mt-7.5 mx-auto hidden min-[640px]:inline-block'
 							/>
 						</div>
 					</div>

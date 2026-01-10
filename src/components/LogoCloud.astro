@@ -1,6 +1,7 @@
 ---
 interface Tool {
 	logo: string;
+	url: string;
 	name: string;
 	logoClass?: string;
 }
@@ -17,67 +18,64 @@ const {
 	titleHighlight = 'tools',
 	highlightImage = 'images/shape/shape_97.svg',
 	tools = [
-		{ logo: 'images/logo/logo-figma.png', name: 'Figma', logoClass: 'md:h-12 h-10', url: 'https://figma.com' },
-		{ logo: 'images/logo/logo-adobe-xd.png', name: 'Adobe XD', logoClass: 'md:h-12 h-10', url: 'https://xd.adobe.com' },
-		{ logo: 'images/logo/logo-sketch.png', name: 'Sketch', logoClass: 'md:h-12 h-10', url: 'https://www.sketch.com' },
+		{ logo: 'images/logo/logo-figma.png', name: 'Figma', logoClass: 'h-10 min-[768px]:h-12', url: 'https://figma.com' },
+		{
+			logo: 'images/logo/logo-adobe-xd.png',
+			name: 'Adobe XD',
+			logoClass: 'h-10 min-[768px]:h-12',
+			url: 'https://xd.adobe.com',
+		},
+		{
+			logo: 'images/logo/logo-sketch.png',
+			name: 'Sketch',
+			logoClass: 'h-10 min-[768px]:h-12',
+			url: 'https://www.sketch.com',
+		},
 		{
 			logo: 'images/logo/logo-psd.svg',
 			name: 'Photoshop',
-			logoClass: 'md:h-12 h-10 mb-1',
+			logoClass: 'h-10 mb-1 min-[768px]:h-12',
 			url: 'https://www.adobe.com/products/photoshop.html',
 		},
-		// {
-		// 	logo: 'images/logo/logo-html.svg',
-		// 	name: 'HTML',
-		// 	logoClass: 'md:h-12 h-10',
-		// 	url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-		// },
-		// {
-		// 	logo: 'images/logo/logo-css.png',
-		// 	name: 'CSS',
-		// 	logoClass: 'md:h-12 h-10',
-		// 	url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-		// },
-		// {
-		// 	logo: 'images/logo/logo-js.svg',
-		// 	name: 'JavaScript',
-		// 	logoClass: 'md:h-12 h-10',
-		// 	url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-		// },
-		{ logo: 'images/logo/logo-react.png', name: 'React', logoClass: 'md:h-12 h-10', url: 'https://react.dev' },
-		{ logo: 'images/logo/logo-vue.png', name: 'Vue', logoClass: 'md:h-12 h-10', url: 'https://vuejs.org' },
+		{ logo: 'images/logo/logo-react.png', name: 'React', logoClass: 'h-10 min-[768px]:h-12', url: 'https://react.dev' },
+		{ logo: 'images/logo/logo-vue.png', name: 'Vue', logoClass: 'h-10 min-[768px]:h-12', url: 'https://vuejs.org' },
 		{
 			logo: 'images/logo/logo-alpine.svg',
 			name: 'Alpine',
-			logoClass: 'h-10 md:h-12 mb-2',
+			logoClass: 'h-10 mb-2 min-[768px]:h-12',
 			url: 'https://alpinejs.dev',
 		},
-		{ logo: 'images/logo/logo-astro.svg', name: 'Astro', logoClass: 'md:h-12 h-10', url: 'https://astro.build' },
+		{
+			logo: 'images/logo/logo-astro.svg',
+			name: 'Astro',
+			logoClass: 'h-10 min-[768px]:h-12',
+			url: 'https://astro.build',
+		},
 		{
 			logo: 'images/logo/logo-statamic.svg',
 			name: 'Statamic',
-			logoClass: 'md:h-12 h-10 mb-2',
+			logoClass: 'h-10 mb-2 min-[768px]:h-12',
 			url: 'https://statamic.com',
 		},
 		{
 			logo: 'images/logo/logo-shopify.svg',
 			name: 'Shopify',
-			logoClass: 'md:h-12 h-10 mb-2',
+			logoClass: 'h-10 mb-2 min-[768px]:h-12',
 			url: 'https://www.shopify.com',
 		},
 	],
 } = Astro.props;
 ---
 
-<div class='fancy-feature-twentyThree mb-20 sm:mb-24 xl:mb-32'>
+<div class='fancy-feature-twentyThree mb-20 min-[640px]:mb-24 min-[1280px]:mb-32'>
 	<div class='container'>
 		<div class='wow fadeInUp pb-5 text-center'>
-			<h2 class='main-title font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
+			<h2 class='main-title font-Recoleta text-4xl font-normal text-black min-[1024px]:text-5xl min-[1280px]:text-6xl'>
 				{title}
 				<span class='relative inline-block'
 					>{titleHighlight}
 					<img
-						class='absolute top-2/4 left-2/4 z-[-1] max-w-[113%] -translate-x-2/4 -translate-y-2/4'
+						class='absolute top-1/2 left-1/2 -z-1 max-w-[113%] -translate-x-1/2 -translate-y-1/2'
 						src={highlightImage}
 						alt=''
 					/></span
@@ -90,15 +88,15 @@ const {
 			{
 				tools.map((tool) => (
 					<a
-						href={tool.url}
+						href={tool?.url}
 						target='_blank'
 						rel='noopener noreferrer'
-						class='flex items-center justify-center gap-7 sm:justify-start lg:w-1/6'>
+						class='flex items-center justify-center gap-7 min-[640px]:justify-start min-[1024px]:w-1/6'>
 						<img
 							src='images/lazy.svg'
 							data-src={tool.logo}
 							alt=''
-							class={`lazy-img ${tool.logoClass || 'h-10 md:h-12'}`}
+							class={`lazy-img ${tool.logoClass || 'h-10 min-[768px]:h-12'}`}
 						/>
 						<h4 class='font-gordita text-xl font-medium'>{tool.name}</h4>
 					</a>
