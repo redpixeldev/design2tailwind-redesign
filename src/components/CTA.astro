@@ -45,11 +45,10 @@ const {
 		<div class='bg-wrapper relative z-2 rounded-[10px] bg-white px-3 py-0'>
 			<div class='mx-[-12px] flex flex-wrap'>
 				<div class='m-auto w-full max-w-full flex-[0_0_auto] px-[12px] xl:w-11/12'>
-					<div class='mx-[-12px] flex flex-wrap items-center'>
+					<div class='xsm:flex-col mx-[-12px] flex sm:flex-col md:flex-col'>
 						<div
-							class='ml-auto! w-full max-w-full flex-[0_0_auto] px-[12px] lg:order-last lg:w-6/12 xl:order-last xl:w-6/12'>
-							<div
-								class='text-wrapper xsm:p-[50px_0] xsm:border-l-0 border-l border-solid border-l-[#E9E9E9] pt-[60px] pr-0 pb-20 pl-20 sm:border-l-0 sm:p-[50px_0] md:border-l-0 md:p-[50px_0]'>
+							class='ml-auto! w-full max-w-full flex-[0_0_auto] px-[12px] md:border-l-[#E9E9E9] lg:order-last lg:w-6/12 xl:order-last xl:w-6/12'>
+							<div class='text-wrapper xsm:p-[20px_0] pt-[60px] pr-0'>
 								<img
 									src='images/lazy.svg'
 									data-src={icon}
@@ -68,66 +67,33 @@ const {
 							</div>
 						</div>
 						<div class='w-full max-w-full flex-[0_0_auto] px-[12px] lg:order-first lg:w-6/12 xl:order-first xl:w-5/12'>
-							<div class='form-style-two xsm:mb-10 sm:mb-10 md:mb-10'>
-								<form
-									action={formAction}
-									id={formId}
-									data-toggle='validator'>
-									<div class='messages'></div>
-									<div class='controls mx-[-12px] flex flex-wrap'>
-										<div class='w-full max-w-full flex-[0_0_auto] px-[12px]'>
-											<div class='input-group-meta form-group relative mb-5'>
-												<input
-													class='h-[60px] w-full max-w-full rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)] p-[0_20px] text-[15px] text-black'
-													type='text'
-													placeholder={namePlaceholder}
-													name='name'
-													required='required'
-													data-error='Name is required.'
-												/>
-												<div
-													class='help-block with-errors absolute bottom-[-17px] left-0 text-[13px] leading-5 text-[#ff4d44]'>
-												</div>
-											</div>
-										</div>
-
-										<div class='w-full max-w-full flex-[0_0_auto] px-[12px]'>
-											<div class='input-group-meta form-group relative mb-5'>
-												<input
-													class='h-[60px] w-full max-w-full rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)] p-[0_20px] text-[15px] text-black'
-													type='email'
-													placeholder={emailPlaceholder}
-													name='email'
-													required='required'
-													data-error='Valid email is required.'
-												/>
-												<div
-													class='help-block with-errors absolute bottom-[-17px] left-0 text-[13px] leading-5 text-[#ff4d44]'>
-												</div>
-											</div>
-										</div>
-										<div class='w-full max-w-full flex-[0_0_auto] px-[12px]'>
-											<div class='input-group-meta form-group relative mb-[15px]'>
-												<textarea
-													class='h-[120px] max-h-[120px] w-full max-w-full rounded-[5px] border-2 border-solid border-[rgba(221,221,221,0.8)] px-5 py-[15px] text-[15px] text-black'
-													placeholder={messagePlaceholder}
-													name='message'
-													required='required'
-													data-error='Please,leave us a message.'
-												></textarea>
-												<div
-													class='help-block with-errors absolute bottom-[-17px] left-0 text-[13px] leading-5 text-[#ff4d44]'>
-												</div>
-											</div>
-										</div>
-										<div class='w-full max-w-full flex-[0_0_auto] px-[12px]'>
-											<button
-												class='btn-twentyTwo tran3s w-full rounded-[7px] bg-[#a056fa] px-[42px] py-0 text-[14px] leading-[55px] font-medium tracking-[0.88px] text-white uppercase hover:bg-(--prime-ten)'
-												>{buttonText}</button
-											>
-										</div>
-									</div>
-								</form>
+							<div class='form-style-two xsm:mb-10 py-10 sm:mb-10 md:mb-10'>
+								<iframe
+									data-tally-src='https://tally.so/embed/Ekd4bB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1'
+									loading='lazy'
+									width='100%'
+									height='613'
+									frameborder='0'
+									marginheight='0'
+									marginwidth='0'
+									title='Let us code your design'
+								></iframe>
+								<script>
+									var d = document,
+										w = 'https://tally.so/widgets/embed.js',
+										v = function () {
+											'undefined' != typeof Tally
+												? Tally.loadEmbeds()
+												: d.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function (e) {
+														e.src = e.dataset.tallySrc;
+													});
+										};
+									if ('undefined' != typeof Tally) v();
+									else if (d.querySelector('script[src="' + w + '"]') == null) {
+										var s = d.createElement('script');
+										((s.src = w), (s.onload = v), (s.onerror = v), d.body.appendChild(s));
+									}
+								</script>
 							</div>
 							<!-- /.form-style-two -->
 						</div>
