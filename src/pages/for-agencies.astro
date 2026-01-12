@@ -13,26 +13,20 @@ import Testimonials from '@components/Testimonials.astro';
 <Layout title='Astro'>
 	<Header />
 
-	<div class='hero-banner-two relative pt-36 pb-12 md:pb-16 lg:pt-44 lg:pb-20 xl:pt-52 xl:pb-24'>
+	<div class='hero-banner-two relative pt-36 pb-12 min-[768px]:pb-16 min-[1024px]:pt-44 min-[1024px]:pb-20 min-[1280px]:pt-52 min-[1280px]:pb-24'>
 		<div class='container'>
 			<div class='flex flex-wrap'>
-				<div class='wow fadeInUp mx-auto w-full text-center lg:w-5/6 xl:w-3/4'>
+				<div class='wow fadeInUp mx-auto w-full text-center min-[1024px]:w-5/6 min-[1280px]:w-3/4'>
 					<h1
-						class='hero-heading font-Recoleta xsm:text-4xl xsm:leading-[1.2em] relative text-[82px] leading-[1.09em] font-normal sm:text-[40px] sm:leading-[1.2em] md:text-[40px] md:leading-[1.2em] lg:text-[58px] 2xl:text-[70px]'>
-						<!-- <img
-							src='images/lazy.svg'
-							data-src='images/shape/shape_25.svg'
-							alt=''
-							class='lazy-img shapes line-shape xsm:hidden! absolute -bottom-1 left-28 z-[-1] sm:hidden! md:hidden! lg:w-36 xl:left-40 xl:w-36'
-						/> -->
+						class='hero-heading font-Recoleta relative text-4xl leading-[1.2em] font-normal min-[640px]:text-[40px] min-[1024px]:text-[58px] min-[1024px]:leading-[1.09em] min-[1280px]:text-[70px] min-[1536px]:text-[82px]'>
 						Tailwind CSS development for
 						<span
-							class="relative z-1 inline-block before:absolute before:top-2/4 before:left-[0%] before:z-[-1] before:h-[81%] before:w-[100%] before:-translate-y-2/4 before:bg-[#FFEBE5] before:content-['']">
+							class="relative z-1 inline-block before:absolute before:top-1/2 before:left-0 before:-z-1 before:h-[81%] before:w-full before:-translate-y-1/2 before:bg-[#FFEBE5] before:content-['']">
 							Agencies
 						</span>
 					</h1>
 					<p
-						class='xsm:pt-[10px] text-base leading-[1.67em] sm:pt-[10px] md:pt-[10px] lg:pt-[10px] lg:text-[19px] xl:pt-10 xl:text-xl'>
+						class='pt-2.5 text-base/[1.67em] min-[1024px]:text-[19px] min-[1280px]:pt-10 min-[1280px]:text-xl'>
 						We help agencies deliver faster with production-ready Tailwind CSS, consistent structure, and clear
 						communication. Use us as an extension of your team whenever you need extra front-end capacity.
 					</p>
@@ -41,62 +35,62 @@ import Testimonials from '@components/Testimonials.astro';
 		</div>
 	</div>
 
-	<div class='partner-section-six wow fadeInUp mb-12 md:mb-16 lg:mb-20 xl:mb-28'>
+	<div class='partner-section-six wow fadeInUp mb-12 min-[768px]:mb-16 min-[1024px]:mb-20 min-[1280px]:mb-28'>
 		<div class='container'>
 			<div
-				class='top-header xsm:pb-[45px] border-b-2 border-solid border-b-black p-[0_0_70px] sm:pb-[45px] md:pb-[45px] lg:pb-[45px]'>
+				class='top-header border-b-2 border-solid border-b-black pb-11.25 min-[1280px]:pb-17.5'>
 				<div class='flex items-center justify-between'>
-					<span class='lines xsm:w-[33%] inline-block h-0.5 w-full grow bg-black sm:w-[33%] md:w-[33%]'></span>
+					<span class='lines inline-block h-0.5 w-1/3 grow bg-black min-[1024px]:w-full'></span>
 					<div
-						class='title xsm:text-[14px] w-full px-2.5 py-0 text-center text-[16px] tracking-[2px] text-black uppercase sm:text-[14px] md:text-[14px] lg:text-[14px]'>
+						class='title w-full px-2.5 py-0 text-center text-sm tracking-[2px] text-black uppercase min-[1280px]:text-base'>
 						Trusted by agencies and teams at
 					</div>
-					<span class='lines xsm:w-[33%] inline-block h-0.5 w-full grow bg-black sm:w-[33%] md:w-[33%]'></span>
+					<span class='lines inline-block h-0.5 w-1/3 grow bg-black min-[1024px]:w-full'></span>
 				</div>
 
-				<div class='partner_slider_one xsm:mt-10 mt-[65px] sm:mt-10 md:mt-10 lg:mt-10'>
-					<div class='item m-[0_12px]'>
-						<div class='icon flex h-[50px] items-center justify-center'>
+				<div class='partner_slider_one mt-10 min-[1280px]:mt-16.25'>
+					<div class='item mx-3'>
+						<div class='icon flex h-12.5 items-center justify-center'>
 							<img
 								src='images/logo/Plogo-37.png'
 								alt=''
 							/>
 						</div>
 					</div>
-					<div class='item m-[0_12px]'>
-						<div class='icon flex h-[50px] items-center justify-center'>
+					<div class='item mx-3'>
+						<div class='icon flex h-12.5 items-center justify-center'>
 							<img
 								src='images/logo/Plogo-38.png'
 								alt=''
 							/>
 						</div>
 					</div>
-					<div class='item m-[0_12px]'>
-						<div class='icon flex h-[50px] items-center justify-center'>
+					<div class='item mx-3'>
+						<div class='icon flex h-12.5 items-center justify-center'>
 							<img
 								src='images/logo/Plogo-39.png'
 								alt=''
 							/>
 						</div>
 					</div>
-					<div class='item m-[0_12px]'>
-						<div class='icon flex h-[50px] items-center justify-center'>
+					<div class='item mx-3'>
+						<div class='icon flex h-12.5 items-center justify-center'>
 							<img
 								src='images/logo/Plogo-40.png'
 								alt=''
 							/>
 						</div>
 					</div>
-					<div class='item m-[0_12px]'>
-						<div class='icon flex h-[50px] items-center justify-center'>
+					<div class='item mx-3'>
+						<div class='icon flex h-12.5 items-center justify-center'>
 							<img
 								src='images/logo/Plogo-41.png'
 								alt=''
 							/>
 						</div>
 					</div>
-					<div class='item m-[0_12px]'>
-						<div class='icon flex h-[50px] items-center justify-center'>
+					<div class='item mx-3'>
+						<div class='icon flex h-12.5 items-center justify-center'>
 							<img
 								src='images/logo/Plogo-39.png'
 								alt=''
@@ -111,13 +105,13 @@ import Testimonials from '@components/Testimonials.astro';
 	<div class='fancy-feature-fiftyOne relative'>
 		<div class='container'>
 			<div class='flex flex-wrap'>
-				<div class='wow fadeInLeft m-auto w-full max-w-full flex-[0_0_auto] px-[12px] lg:w-7/12 xl:w-7/12'>
-					<div class='title-style-five xsm:mb-10 mb-[65px] text-center sm:mb-10 md:mb-10 lg:mb-10'>
-						<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
+				<div class='wow fadeInLeft m-auto w-full max-w-full flex-[0_0_auto] px-3 min-[1024px]:w-7/12'>
+					<div class='title-style-five mb-10 text-center min-[1280px]:mb-16.25'>
+						<h2 class='font-Recoleta text-4xl font-normal text-black min-[1024px]:text-5xl min-[1280px]:text-6xl'>
 							Flexible monthly retainers.
 						</h2>
 						<p
-							class='xsm:pt-[10px] mb-[30px] pt-5 text-base leading-[1.67em] sm:pt-[10px] md:pt-[10px] lg:mb-[40px] lg:pt-[10px] lg:text-lg lg:text-[19px] xl:mb-[50px] xl:text-xl'>
+							class='pt-2.5 mb-7.5 text-base/[1.67em] min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:pt-5 min-[1280px]:mb-12.5 min-[1280px]:text-xl'>
 							These blocks are designed for agencies who want consistent front-end support. Use your hours on
 							design-to-Tailwind builds, ongoing improvements, and overflow work.
 						</p>
@@ -130,54 +124,54 @@ import Testimonials from '@components/Testimonials.astro';
 			src='images/lazy.svg'
 			data-src='images/shape/shape_172.svg'
 			alt=''
-			class='lazy-img shapes shape-two xsm:hidden! absolute top-[4%] right-[17%] z-[-1] sm:hidden! md:hidden! lg:right-[6%] 2xl:right-[8%]'
+			class='lazy-img shapes shape-two hidden absolute top-[4%] -z-1 min-[1024px]:block min-[1024px]:right-[6%] min-[1536px]:right-[8%]'
 		/>
 	</div>
 
-	<div class='pricing-section-three relative my-6 md:my-14 lg:my-24 xl:my-24'>
+	<div class='pricing-section-three relative my-6 min-[768px]:my-14 min-[1024px]:my-24'>
 		<div class='container'>
 			<div class='pricing-table-area-three wow fadeInUp'>
 				<div class='tab-content'>
 					<div class='tab-pane show active'>
 						<div class='flex flex-wrap items-center'>
 							<!-- Starter Plan -->
-							<div class='xsm:px-[12px] w-full max-w-full flex-[0_0_auto] sm:w-6/12 md:w-6/12 lg:w-3/12 xl:w-3/12'>
+							<div class='w-full max-w-full flex-[0_0_auto] px-3 min-[640px]:w-6/12 min-[1024px]:w-3/12'>
 								<div
-									class='pr-column xsm:p-[30px_10px_30px_20px] pr-one xsm:rounded-[15px] xsm:border-r-[#b1b2f4] xsm:border-r xsm:border-solid relative rounded-[15px_0_0_15px] border border-r-0 border-solid border-[#b1b2f4] p-[60px_10px_50px_45px] sm:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] lg:p-[30px_10px_30px_20px] 2xl:pl-[30px]'>
+									class='pr-column pr-one relative pt-7.5 pr-2.5 pb-7.5 pl-5 rounded-[15px] border border-solid border-[#b1b2f4] min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1280px]:rounded-[15px_0_0_15px] min-[1280px]:border-r-0 min-[1536px]:pl-7.5'>
 									<img
 										src='images/icon/icon_56.svg'
 										alt=''
-										class='icon h-[25px]'
+										class='icon h-6.25'
 									/>
 									<div
-										class='plan xsm:text-[24px] xsm:m-[20px_0_18px] m-[26px_0_22px] text-[32px] text-black sm:m-[20px_0_18px] sm:text-[24px] md:m-[20px_0_18px] md:text-[24px] lg:m-[20px_0_18px] lg:text-[24px]'>
+										class='plan mt-5 mb-4.5 text-2xl text-black min-[1280px]:mt-6.5 min-[1280px]:mb-5.5 min-[1280px]:text-[32px]'>
 										Starter
 									</div>
 									<div class='pr-body'>
 										<ul class='mb-0 list-none pl-0 text-left'>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												5 hours/month
 											</li>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												Quick fixes & overflow tasks
 											</li>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												Small landing pages
 											</li>
 										</ul>
 									</div>
-									<div class='pr-footer xsm:pt-[30px] pt-[15px] sm:pt-[30px] md:pt-[30px] lg:pt-[30px]'>
+									<div class='pr-footer pt-7.5 min-[1280px]:pt-3.75'>
 										<div
-											class='price xsm:text-[26px] text-[28px] text-black sm:text-[26px] md:text-[26px] lg:text-[26px]'>
+											class='price text-[26px] text-black min-[1280px]:text-[28px]'>
 											$400
 										</div>
-										<div class='trial-text mb-[30px] text-[17px] opacity-75'>Best for light ongoing support</div>
+										<div class='trial-text mb-7.5 text-[17px] opacity-75'>Best for light ongoing support</div>
 										<a
 											href='#cta'
-											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-[45px] py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
+											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-11.25 py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
 											>Request a retainer</a
 										>
 									</div>
@@ -185,9 +179,9 @@ import Testimonials from '@components/Testimonials.astro';
 								<!-- /.pr-column -->
 							</div>
 							<!-- Most Popular Plan -->
-							<div class='xsm:px-[12px] w-full max-w-full flex-[0_0_auto] sm:w-6/12 md:w-6/12 lg:w-3/12 xl:w-3/12'>
+							<div class='w-full max-w-full flex-[0_0_auto] px-3 min-[640px]:w-6/12 min-[1024px]:w-3/12'>
 								<div
-									class='pr-column xsm:p-[30px_10px_30px_20px] active relative p-[60px_10px_50px_45px] sm:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] lg:p-[30px_10px_30px_20px] 2xl:pl-[30px]'>
+									class='pr-column active relative pt-7.5 pr-2.5 pb-7.5 pl-5 min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1536px]:pl-7.5'>
 									<div
 										class='absolute top-4 right-4 rounded-full bg-[#BC46E2] px-3 py-1 text-xs font-semibold text-white'>
 										Most popular
@@ -195,37 +189,37 @@ import Testimonials from '@components/Testimonials.astro';
 									<img
 										src='images/icon/icon_57.svg'
 										alt=''
-										class='icon h-[25px]'
+										class='icon h-6.25'
 									/>
 									<div
-										class='plan xsm:text-[24px] xsm:m-[20px_0_18px] m-[26px_0_22px] text-[32px] text-black sm:m-[20px_0_18px] sm:text-[24px] md:m-[20px_0_18px] md:text-[24px] lg:m-[20px_0_18px] lg:text-[24px]'>
+										class='plan mt-5 mb-4.5 text-2xl text-black min-[1280px]:mt-6.5 min-[1280px]:mb-5.5 min-[1280px]:text-[32px]'>
 										Most Popular
 									</div>
-									<div class='pr-body pt-[10px]'>
+									<div class='pr-body pt-2.5'>
 										<ul class='mb-0 list-none pl-0 text-left'>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												10 hours / month
 											</li>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												Steady weekly progress
 											</li>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												Multiple sections or pages
 											</li>
 										</ul>
 									</div>
-									<div class='pr-footer xsm:pt-[30px] pt-[45px] sm:pt-[30px] md:pt-[30px] lg:pt-[30px]'>
+									<div class='pr-footer pt-7.5 min-[1280px]:pt-11.25'>
 										<div
-											class='price xsm:text-[26px] text-[28px] text-black sm:text-[26px] md:text-[26px] lg:text-[26px]'>
+											class='price text-[26px] text-black min-[1280px]:text-[28px]'>
 											$800
 										</div>
-										<div class='trial-text mb-[30px] text-[17px] opacity-75'>Best for ongoing work</div>
+										<div class='trial-text mb-7.5 text-[17px] opacity-75'>Best for ongoing work</div>
 										<a
 											href='#cta'
-											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-[45px] py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
+											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-11.25 py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
 											>Request a retainer</a
 										>
 									</div>
@@ -233,43 +227,43 @@ import Testimonials from '@components/Testimonials.astro';
 								<!-- /.pr-column -->
 							</div>
 							<!-- Growth Plan -->
-							<div class='xsm:px-[12px] w-full max-w-full flex-[0_0_auto] sm:w-6/12 md:w-6/12 lg:w-3/12 xl:w-3/12'>
+							<div class='w-full max-w-full flex-[0_0_auto] px-3 min-[640px]:w-6/12 min-[1024px]:w-3/12'>
 								<div
-									class='pr-column xsm:p-[30px_10px_30px_20px] pr-two xsm:border-l-[#b1b2f4] xsm:border-l xsm:border-solid xsm:rounded-[15px] xsm:border-b-[none] relative border border-l-0 border-solid border-[#b1b2f4] p-[60px_10px_50px_45px] sm:border-l sm:border-solid sm:border-l-[#b1b2f4] sm:p-[30px_10px_30px_20px] md:border-l md:border-solid md:border-l-[#b1b2f4] md:p-[30px_10px_30px_20px] lg:p-[30px_10px_30px_20px] 2xl:pl-[30px]'>
+									class='pr-column pr-two relative pt-7.5 pr-2.5 pb-7.5 pl-5 rounded-[15px] border border-solid border-[#b1b2f4] min-[1024px]:border-l-0 min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1536px]:pl-7.5'>
 									<img
 										src='images/icon/icon_58.svg'
 										alt=''
-										class='icon h-[25px]'
+										class='icon h-6.25'
 									/>
 									<div
-										class='plan xsm:text-[24px] xsm:m-[20px_0_18px] m-[26px_0_22px] text-[32px] text-black sm:m-[20px_0_18px] sm:text-[24px] md:m-[20px_0_18px] md:text-[24px] lg:m-[20px_0_18px] lg:text-[24px]'>
+										class='plan mt-5 mb-4.5 text-2xl text-black min-[1280px]:mt-6.5 min-[1280px]:mb-5.5 min-[1280px]:text-[32px]'>
 										Growth
 									</div>
 									<div class='pr-body'>
 										<ul class='mb-0 list-none pl-0 text-left'>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												20 hours / month
 											</li>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												Larger builds & iterations
 											</li>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												Faster turnaround times
 											</li>
 										</ul>
 									</div>
-									<div class='pr-footer xsm:pt-[30px] pt-[15px] sm:pt-[30px] md:pt-[30px] lg:pt-[30px]'>
+									<div class='pr-footer pt-7.5 min-[1280px]:pt-3.75'>
 										<div
-											class='price xsm:text-[26px] text-[28px] text-black sm:text-[26px] md:text-[26px] lg:text-[26px]'>
+											class='price text-[26px] text-black min-[1280px]:text-[28px]'>
 											$1,500
 										</div>
-										<div class='trial-text mb-[30px] text-[17px] opacity-75'>Ideal for active client pipelines</div>
+										<div class='trial-text mb-7.5 text-[17px] opacity-75'>Ideal for active client pipelines</div>
 										<a
 											href='#cta'
-											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-[45px] py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
+											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-11.25 py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
 											>Request a retainer</a
 										>
 									</div>
@@ -277,43 +271,43 @@ import Testimonials from '@components/Testimonials.astro';
 								<!-- /.pr-column -->
 							</div>
 							<!-- Scale Plan -->
-							<div class='xsm:px-[12px] w-full max-w-full flex-[0_0_auto] sm:w-6/12 md:w-6/12 lg:w-3/12 xl:w-3/12'>
+							<div class='w-full max-w-full flex-[0_0_auto] px-3 min-[640px]:w-6/12 min-[1024px]:w-3/12'>
 								<div
-									class='pr-column xsm:p-[30px_10px_30px_20px] pr-three xsm:rounded-[15px] xsm:border-l-[#b1b2f4] xsm:border-l xsm:border-solid relative rounded-[0_15px_15px_0] border border-l-0 border-solid border-[#b1b2f4] p-[60px_10px_50px_45px] sm:p-[30px_10px_30px_20px] md:p-[30px_10px_30px_20px] lg:p-[30px_10px_30px_20px] 2xl:pl-[30px]'>
+									class='pr-column pr-three relative pt-7.5 pr-2.5 pb-7.5 pl-5 rounded-[15px] border border-solid border-[#b1b2f4] min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1280px]:rounded-[0_15px_15px_0] min-[1280px]:border-l-0 min-[1536px]:pl-7.5'>
 									<img
 										src='images/icon/icon_59.svg'
 										alt=''
-										class='icon h-[25px]'
+										class='icon h-6.25'
 									/>
 									<div
-										class='plan xsm:text-[24px] xsm:m-[20px_0_18px] m-[26px_0_22px] text-[32px] text-black sm:m-[20px_0_18px] sm:text-[24px] md:m-[20px_0_18px] md:text-[24px] lg:m-[20px_0_18px] lg:text-[24px]'>
+										class='plan mt-5 mb-4.5 text-2xl text-black min-[1280px]:mt-6.5 min-[1280px]:mb-5.5 min-[1280px]:text-[32px]'>
 										Scale
 									</div>
 									<div class='pr-body'>
 										<ul class='mb-0 list-none pl-0 text-left'>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												40 hours / month
 											</li>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												Dedicated agency support
 											</li>
 											<li
-												class="xsm:text-[16px] before:font-Bootstrap relative mb-[15px] pr-5 text-[18px] before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] sm:text-[16px] md:text-[16px] lg:text-[16px]">
+												class="before:font-Bootstrap relative mb-3.75 pr-5 text-base before:absolute before:top-0 before:left-0 before:font-bold before:text-(--prime-two) before:content-['\f272'] min-[1280px]:text-lg">
 												Reserved capacity
 											</li>
 										</ul>
 									</div>
-									<div class='pr-footer xsm:pt-[30px] pt-[15px] sm:pt-[30px] md:pt-[30px] lg:pt-[30px]'>
+									<div class='pr-footer pt-7.5 min-[1280px]:pt-3.75'>
 										<div
-											class='price xsm:text-[26px] text-[28px] text-black sm:text-[26px] md:text-[26px] lg:text-[26px]'>
+											class='price text-[26px] text-black min-[1280px]:text-[28px]'>
 											$2,800
 										</div>
-										<div class='trial-text mb-[30px] text-[17px] opacity-75'>Best for recurring projects</div>
+										<div class='trial-text mb-7.5 text-[17px] opacity-75'>Best for recurring projects</div>
 										<a
 											href='#cta'
-											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-[45px] py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
+											class='btn-twelve tran3s rounded-[23px] border border-solid border-[#BC46E2] px-11.25 py-0 leading-[43px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white'
 											>Request a retainer</a
 										>
 									</div>
@@ -326,27 +320,27 @@ import Testimonials from '@components/Testimonials.astro';
 					<!-- /.tab-pane -->
 				</div>
 			</div>
-			<div class='wow fadeInUp mx-auto w-full text-center lg:w-5/6 xl:w-2/3'>
+			<div class='wow fadeInUp mx-auto w-full text-center min-[1024px]:w-5/6 min-[1280px]:w-2/3'>
 				<p
-					class='xsm:pt-[10px] mt-4 mb-[30px] pt-5 text-base leading-[1.67em] text-gray-500 sm:pt-[10px] md:pt-[10px] lg:mb-[40px] lg:pt-[10px] lg:text-lg lg:text-[19px] xl:mb-[50px] xl:text-lg'>
+					class='mt-4 pt-2.5 mb-7.5 text-base/[1.67em] text-gray-500 min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:pt-5 min-[1280px]:mb-12.5 min-[1280px]:text-lg'>
 					Hours roll over for 30 days. Cancel anytime with notice.
 				</p>
 				<p
-					class='xsm:pt-[10px] mb-[30px] pt-5 text-base leading-[1.67em] sm:pt-[10px] md:pt-[10px] lg:mb-[40px] lg:pt-[10px] lg:text-lg lg:text-[19px] xl:mb-[50px] xl:text-xl'>
+					class='pt-2.5 mb-7.5 text-base/[1.67em] min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:pt-5 min-[1280px]:mb-12.5 min-[1280px]:text-xl'>
 					Need a one-off project instead? <a
 						href='#cta'
 						class='text-[#BC46E2] underline'
 						>Request a quote</a
-					> and we’ll propose the best option.
+					> and we'll propose the best option.
 				</p>
 			</div>
 			<!-- /.pricing-table-area-three -->
 		</div>
 		<div
-			class='shapes shape-one absolute top-[18%] left-[12%] z-[-1] h-3 w-3 animate-[jumpThree_5s_infinite_linear] rounded-[50%] bg-[#74E2CD]'>
+			class='shapes shape-one absolute top-[18%] left-[12%] -z-1 size-3 animate-[jumpThree_5s_infinite_linear] rounded-full bg-[#74E2CD]'>
 		</div>
 		<div
-			class='shapes shape-two absolute top-[29%] right-[10%] z-[-1] h-[27px] w-[27px] animate-[jumpTwo_5s_infinite_linear] rounded-[50%] bg-[#007BFF]'>
+			class='shapes shape-two absolute top-[29%] right-[10%] -z-1 size-6.75 animate-[jumpTwo_5s_infinite_linear] rounded-full bg-[#007BFF]'>
 		</div>
 	</div>
 
