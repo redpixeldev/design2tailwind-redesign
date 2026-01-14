@@ -16,7 +16,8 @@ import Testimonials from '@components/Testimonials.astro';
 	keywords={['agency tailwind css', 'white label development', 'agency retainer', 'front-end development']}>
 	<Header />
 
-	<div class='hero-banner-two relative pt-36 pb-12 min-[768px]:pb-16 min-[1024px]:pt-44 min-[1024px]:pb-20 min-[1280px]:pt-52 min-[1280px]:pb-24'>
+	<div
+		class='hero-banner-two relative pt-36 pb-12 min-[768px]:pb-16 min-[1024px]:pt-44 min-[1024px]:pb-20 min-[1280px]:pt-52 min-[1280px]:pb-24'>
 		<div class='container'>
 			<div class='flex flex-wrap'>
 				<div class='wow fadeInUp mx-auto w-full text-center min-[1024px]:w-5/6 min-[1280px]:w-3/4'>
@@ -28,8 +29,7 @@ import Testimonials from '@components/Testimonials.astro';
 							Agencies
 						</span>
 					</h1>
-					<p
-						class='pt-2.5 text-base/[1.67em] min-[1024px]:text-[19px] min-[1280px]:pt-10 min-[1280px]:text-xl'>
+					<p class='pt-2.5 text-base/[1.67em] min-[1024px]:text-[19px] min-[1280px]:pt-10 min-[1280px]:text-xl'>
 						We help agencies deliver faster with production-ready Tailwind CSS, consistent structure, and clear
 						communication. Use us as an extension of your team whenever you need extra front-end capacity.
 					</p>
@@ -40,8 +40,7 @@ import Testimonials from '@components/Testimonials.astro';
 
 	<div class='partner-section-six wow fadeInUp mb-12 min-[768px]:mb-16 min-[1024px]:mb-20 min-[1280px]:mb-28'>
 		<div class='container'>
-			<div
-				class='top-header border-b-2 border-solid border-b-black pb-11.25 min-[1280px]:pb-17.5'>
+			<div class='top-header border-b-2 border-solid border-b-black pb-11.25 min-[1280px]:pb-17.5'>
 				<div class='flex items-center justify-between'>
 					<span class='lines inline-block h-0.5 w-1/3 grow bg-black min-[1024px]:w-full'></span>
 					<div
@@ -51,55 +50,60 @@ import Testimonials from '@components/Testimonials.astro';
 					<span class='lines inline-block h-0.5 w-1/3 grow bg-black min-[1024px]:w-full'></span>
 				</div>
 
-				<div class='partner_slider_one mt-10 min-[1280px]:mt-16.25'>
-					<div class='item mx-3'>
-						<div class='icon flex h-12.5 items-center justify-center'>
-							<img
-								src='images/logo/Plogo-37.png'
-								alt=''
-							/>
-						</div>
-					</div>
-					<div class='item mx-3'>
-						<div class='icon flex h-12.5 items-center justify-center'>
-							<img
-								src='images/logo/Plogo-38.png'
-								alt=''
-							/>
-						</div>
-					</div>
-					<div class='item mx-3'>
+				<div class='mt-10 grid grid-cols-1 gap-16 px-8 grayscale min-[1280px]:mt-16.25 md:grid-cols-2 xl:grid-cols-4'>
+					<a
+						href='https://flxwebsites.com/'
+						target='_blank'
+						class='icon flex w-full items-center justify-center'>
+						<img
+							src='/images/agencies/flx-websites.svg'
+							alt=''
+							class='h-12.5 w-auto object-contain'
+						/>
+					</a>
+
+					<a
+						href='https://insight-media.be/'
+						target='_blank'
+						class='icon flex items-center justify-center'>
+						<img
+							src='/images/agencies/insight-media.png'
+							class='h-12.5 w-auto object-contain'
+							alt=''
+						/>
+					</a>
+
+					<a
+						href='https://realisingdesigns.com/'
+						target='_blank'
+						class='icon flex items-center justify-center'>
+						<img
+							src='/images/agencies/realising-designs.svg'
+							class='h-12.5 w-auto object-contain'
+							alt=''
+						/>
+					</a>
+
+					<a
+						href='https://sideventures.co/'
+						target='_blank'
+						class='icon flex items-center justify-center gap-2'>
+						<img
+							src='/images/agencies/sideventures.svg'
+							class='h-12.5 w-auto object-contain'
+							alt=''
+						/>
+						<span class='block shrink-0 text-xl font-black'>Side Ventures</span>
+					</a>
+
+					<!-- <div class='item mx-3'>
 						<div class='icon flex h-12.5 items-center justify-center'>
 							<img
 								src='images/logo/Plogo-39.png'
 								alt=''
 							/>
 						</div>
-					</div>
-					<div class='item mx-3'>
-						<div class='icon flex h-12.5 items-center justify-center'>
-							<img
-								src='images/logo/Plogo-40.png'
-								alt=''
-							/>
-						</div>
-					</div>
-					<div class='item mx-3'>
-						<div class='icon flex h-12.5 items-center justify-center'>
-							<img
-								src='images/logo/Plogo-41.png'
-								alt=''
-							/>
-						</div>
-					</div>
-					<div class='item mx-3'>
-						<div class='icon flex h-12.5 items-center justify-center'>
-							<img
-								src='images/logo/Plogo-39.png'
-								alt=''
-							/>
-						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -114,7 +118,7 @@ import Testimonials from '@components/Testimonials.astro';
 							Flexible monthly retainers.
 						</h2>
 						<p
-							class='pt-2.5 mb-7.5 text-base/[1.67em] min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:pt-5 min-[1280px]:mb-12.5 min-[1280px]:text-xl'>
+							class='mb-7.5 pt-2.5 text-base/[1.67em] min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:mb-12.5 min-[1280px]:pt-5 min-[1280px]:text-xl'>
 							These blocks are designed for agencies who want consistent front-end support. Use your hours on
 							design-to-Tailwind builds, ongoing improvements, and overflow work.
 						</p>
@@ -127,7 +131,7 @@ import Testimonials from '@components/Testimonials.astro';
 			src='images/lazy.svg'
 			data-src='images/shape/shape_172.svg'
 			alt=''
-			class='lazy-img shapes shape-two hidden absolute top-[4%] -z-1 min-[1024px]:block min-[1024px]:right-[6%] min-[1536px]:right-[8%]'
+			class='lazy-img shapes shape-two absolute top-[4%] -z-1 hidden min-[1024px]:right-[6%] min-[1024px]:block min-[1536px]:right-[8%]'
 		/>
 	</div>
 
@@ -140,7 +144,7 @@ import Testimonials from '@components/Testimonials.astro';
 							<!-- Starter Plan -->
 							<div class='w-full max-w-full flex-[0_0_auto] px-3 min-[640px]:w-6/12 min-[1024px]:w-3/12'>
 								<div
-									class='pr-column pr-one relative pt-7.5 pr-2.5 pb-7.5 pl-5 rounded-[15px] border border-solid border-[#b1b2f4] min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1280px]:rounded-[15px_0_0_15px] min-[1280px]:border-r-0 min-[1536px]:pl-7.5'>
+									class='pr-column pr-one relative rounded-[15px] border border-solid border-[#b1b2f4] pt-7.5 pr-2.5 pb-7.5 pl-5 min-[1280px]:rounded-[15px_0_0_15px] min-[1280px]:border-r-0 min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1536px]:pl-7.5'>
 									<img
 										src='images/icon/icon_56.svg'
 										alt=''
@@ -167,10 +171,7 @@ import Testimonials from '@components/Testimonials.astro';
 										</ul>
 									</div>
 									<div class='pr-footer pt-7.5 min-[1280px]:pt-3.75'>
-										<div
-											class='price text-[26px] text-black min-[1280px]:text-[28px]'>
-											$400
-										</div>
+										<div class='price text-[26px] text-black min-[1280px]:text-[28px]'>$400</div>
 										<div class='trial-text mb-7.5 text-[17px] opacity-75'>Best for light ongoing support</div>
 										<a
 											href='mailto:hello@design2tailwind.com?subject=Retainer%20Inquiry&body=Hi%2C%0A%0AI%27m%20interested%20in%20your%20agency%20retainer%20services.%0A%0A'
@@ -215,10 +216,7 @@ import Testimonials from '@components/Testimonials.astro';
 										</ul>
 									</div>
 									<div class='pr-footer pt-7.5 min-[1280px]:pt-11.25'>
-										<div
-											class='price text-[26px] text-black min-[1280px]:text-[28px]'>
-											$800
-										</div>
+										<div class='price text-[26px] text-black min-[1280px]:text-[28px]'>$800</div>
 										<div class='trial-text mb-7.5 text-[17px] opacity-75'>Best for ongoing work</div>
 										<a
 											href='mailto:hello@design2tailwind.com?subject=Retainer%20Inquiry&body=Hi%2C%0A%0AI%27m%20interested%20in%20your%20agency%20retainer%20services.%0A%0A'
@@ -232,7 +230,7 @@ import Testimonials from '@components/Testimonials.astro';
 							<!-- Growth Plan -->
 							<div class='w-full max-w-full flex-[0_0_auto] px-3 min-[640px]:w-6/12 min-[1024px]:w-3/12'>
 								<div
-									class='pr-column pr-two relative pt-7.5 pr-2.5 pb-7.5 pl-5 rounded-[15px] border border-solid border-[#b1b2f4] min-[1024px]:border-l-0 min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1536px]:pl-7.5'>
+									class='pr-column pr-two relative rounded-[15px] border border-solid border-[#b1b2f4] pt-7.5 pr-2.5 pb-7.5 pl-5 min-[1024px]:border-l-0 min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1536px]:pl-7.5'>
 									<img
 										src='images/icon/icon_58.svg'
 										alt=''
@@ -259,10 +257,7 @@ import Testimonials from '@components/Testimonials.astro';
 										</ul>
 									</div>
 									<div class='pr-footer pt-7.5 min-[1280px]:pt-3.75'>
-										<div
-											class='price text-[26px] text-black min-[1280px]:text-[28px]'>
-											$1,500
-										</div>
+										<div class='price text-[26px] text-black min-[1280px]:text-[28px]'>$1,500</div>
 										<div class='trial-text mb-7.5 text-[17px] opacity-75'>Ideal for active client pipelines</div>
 										<a
 											href='mailto:hello@design2tailwind.com?subject=Retainer%20Inquiry&body=Hi%2C%0A%0AI%27m%20interested%20in%20your%20agency%20retainer%20services.%0A%0A'
@@ -276,7 +271,7 @@ import Testimonials from '@components/Testimonials.astro';
 							<!-- Scale Plan -->
 							<div class='w-full max-w-full flex-[0_0_auto] px-3 min-[640px]:w-6/12 min-[1024px]:w-3/12'>
 								<div
-									class='pr-column pr-three relative pt-7.5 pr-2.5 pb-7.5 pl-5 rounded-[15px] border border-solid border-[#b1b2f4] min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1280px]:rounded-[0_15px_15px_0] min-[1280px]:border-l-0 min-[1536px]:pl-7.5'>
+									class='pr-column pr-three relative rounded-[15px] border border-solid border-[#b1b2f4] pt-7.5 pr-2.5 pb-7.5 pl-5 min-[1280px]:rounded-[0_15px_15px_0] min-[1280px]:border-l-0 min-[1280px]:pt-15 min-[1280px]:pb-12.5 min-[1280px]:pl-11.25 min-[1536px]:pl-7.5'>
 									<img
 										src='images/icon/icon_59.svg'
 										alt=''
@@ -303,10 +298,7 @@ import Testimonials from '@components/Testimonials.astro';
 										</ul>
 									</div>
 									<div class='pr-footer pt-7.5 min-[1280px]:pt-3.75'>
-										<div
-											class='price text-[26px] text-black min-[1280px]:text-[28px]'>
-											$2,800
-										</div>
+										<div class='price text-[26px] text-black min-[1280px]:text-[28px]'>$2,800</div>
 										<div class='trial-text mb-7.5 text-[17px] opacity-75'>Best for recurring projects</div>
 										<a
 											href='mailto:hello@design2tailwind.com?subject=Retainer%20Inquiry&body=Hi%2C%0A%0AI%27m%20interested%20in%20your%20agency%20retainer%20services.%0A%0A'
@@ -325,11 +317,11 @@ import Testimonials from '@components/Testimonials.astro';
 			</div>
 			<div class='wow fadeInUp mx-auto w-full text-center min-[1024px]:w-5/6 min-[1280px]:w-2/3'>
 				<p
-					class='mt-4 pt-2.5 mb-7.5 text-base/[1.67em] text-gray-500 min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:pt-5 min-[1280px]:mb-12.5 min-[1280px]:text-lg'>
+					class='mt-4 mb-7.5 pt-2.5 text-base/[1.67em] text-gray-500 min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:mb-12.5 min-[1280px]:pt-5 min-[1280px]:text-lg'>
 					Hours roll over for 30 days. Cancel anytime with notice.
 				</p>
 				<p
-					class='pt-2.5 mb-7.5 text-base/[1.67em] min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:pt-5 min-[1280px]:mb-12.5 min-[1280px]:text-xl'>
+					class='mb-7.5 pt-2.5 text-base/[1.67em] min-[1024px]:mb-10 min-[1024px]:text-[19px] min-[1280px]:mb-12.5 min-[1280px]:pt-5 min-[1280px]:text-xl'>
 					Need a one-off project instead? <a
 						href='#cta'
 						class='text-[#BC46E2] underline'
