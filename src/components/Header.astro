@@ -1,5 +1,19 @@
 <header
-	class='theme-main-menu sticky-menu theme-menu-two absolute inset-x-0 top-0 z-99 py-5 px-3 transition-all duration-400 ease-out min-[1024px]:px-5 min-[1536px]:px-8.75'>
+	x-data='{ mobileMenuOpen: false }'
+	class='theme-main-menu sticky-menu theme-menu-two absolute inset-x-0 top-0 z-99 px-3 py-5 transition-all duration-400 ease-out min-[1024px]:px-5 min-[1536px]:px-8.75'>
+	<!-- Mobile menu overlay -->
+	<div
+		x-show='mobileMenuOpen'
+		x-transition:enter='transition-opacity ease-out duration-300'
+		x-transition:enter-start='opacity-0'
+		x-transition:enter-end='opacity-50'
+		x-transition:leave='transition-opacity ease-in duration-200'
+		x-transition:leave-start='opacity-50'
+		x-transition:leave-end='opacity-0'
+		@click='mobileMenuOpen = false'
+		class='fixed inset-0 z-9998 bg-black min-[1024px]:hidden'
+		style='display: none;'>
+	</div>
 	<div class='inner-content relative pl-4'>
 		<div class='flex items-center justify-between'>
 			<div class='flex items-center'>
@@ -16,7 +30,7 @@
 				<!-- <a href="signin.html" class="login-btn-one text-[17px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] font-medium tran3s mr-4 leading-[48px] border text-black p-[0_35px] rounded-[30px] border-solid border-[#E4E4E4] hover:text-white hover:bg-[#BC46E2] lg:p-[0_25px] lg:leading-[45px] md:p-[0_25px] md:leading-[45px] sm:p-[0_25px] sm:leading-[45px] xsm:p-[0_25px] xsm:leading-[45px]">Login</a> -->
 				<a
 					href='/#quote'
-					class='contact-btn-two tran3s hidden rounded-[30px] border border-solid border-[#BC46E2] py-0 px-6.25 text-[15px] leading-[45px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white min-[1024px]:block min-[1280px]:px-8.75 min-[1280px]:text-[17px] min-[1280px]:leading-[48px]'
+					class='contact-btn-two tran3s hidden rounded-[30px] border border-solid border-[#BC46E2] px-6.25 py-0 text-[15px] leading-[45px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white min-[1024px]:block min-[1280px]:px-8.75 min-[1280px]:text-[17px] min-[1280px]:leading-[48px]'
 					>Get a Free Quote</a
 				>
 			</div>
@@ -25,23 +39,28 @@
 			<nav
 				class='navbar navbar-expand-lg static flex flex-wrap items-center justify-between p-0 min-[1024px]:order-2 min-[1024px]:flex-nowrap min-[1024px]:justify-start min-[1024px]:py-2'>
 				<button
-					class="navbar-toggler relative z-99 block h-9.5 w-11 rounded border-0 bg-[#BC46E2] p-0 text-xl leading-none shadow-[0_15px_20px_0px_rgba(0,0,0,0.05)] transition-shadow duration-150 ease-in-out before:pointer-events-none before:absolute before:top-1/2 before:left-2.25 before:h-0.5 before:w-6.5 before:origin-center before:bg-white before:transition-transform before:duration-250 before:content-[''] after:pointer-events-none after:absolute after:top-1/2 after:left-2.25 after:h-0.5 after:w-6.5 after:origin-center after:bg-white after:transition-transform after:duration-250 after:content-[''] focus:shadow-none min-[1024px]:hidden"
+					@click='mobileMenuOpen = !mobileMenuOpen'
+					class='navbar-toggler relative z-9999 flex h-10 w-10 items-center justify-center rounded-lg border-0 bg-[#BC46E2] p-0 text-white shadow-[0_15px_20px_0px_rgba(0,0,0,0.05)] transition-all duration-200 ease-in-out hover:bg-[#a93dd0] focus:shadow-none min-[1024px]:hidden'
 					type='button'
-					data-bs-toggle='collapse'
-					data-bs-target='#navbarNav'
 					aria-controls='navbarNav'
-					aria-expanded='false'
+					:aria-expanded='mobileMenuOpen.toString()'
 					aria-label='Toggle navigation'>
-					<span
-						class='absolute left-2.25 -mt-px h-0.5 w-6.5 overflow-hidden bg-white indent-[200%] transition-opacity duration-250'
-					></span>
+					<!-- Hamburger icon -->
+					<svg x-show='!mobileMenuOpen' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='h-6 w-6'>
+						<path stroke-linecap='round' stroke-linejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
+					</svg>
+					<!-- Close icon -->
+					<svg x-show='mobileMenuOpen' x-cloak xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='h-6 w-6'>
+						<path stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6M6 6l12 12' />
+					</svg>
 				</button>
 				<div
-					class='fixed visible top-0 left-0 z-9999 block clear-both h-screen max-h-screen w-80 max-w-[calc(100vw-60px)] -translate-x-full overflow-y-auto bg-white pt-8 px-3.75 pb-5 transition-all duration-300 ease-in-out min-[768px]:w-4/5 min-[1024px]:static min-[1024px]:z-auto min-[1024px]:clear-none min-[1024px]:h-auto min-[1024px]:max-h-none min-[1024px]:w-auto min-[1024px]:max-w-none min-[1024px]:translate-x-0 min-[1024px]:overflow-visible min-[1024px]:bg-transparent min-[1024px]:p-0 min-[1024px]:transition-none min-[1024px]:grow min-[1024px]:basis-full min-[1024px]:items-center'
+					:class="mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'"
+					class='visible fixed top-0 left-0 z-9999 clear-both block h-screen max-h-screen w-80 max-w-[calc(100vw-60px)] overflow-y-auto bg-white px-3.75 pt-8 pb-5 shadow-[4px_0_25px_rgba(0,0,0,0.1)] transition-transform duration-300 ease-in-out min-[768px]:w-4/5 min-[1024px]:static min-[1024px]:z-auto min-[1024px]:clear-none min-[1024px]:h-auto min-[1024px]:max-h-none min-[1024px]:w-auto min-[1024px]:max-w-none min-[1024px]:grow min-[1024px]:basis-full min-[1024px]:translate-x-0! min-[1024px]:items-center min-[1024px]:overflow-visible min-[1024px]:bg-transparent min-[1024px]:p-0 min-[1024px]:shadow-none min-[1024px]:transition-none'
 					id='navbarNav'>
 					<ul class='navbar-nav mb-0 flex flex-col pl-0 min-[1024px]:flex-row'>
 						<li class='block min-[1024px]:hidden'>
-							<div class='mb-12 flex items-center'>
+							<div class='mb-12 flex items-center justify-between'>
 								<a
 									href='/'
 									class='block'
@@ -51,6 +70,23 @@
 										alt=''
 									/></a
 								>
+								<button
+									@click='mobileMenuOpen = false'
+									class='flex h-9 w-9 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-colors hover:bg-gray-200'
+									aria-label='Close menu'>
+									<svg
+										class='h-5 w-5'
+										fill='none'
+										stroke='currentColor'
+										viewBox='0 0 24 24'>
+										<path
+											stroke-linecap='round'
+											stroke-linejoin='round'
+											stroke-width='2'
+											d='M6 18L18 6M6 6l12 12'
+										></path>
+									</svg>
+								</button>
 							</div>
 						</li>
 						<li>
@@ -60,10 +96,34 @@
 								>Home</a
 							>
 						</li>
-						<li class='group relative'>
+						<li
+							x-data='{ servicesOpen: false }'
+							class='group relative'>
+							<!-- Mobile: Button trigger -->
+							<button
+								@click='servicesOpen = !servicesOpen'
+								:class="servicesOpen ? 'text-[#BC46E2]' : ''"
+								class='nav-link visible relative mx-6.5 flex w-full items-center justify-between gap-1 py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! min-[1024px]:hidden'
+								type='button'>
+								Services
+								<svg
+									:class="servicesOpen ? 'rotate-180' : ''"
+									class='h-4 w-4 transition-transform duration-200'
+									fill='none'
+									stroke='currentColor'
+									viewBox='0 0 24 24'>
+									<path
+										stroke-linecap='round'
+										stroke-linejoin='round'
+										stroke-width='2'
+										d='M19 9l-7 7-7-7'
+									></path>
+								</svg>
+							</button>
+							<!-- Desktop: Hover trigger -->
 							<a
 								href='#'
-								class='nav-link visible relative mx-6.5 flex items-center gap-1 py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! min-[1024px]:text-[17px]'
+								class='nav-link visible relative mx-6.5 hidden items-center gap-1 py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! min-[1024px]:flex min-[1024px]:text-[17px]'
 								>Services
 								<svg
 									class='h-4 w-4 transition-transform duration-200 group-hover:rotate-180'
@@ -78,17 +138,162 @@
 									></path>
 								</svg>
 							</a>
+							<!-- Mobile: Collapsible submenu -->
 							<div
-								class='invisible absolute top-full left-0 z-50 grid min-w-[480px] translate-y-2 grid-cols-2 gap-0 rounded-xl bg-white p-4 opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.12)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100'>
+								x-show='servicesOpen'
+								x-collapse
+								class='overflow-hidden pl-4 min-[1024px]:hidden'>
+								<!-- Design Tools -->
+								<span class='mt-2 mb-2 block px-6.5 text-[11px] font-semibold tracking-wider text-gray-400 uppercase'
+									>Design Tools</span
+								>
+								<ul class='space-y-1'>
+									<li>
+										<a
+											href='/figma-to-tailwind'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-figma.png'
+												alt='Figma'
+												class='h-5 w-5'
+											/>
+											Figma
+										</a>
+									</li>
+									<li>
+										<a
+											href='/sketch-to-tailwind'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-sketch.png'
+												alt='Sketch'
+												class='h-5 w-5'
+											/>
+											Sketch
+										</a>
+									</li>
+									<li>
+										<a
+											href='/adobe-xd-to-tailwind'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-adobe-xd.png'
+												alt='Adobe XD'
+												class='h-5 w-5'
+											/>
+											Adobe XD
+										</a>
+									</li>
+									<li>
+										<a
+											href='/psd-to-tailwind'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-psd.svg'
+												alt='PSD'
+												class='h-5 w-5'
+											/>
+											Photoshop
+										</a>
+									</li>
+								</ul>
+								<!-- Frameworks -->
+								<span class='mt-4 mb-2 block px-6.5 text-[11px] font-semibold tracking-wider text-gray-400 uppercase'
+									>Frameworks</span
+								>
+								<ul class='space-y-1 pb-2'>
+									<li>
+										<a
+											href='/design-to-tailwind-react'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-react.png'
+												alt='React'
+												class='h-5 w-5'
+											/>
+											React
+										</a>
+									</li>
+									<li>
+										<a
+											href='/design-to-tailwind-vue'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-vue.png'
+												alt='Vue'
+												class='h-5 w-5'
+											/>
+											Vue
+										</a>
+									</li>
+									<li>
+										<a
+											href='/design-to-tailwind-astro'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-astro.svg'
+												alt='Astro'
+												class='h-5 w-5'
+											/>
+											Astro
+										</a>
+									</li>
+									<li>
+										<a
+											href='/design-to-tailwind-alpinejs'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-alpine.svg'
+												alt='Alpine.js'
+												class='h-5 w-5'
+											/>
+											Alpine.js
+										</a>
+									</li>
+									<li>
+										<a
+											href='/design-to-tailwind-shopify'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-shopify.svg'
+												alt='Shopify'
+												class='h-5 w-5'
+											/>
+											Shopify
+										</a>
+									</li>
+									<li>
+										<a
+											href='/design-to-tailwind-statamic'
+											class='flex items-center gap-3 px-6.5 py-2 text-base font-medium text-gray-700 transition-colors hover:text-[#BC46E2]'>
+											<img
+												src='/images/logo/logo-statamic.svg'
+												alt='Statamic'
+												class='h-5 w-5'
+											/>
+											Statamic
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- Desktop: Hover dropdown -->
+							<div
+								class='invisible absolute top-full left-0 z-50 hidden min-w-[480px] translate-y-2 grid-cols-2 gap-0 rounded-xl bg-white p-4 opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.12)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 min-[1024px]:grid'>
 								<!-- Design Tools Column -->
 								<div class='border-r border-gray-100 pr-4'>
-									<span class='mb-2 block px-3 text-[11px] font-semibold tracking-wider text-gray-400 uppercase'>Design Tools</span>
+									<span class='mb-2 block px-3 text-[11px] font-semibold tracking-wider text-gray-400 uppercase'
+										>Design Tools</span
+									>
 									<ul class='space-y-0.5'>
 										<li>
 											<a
 												href='/figma-to-tailwind'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-figma.png' alt='Figma' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-figma.png'
+													alt='Figma'
+													class='h-5 w-5'
+												/>
 												Figma
 											</a>
 										</li>
@@ -96,7 +301,11 @@
 											<a
 												href='/sketch-to-tailwind'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-sketch.png' alt='Sketch' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-sketch.png'
+													alt='Sketch'
+													class='h-5 w-5'
+												/>
 												Sketch
 											</a>
 										</li>
@@ -104,7 +313,11 @@
 											<a
 												href='/adobe-xd-to-tailwind'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-adobe-xd.png' alt='Adobe XD' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-adobe-xd.png'
+													alt='Adobe XD'
+													class='h-5 w-5'
+												/>
 												Adobe XD
 											</a>
 										</li>
@@ -112,7 +325,11 @@
 											<a
 												href='/psd-to-tailwind'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-psd.svg' alt='PSD' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-psd.svg'
+													alt='PSD'
+													class='h-5 w-5'
+												/>
 												Photoshop
 											</a>
 										</li>
@@ -120,13 +337,19 @@
 								</div>
 								<!-- Frameworks Column -->
 								<div class='pl-4'>
-									<span class='mb-2 block px-3 text-[11px] font-semibold tracking-wider text-gray-400 uppercase'>Frameworks</span>
+									<span class='mb-2 block px-3 text-[11px] font-semibold tracking-wider text-gray-400 uppercase'
+										>Frameworks</span
+									>
 									<ul class='space-y-0.5'>
 										<li>
 											<a
 												href='/design-to-tailwind-react'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-react.png' alt='React' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-react.png'
+													alt='React'
+													class='h-5 w-5'
+												/>
 												React
 											</a>
 										</li>
@@ -134,7 +357,11 @@
 											<a
 												href='/design-to-tailwind-vue'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-vue.png' alt='Vue' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-vue.png'
+													alt='Vue'
+													class='h-5 w-5'
+												/>
 												Vue
 											</a>
 										</li>
@@ -142,7 +369,11 @@
 											<a
 												href='/design-to-tailwind-astro'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-astro.svg' alt='Astro' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-astro.svg'
+													alt='Astro'
+													class='h-5 w-5'
+												/>
 												Astro
 											</a>
 										</li>
@@ -150,7 +381,11 @@
 											<a
 												href='/design-to-tailwind-alpinejs'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-alpine.svg' alt='Alpine.js' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-alpine.svg'
+													alt='Alpine.js'
+													class='h-5 w-5'
+												/>
 												Alpine.js
 											</a>
 										</li>
@@ -158,7 +393,11 @@
 											<a
 												href='/design-to-tailwind-shopify'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-shopify.svg' alt='Shopify' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-shopify.svg'
+													alt='Shopify'
+													class='h-5 w-5'
+												/>
 												Shopify
 											</a>
 										</li>
@@ -166,7 +405,11 @@
 											<a
 												href='/design-to-tailwind-statamic'
 												class='flex items-center gap-3 rounded-lg px-3 py-2 text-[14px] font-medium text-gray-700 transition-colors hover:bg-gray-50 hover:text-[#BC46E2]'>
-												<img src='/images/logo/logo-statamic.svg' alt='Statamic' class='h-5 w-5' />
+												<img
+													src='/images/logo/logo-statamic.svg'
+													alt='Statamic'
+													class='h-5 w-5'
+												/>
 												Statamic
 											</a>
 										</li>

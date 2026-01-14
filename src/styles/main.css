@@ -21,6 +21,11 @@
 }
 
 @layer base {
+	/* Alpine.js cloak - hide elements until Alpine initializes */
+	[x-cloak] {
+		display: none !important;
+	}
+
 	* {
 		@apply m-0 box-border p-0;
 	}
