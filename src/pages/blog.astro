@@ -4,128 +4,116 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 ---
 
-<Layout title='Astro'>
+<Layout
+	title='Blog | Tips, tutorials, and insights about Tailwind CSS development'
+	description='Tips, tutorials, and insights about Tailwind CSS development. Learn modern front-end techniques from the Design2Tailwind team.'
+	keywords={['tailwind css blog', 'tailwind tutorials', 'css tips']}>
 	<Header />
 
-	<div class="pt-36 min-[1024px]:pt-44 min-[1280px]:pt-52">
-		<div class="fancy-feature-fiftyOne relative">
-			<div class="container">
-				<div class="flex flex-wrap">
-					<div class="wow fadeInLeft">
-						<div class="title-style-five mb-10 min-[768px]:mb-16">
-							<div class="sc-title-two italic relative inline-block text-[17px] text-(--prime-ten) mb-5 pl-10 before:content-[''] before:absolute before:w-6 before:h-px before:left-0 before:top-3.5 before:bg-(--prime-ten)">Blog</div>
-							<h2 class="font-Recoleta font-normal text-black text-4xl min-[1024px]:text-5xl min-[1280px]:text-6xl">Latest posts</h2>
-							<p class="text-black text-xl pt-7">Check out our posts for the latest news, tutorials, <br/> tips and tricks for Tailwind CSS
+	<div class='pt-36 min-[1024px]:pt-44 min-[1280px]:pt-52'>
+		<div class='fancy-feature-fiftyOne relative'>
+			<div class='container'>
+				<div class='flex flex-wrap'>
+					<div class='wow fadeInLeft'>
+						<div class='title-style-five mb-10 min-[768px]:mb-16'>
+							<div
+								class="sc-title-two relative mb-5 inline-block pl-10 text-[17px] text-(--prime-ten) italic before:absolute before:top-3.5 before:left-0 before:h-px before:w-6 before:bg-(--prime-ten) before:content-['']">
+								Blog
+							</div>
+							<h2 class='font-Recoleta text-4xl font-normal text-black min-[1024px]:text-5xl min-[1280px]:text-6xl'>
+								Latest posts
+							</h2>
+							<p class='pt-7 text-xl text-black'>
+								Check out our posts for the latest news, tutorials, <br /> tips and tricks for Tailwind CSS
 							</p>
 						</div>
 					</div>
 				</div>
-			</div> <!-- /.container -->
-			<img src="images/lazy.svg" data-src="images/shape/shape_172.svg" alt="" class="lazy-img shapes shape-two hidden absolute -z-1 top-[4%] min-[1024px]:block min-[1024px]:right-[6%] min-[1536px]:right-[8%]">
+			</div>
+			<!-- /.container -->
+			<img
+				src='images/lazy.svg'
+				data-src='images/shape/shape_172.svg'
+				alt=''
+				class='lazy-img shapes shape-two absolute top-[4%] -z-1 hidden min-[1024px]:right-[6%] min-[1024px]:block min-[1536px]:right-[8%]'
+			/>
 		</div>
 	</div>
 
-	<div class="container relative z-30">
-		<div class="mb-20 min-[1024px]:w-5/6">
-			<div class="flex flex-col gap-8">
+	<div class='relative z-30 container'>
+		<div class='mb-20 min-[1024px]:w-5/6'>
+			<div class='flex flex-col gap-8'>
 				<a
-					href="/post"
-					class="border-[#b1b2f4] bg-white group flex flex-col overflow-hidden rounded-xl border shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center"
-				>
-					<div class="w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8">
-						<div class="flex">
-							<p class="text-black font-body text-sm min-[768px]:text-base">
+					href='/post'
+					class='group flex flex-col overflow-hidden rounded-xl border border-[#b1b2f4] bg-white shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center'>
+					<div class='w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8'>
+						<div class='flex'>
+							<p class='font-body text-sm text-black min-[768px]:text-base'>
 								By
-								<span class="font-bold">Vivian</span>
+								<span class='font-bold'>Vivian</span>
 							</p>
-							<span class="text-black px-2 text-sm min-[768px]:text-base">/</span>
-							<p class="text-black font-body text-sm min-[768px]:text-base">
-								Septembre 18,2024
-							</p>
+							<span class='px-2 text-sm text-black min-[768px]:text-base'>/</span>
+							<p class='font-body text-sm text-black min-[768px]:text-base'>Septembre 18,2024</p>
 						</div>
 						<h3
-							class="text-black group-hover:text-[#a056fa] font-body text-lg font-Recoleta font-medium transition-colors duration-300 min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl"
-						>
-						How to use box shadows with Tailwind CSS, including custom and arbitrary values
+							class='font-body font-Recoleta text-lg font-medium text-black transition-colors duration-300 group-hover:text-[#a056fa] min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl'>
+							How to use box shadows with Tailwind CSS, including custom and arbitrary values
 						</h3>
 						<p
-							class="text-black text-sm line-clamp-2 pt-1.5 font-body min-[768px]:pt-3 min-[768px]:text-base min-[768px]:line-clamp-1 min-[1024px]:line-clamp-2"
-						>
-
-						Learn how to use box shadows to add some flair to your designs.
-
+							class='font-body line-clamp-2 pt-1.5 text-sm text-black min-[768px]:line-clamp-1 min-[768px]:pt-3 min-[768px]:text-base min-[1024px]:line-clamp-2'>
+							Learn how to use box shadows to add some flair to your designs.
 						</p>
-						<p
-							class="text-[#4e257e] font-medium pt-1 font-body transition-colors duration-300 mb-0 min-[768px]:pt-2"
-						>
+						<p class='font-body mb-0 pt-1 font-medium text-[#4e257e] transition-colors duration-300 min-[768px]:pt-2'>
 							Read More »
 						</p>
 					</div>
 				</a>
 				<a
-					href="/post"
-					class="border-[#b1b2f4] bg-white flex group flex-col overflow-hidden rounded-xl border shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center"
-				>
-					<div class="w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8">
-						<div class="flex">
-							<p class="text-black font-body text-sm min-[768px]:text-base">
+					href='/post'
+					class='group flex flex-col overflow-hidden rounded-xl border border-[#b1b2f4] bg-white shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center'>
+					<div class='w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8'>
+						<div class='flex'>
+							<p class='font-body text-sm text-black min-[768px]:text-base'>
 								By
-								<span class="font-bold">Vivian</span>
+								<span class='font-bold'>Vivian</span>
 							</p>
-							<span class="text-black px-2 text-sm min-[768px]:text-base">/</span>
-							<p class="text-black font-body text-sm min-[768px]:text-base">
-								Septembre 18,2024
-							</p>
+							<span class='px-2 text-sm text-black min-[768px]:text-base'>/</span>
+							<p class='font-body text-sm text-black min-[768px]:text-base'>Septembre 18,2024</p>
 						</div>
 						<h3
-							class="text-black group-hover:text-[#a056fa] font-body text-lg font-Recoleta font-medium transition-colors duration-300 min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl"
-						>
-						How to use box shadows with Tailwind CSS, including custom and arbitrary values
+							class='font-body font-Recoleta text-lg font-medium text-black transition-colors duration-300 group-hover:text-[#a056fa] min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl'>
+							How to use box shadows with Tailwind CSS, including custom and arbitrary values
 						</h3>
 						<p
-							class="text-black text-sm line-clamp-2 pt-1.5 font-body min-[768px]:pt-3 min-[768px]:text-base min-[768px]:line-clamp-1 min-[1024px]:line-clamp-2"
-						>
-
-						Learn how to use box shadows to add some flair to your designs.
-
+							class='font-body line-clamp-2 pt-1.5 text-sm text-black min-[768px]:line-clamp-1 min-[768px]:pt-3 min-[768px]:text-base min-[1024px]:line-clamp-2'>
+							Learn how to use box shadows to add some flair to your designs.
 						</p>
-						<p
-							class="text-[#4e257e] font-medium pt-1 font-body transition-colors duration-300 mb-0 min-[768px]:pt-2"
-						>
+						<p class='font-body mb-0 pt-1 font-medium text-[#4e257e] transition-colors duration-300 min-[768px]:pt-2'>
 							Read More »
 						</p>
 					</div>
 				</a>
 				<a
-					href="/post"
-					class="border-[#b1b2f4] flex bg-white group flex-col overflow-hidden rounded-xl border shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center"
-				>
-					<div class="w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8">
-						<div class="flex">
-							<p class="text-black font-body text-sm min-[768px]:text-base">
+					href='/post'
+					class='group flex flex-col overflow-hidden rounded-xl border border-[#b1b2f4] bg-white shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center'>
+					<div class='w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8'>
+						<div class='flex'>
+							<p class='font-body text-sm text-black min-[768px]:text-base'>
 								By
-								<span class="font-bold">Vivian</span>
+								<span class='font-bold'>Vivian</span>
 							</p>
-							<span class="text-black px-2 text-sm min-[768px]:text-base">/</span>
-							<p class="text-black font-body text-sm min-[768px]:text-base">
-								Septembre 18,2024
-							</p>
+							<span class='px-2 text-sm text-black min-[768px]:text-base'>/</span>
+							<p class='font-body text-sm text-black min-[768px]:text-base'>Septembre 18,2024</p>
 						</div>
 						<h3
-							class="text-black group-hover:text-[#a056fa] font-body text-lg font-Recoleta font-medium transition-colors duration-300 min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl"
-						>
-						How to use box shadows with Tailwind CSS, including custom and arbitrary values
+							class='font-body font-Recoleta text-lg font-medium text-black transition-colors duration-300 group-hover:text-[#a056fa] min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl'>
+							How to use box shadows with Tailwind CSS, including custom and arbitrary values
 						</h3>
 						<p
-							class="text-black text-sm line-clamp-2 pt-1.5 font-body min-[768px]:pt-3 min-[768px]:text-base min-[768px]:line-clamp-1 min-[1024px]:line-clamp-2"
-						>
-
-						Learn how to use box shadows to add some flair to your designs.
-
+							class='font-body line-clamp-2 pt-1.5 text-sm text-black min-[768px]:line-clamp-1 min-[768px]:pt-3 min-[768px]:text-base min-[1024px]:line-clamp-2'>
+							Learn how to use box shadows to add some flair to your designs.
 						</p>
-						<p
-							class="text-[#4e257e] font-medium pt-1 font-body transition-colors duration-300 mb-0 min-[768px]:pt-2"
-						>
+						<p class='font-body mb-0 pt-1 font-medium text-[#4e257e] transition-colors duration-300 min-[768px]:pt-2'>
 							Read More »
 						</p>
 					</div>
@@ -133,8 +121,6 @@ import Footer from '@components/Footer.astro';
 			</div>
 		</div>
 	</div>
-
-
 
 	<Footer />
 </Layout>

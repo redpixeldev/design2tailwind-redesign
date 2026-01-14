@@ -4,7 +4,16 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 ---
 
-<Layout title='Astro'>
+<Layout
+	title='How to use box shadows with Tailwind CSS'
+	description='Learn how to use box shadows in Tailwind CSS, including custom and arbitrary values for modern UI design.'
+	ogType='article'
+	keywords={['tailwind css', 'box shadows', 'css shadows', 'tailwind tutorial']}
+	article={{
+		publishedTime: '2024-09-12T00:00:00Z',
+		author: 'Vivian',
+		tags: ['tailwind', 'css', 'shadows'],
+	}}>
 	<Header />
 
 	<div class="container flex flex-col pt-36 lg:pt-44 xl:pt-52 mb-20 lg:flex-row">

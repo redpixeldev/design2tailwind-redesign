@@ -1,76 +1,190 @@
 ---
 import '../styles/main.css';
+import { siteConfig } from '@config/site';
+import type { SEOProps } from '@/types/seo';
 
-const { title } = Astro.props;
+interface Props extends SEOProps {}
+
+const {
+	title,
+	seoTitle,
+	description = siteConfig.description,
+	canonical,
+	ogImage = siteConfig.defaultOgImage,
+	ogType = 'website',
+	keywords = [],
+	article,
+	noindex = false,
+} = Astro.props;
+
+const formattedTitle = seoTitle ?? (title ? `${title}` : siteConfig.name);
+const canonicalURL = canonical
+	? new URL(canonical, siteConfig.url).href
+	: new URL(Astro.url.pathname, siteConfig.url).href;
+const ogImageURL = new URL(ogImage, siteConfig.url).href;
 ---
 
 <!doctype html>
 <html lang='en'>
 	<head>
 		<meta charset='UTF-8' />
-		<meta charset='UTF-8' />
-		<meta
-			name='keywords'
-			content='Digital marketing agency, Digital marketing company, Digital marketing services'
-		/>
-		<meta
-			name='description'
-			content='Jano creative multipurpose is a beautiful website template designed for SEO & Digital Agency websites.'
-		/>
-		<meta
-			property='og:site_name'
-			content='Jano'
-		/>
-		<meta
-			property='og:url'
-			content='https://heloshape.com/'
-		/>
-		<meta
-			property='og:type'
-			content='website'
-		/>
-		<meta
-			property='og:title'
-			content='Jano - Creative Multipurpose Tailwind CSS Template'
-		/>
-		<meta
-			name='og:image'
-			content='images/assets/ogg.png'
-		/>
-		<!-- For IE -->
-		<meta
-			http-equiv='X-UA-Compatible'
-			content='IE=edge'
-		/>
-		<!-- For Resposive Device -->
 		<meta
 			name='viewport'
 			content='width=device-width, initial-scale=1.0'
 		/>
-		<!-- Chrome, Firefox OS and Opera -->
+		<meta
+			http-equiv='X-UA-Compatible'
+			content='IE=edge'
+		/>
+
+		<!-- Primary Meta Tags -->
+		<title>{formattedTitle}</title>
+		<meta
+			name='title'
+			content={formattedTitle}
+		/>
+		<meta
+			name='description'
+			content={description}
+		/>
+		{
+			keywords.length > 0 && (
+				<meta
+					name='keywords'
+					content={keywords.join(', ')}
+				/>
+			)
+		}
+		<link
+			rel='canonical'
+			href={canonicalURL}
+		/>
+		{
+			noindex && (
+				<meta
+					name='robots'
+					content='noindex, nofollow'
+				/>
+			)
+		}
+
+		<!-- Open Graph / Facebook -->
+		<meta
+			property='og:type'
+			content={ogType}
+		/>
+		<meta
+			property='og:url'
+			content={canonicalURL}
+		/>
+		<meta
+			property='og:title'
+			content={formattedTitle}
+		/>
+		<meta
+			property='og:description'
+			content={description}
+		/>
+		<meta
+			property='og:image'
+			content={ogImageURL}
+		/>
+		<meta
+			property='og:site_name'
+			content={siteConfig.name}
+		/>
+		<meta
+			property='og:locale'
+			content={siteConfig.locale}
+		/>
+
+		<!-- Twitter -->
+		<meta
+			name='twitter:card'
+			content='summary_large_image'
+		/>
+		<meta
+			name='twitter:url'
+			content={canonicalURL}
+		/>
+		<meta
+			name='twitter:title'
+			content={formattedTitle}
+		/>
+		<meta
+			name='twitter:description'
+			content={description}
+		/>
+		<meta
+			name='twitter:image'
+			content={ogImageURL}
+		/>
+		<meta
+			name='twitter:site'
+			content={siteConfig.twitterHandle}
+		/>
+
+		<!-- Article Meta (for blog posts) -->
+		{
+			article && (
+				<>
+					<meta
+						property='article:published_time'
+						content={article.publishedTime}
+					/>
+					{article.modifiedTime && (
+						<meta
+							property='article:modified_time'
+							content={article.modifiedTime}
+						/>
+					)}
+					{article.author && (
+						<meta
+							property='article:author'
+							content={article.author}
+						/>
+					)}
+					{article.tags?.map((tag) => (
+						<meta
+							property='article:tag'
+							content={tag}
+						/>
+					))}
+				</>
+			)
+		}
+
+		<!-- Theme & Browser -->
 		<meta
 			name='theme-color'
-			content='#1d2b40'
+			content={siteConfig.themeColor}
 		/>
-		<!-- Windows Phone -->
 		<meta
 			name='msapplication-navbutton-color'
-			content='#1d2b40'
+			content={siteConfig.themeColor}
 		/>
-		<!-- iOS Safari -->
 		<meta
 			name='apple-mobile-web-app-status-bar-style'
-			content='#1d2b40'
+			content={siteConfig.themeColor}
 		/>
-		<title>Sass Product || Jano - Creative Multipurpose Tailwind CSS Template</title>
+
 		<!-- Favicon -->
 		<link
 			rel='icon'
 			type='image/png'
-			sizes='56x56'
-			href='/images/favicon/icon.png'
+			sizes='32x32'
+			href='/favicon.png'
 		/>
-		<!-- Main style sheet -->
+
+		<!-- Fonts -->
+		<link
+			rel='preconnect'
+			href='https://fonts.googleapis.com'
+		/>
+		<link
+			rel='preconnect'
+			href='https://fonts.gstatic.com'
+		/>
 		<link
 			rel='stylesheet'
 			type='text/css'
@@ -107,6 +221,8 @@ const { title } = Astro.props;
 			href='/fonts/font-awesome/css/all.min.css'
 			media='all'
 		/>
+
+		<!-- Vendor Stylesheets -->
 		<link
 			rel='stylesheet'
 			type='text/css'
@@ -137,25 +253,10 @@ const { title } = Astro.props;
 			href='/vendor/nice-select/nice-select.css'
 			media='all'
 		/>
-		<!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
 
-		<title>{title}</title>
-		<link
-			rel='preconnect'
-			href='https://fonts.googleapis.com'
-		/>
-		<link
-			rel='preconnect'
-			href='https://fonts.gstatic.com'
-		/>
-		<link
-			rel='icon'
-			type='image/png'
-			sizes='32x32'
-			href='/favicon.png'
-		/>
-
+		<!-- Alpine.js -->
 		<script
+			is:inline
 			defer
 			src='https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js'
 		></script>
@@ -163,38 +264,31 @@ const { title } = Astro.props;
 	<body class='main-page-wrapper overflow-x-hidden'>
 		<slot />
 
-		<!-- Optional JavaScript _____________________________ -->
-		<!-- jQuery -->
+		<!-- Vendor Scripts -->
 		<script
 			is:inline
 			src='/vendor/jquery.min.js'
 		></script>
-		<!-- Bootstrap JS -->
 		<script
 			is:inline
 			src='/vendor/bootstrap/js/bootstrap.bundle.min.js'
 		></script>
-		<!-- WOW js -->
 		<script
 			is:inline
 			src='/vendor/wow/wow.min.js'
 		></script>
-		<!-- Slick Slider -->
 		<script
 			is:inline
 			src='/vendor/slick/slick.min.js'
 		></script>
-		<!-- Fancybox -->
 		<script
 			is:inline
 			src='/vendor/fancybox/dist/jquery.fancybox.min.js'
 		></script>
-		<!-- Lazy -->
 		<script
 			is:inline
 			src='/vendor/jquery.lazy.min.js'
 		></script>
-		<!-- js Counter -->
 		<script
 			is:inline
 			src='/vendor/jquery.counterup.min.js'
@@ -203,28 +297,23 @@ const { title } = Astro.props;
 			is:inline
 			src='/vendor/jquery.waypoints.min.js'
 		></script>
-		<!-- isotop -->
 		<script
 			is:inline
 			src='/vendor/isotope.pkgd.min.js'
 		></script>
-		<!-- Nice Select -->
 		<script
 			is:inline
 			src='/vendor/nice-select/jquery.nice-select.min.js'
 		></script>
-		<!-- validator js -->
 		<script
 			is:inline
 			src='/vendor/validator.js'
 		></script>
-		<!-- Theme js -->
 		<script
 			is:inline
 			src='/js/theme.js'
 		></script>
 	</body>
-	<!-- /.main-page-wrapper -->
 
 	<div id='preloader'>
 		<div
