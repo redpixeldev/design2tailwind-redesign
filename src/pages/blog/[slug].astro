@@ -1,0 +1,136 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+	return posts.map((post) => {
+		// Extract slug from permalink: "/blog/tailwindcss-tables/" -> "tailwindcss-tables"
+		const slug = post.data.permalink.replace(/^\/blog\//, '').replace(/\/$/, '');
+
+		return {
+			params: { slug },
+			props: { post },
+		};
+	});
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+// Format date for display
+const formattedDate = post.data.publishing_date.toLocaleDateString('en-US', {
+	year: 'numeric',
+	month: 'long',
+	day: 'numeric',
+});
+
+// Build article metadata for Layout SEO
+const article = {
+	publishedTime: post.data.publishing_date.toISOString(),
+	author: post.data.author,
+	tags: [post.data.category, post.data.keyword].filter(Boolean) as string[],
+};
+
+// Check if any syndication links exist
+const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.medium || post.data.reddit;
+---
+
+<Layout
+	title={post.data.title}
+	description={post.data.description}
+	ogType='article'
+	keywords={[post.data.keyword, post.data.category].filter(Boolean) as string[]}
+	article={article}>
+	<Header />
+
+	<div class='container flex flex-col pt-36 lg:pt-44 xl:pt-52 mb-20 lg:flex-row'>
+		<div class='mx-auto w-full max-w-3xl'>
+			<h1 class='font-Recoleta font-normal text-black xl:text-[43px]/[48px]! lg:text-4xl! text-3xl!'>
+				{post.data.title}
+			</h1>
+			<div class='border-grey-light flex flex-col border-b pb-5 md:flex-row md:items-center'>
+				<div class='flex pt-4'>
+					<p class='text-black font-body text-sm md:text-base'>
+						By
+						<span class='font-bold'>{post.data.author}</span>
+					</p>
+					<span class='text-black px-2 text-sm md:text-base'>/</span>
+					<p class='text-black font-body text-sm md:text-base'>
+						{formattedDate}
+					</p>
+				</div>
+			</div>
+			<div
+				class='prose-blog prose relative mt-8 max-w-none md:prose-lg prose-headings:mt-4 prose-li:marker:text-black text-black font-Gordita'>
+				<Content />
+			</div>
+
+			{
+				hasSyndication && (
+					<div class='mt-8 flex flex-col md:flex-row md:items-center border-t border-grey-light pt-6'>
+						<span class='text-black mr-4 font-medium text-lg md:text-base'>Also published on:</span>
+						<div class='flex gap-4 mt-2 md:mt-0 items-center flex-wrap'>
+							{post.data['dev.to'] && (
+								<a
+									href={post.data['dev.to']}
+									target='_blank'
+									rel='noopener noreferrer'
+									class='text-[#4e257e] hover:text-[#a056fa] transition-colors font-medium'>
+									Dev.to
+								</a>
+							)}
+							{post.data.hashnode && (
+								<a
+									href={post.data.hashnode}
+									target='_blank'
+									rel='noopener noreferrer'
+									class='text-[#4e257e] hover:text-[#a056fa] transition-colors font-medium'>
+									Hashnode
+								</a>
+							)}
+							{post.data.medium && (
+								<a
+									href={post.data.medium}
+									target='_blank'
+									rel='noopener noreferrer'
+									class='text-[#4e257e] hover:text-[#a056fa] transition-colors font-medium'>
+									Medium
+								</a>
+							)}
+							{post.data.reddit && (
+								<a
+									href={post.data.reddit}
+									target='_blank'
+									rel='noopener noreferrer'
+									class='text-[#4e257e] hover:text-[#a056fa] transition-colors font-medium'>
+									Reddit
+								</a>
+							)}
+						</div>
+					</div>
+				)
+			}
+
+			<div class='mt-8 flex flex-col md:flex-row md:items-center'>
+				<span class='text-black mr-4 font-medium text-lg md:text-base'>Share this article on:</span>
+				<div class='flex gap-2.5 mt-2 items-center'>
+					<button id='twitter'>
+						<img src='/images/lazy.svg' data-src='/images/icon/icon-twitter.svg' alt='Twitter' class='lazy-img h-9' />
+					</button>
+					<button id='linkedin'>
+						<img src='/images/lazy.svg' data-src='/images/icon/icon-linkedin.svg' alt='LinkedIn' class='lazy-img h-9' />
+					</button>
+					<button id='reddit'>
+						<img src='/images/lazy.svg' data-src='/images/icon/icon-reddit.svg' alt='Reddit' class='lazy-img h-9' />
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<Footer />
+</Layout>

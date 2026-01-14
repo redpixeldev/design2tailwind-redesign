@@ -1,0 +1,93 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+
+// Get all non-draft posts, sorted by date (newest first)
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+	(a, b) => b.data.publishing_date.getTime() - a.data.publishing_date.getTime()
+);
+
+// Helper to format date
+const formatDate = (date: Date) =>
+	date.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	});
+
+// Helper to get slug from permalink
+const getSlug = (permalink: string) => permalink.replace(/^\/blog\//, '').replace(/\/$/, '');
+---
+
+<Layout
+	title='Blog | Tips, tutorials, and insights about Tailwind CSS development'
+	description='Tips, tutorials, and insights about Tailwind CSS development. Learn modern front-end techniques from the Design2Tailwind team.'
+	keywords={['tailwind css blog', 'tailwind tutorials', 'css tips']}>
+	<Header />
+
+	<div class='pt-36 min-[1024px]:pt-44 min-[1280px]:pt-52'>
+		<div class='fancy-feature-fiftyOne relative'>
+			<div class='container'>
+				<div class='flex flex-wrap'>
+					<div class='wow fadeInLeft'>
+						<div class='title-style-five mb-10 min-[768px]:mb-16'>
+							<div
+								class="sc-title-two relative mb-5 inline-block pl-10 text-[17px] text-(--prime-ten) italic before:absolute before:top-3.5 before:left-0 before:h-px before:w-6 before:bg-(--prime-ten) before:content-['']">
+								Blog
+							</div>
+							<h2 class='font-Recoleta text-4xl font-normal text-black min-[1024px]:text-5xl min-[1280px]:text-6xl'>
+								Latest posts
+							</h2>
+							<p class='pt-7 text-xl text-black'>
+								Check out our posts for the latest news, tutorials, <br /> tips and tricks for Tailwind CSS
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img
+				src='images/lazy.svg'
+				data-src='images/shape/shape_172.svg'
+				alt=''
+				class='lazy-img shapes shape-two absolute top-[4%] -z-1 hidden min-[1024px]:right-[6%] min-[1024px]:block min-[1536px]:right-[8%]'
+			/>
+		</div>
+	</div>
+
+	<div class='relative z-30 container'>
+		<div class='mb-20 min-[1024px]:w-5/6'>
+			<div class='flex flex-col gap-8'>
+				{
+					posts.map((post) => (
+						<a
+							href={`/blog/${getSlug(post.data.permalink)}`}
+							class='group flex flex-col overflow-hidden rounded-xl border border-[#b1b2f4] bg-white shadow-sm shadow-[#e4e2e8] transition-shadow duration-300 min-[768px]:flex-row min-[768px]:items-center'>
+							<div class='w-full px-5 py-6 min-[768px]:px-8 min-[768px]:py-8'>
+								<div class='flex'>
+									<p class='font-body text-sm text-black min-[768px]:text-base'>
+										By <span class='font-bold'>{post.data.author}</span>
+									</p>
+									<span class='px-2 text-sm text-black min-[768px]:text-base'>/</span>
+									<p class='font-body text-sm text-black min-[768px]:text-base'>{formatDate(post.data.publishing_date)}</p>
+								</div>
+								<h3 class='font-body font-Recoleta text-lg font-medium text-black transition-colors duration-300 group-hover:text-[#a056fa] min-[768px]:pt-2 min-[768px]:text-xl min-[1024px]:text-2xl'>
+									{post.data.title}
+								</h3>
+								<p class='font-body line-clamp-2 pt-1.5 text-sm text-black min-[768px]:line-clamp-1 min-[768px]:pt-3 min-[768px]:text-base min-[1024px]:line-clamp-2'>
+									{post.data.description}
+								</p>
+								<p class='font-body mb-0 pt-1 font-medium text-[#4e257e] transition-colors duration-300 min-[768px]:pt-2'>
+									Read More &raquo;
+								</p>
+							</div>
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</div>
+
+	<Footer />
+</Layout>
