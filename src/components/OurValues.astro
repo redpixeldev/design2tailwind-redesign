@@ -47,11 +47,11 @@ const {
 ---
 
 <div
-	class='fancy-feature-fiftyNine wow fadeInUp relative z-30 mt-16 mb-24 min-[640px]:mt-20 min-[1024px]:mb-28 min-[1280px]:mt-28 min-[1280px]:mb-36'>
+	class='fancy-feature-fiftyNine wow fadeInUp relative z-30 mt-16 mb-24 sm:mt-20 lg:mb-28 xl:mt-28 xl:mb-36'>
 	<div class='container'>
 		<div class='title-style-ten wow fadeInUp text-center'>
 			<h2
-				class='main-title font-Recoleta text-[35px] leading-[1.17em] font-normal tracking-[0] text-black min-[1536px]:text-[54px]'>
+				class='main-title font-Recoleta text-[35px] leading-[1.17em] font-normal tracking-[0] text-black 2xl:text-[54px]'>
 				{titlePart1}
 				<span class='relative'>
 					{titlePart2}<img
@@ -61,21 +61,21 @@ const {
 					/></span
 				>
 			</h2>
-			<div class='mx-auto min-[768px]:w-5/6'>
-				<p class='wow fadeInUp mt-5 text-base leading-[1.67em] min-[1024px]:mt-6.25 min-[1024px]:text-[19px] min-[1280px]:text-xl'>
+			<div class='mx-auto md:w-5/6'>
+				<p class='wow fadeInUp mt-5 text-base leading-[1.67em] lg:mt-6.25 lg:text-[19px] xl:text-xl'>
 					{description}
 				</p>
 			</div>
 		</div>
 
 		<div
-			class='card-wrapper mt-12.5 pt-5 pb-7.5 border-y-2 border-solid border-y-black min-[1280px]:mt-21.25 min-[1280px]:pt-11.25 min-[1280px]:pb-13.75'>
-			<div class='grid justify-center gap-8 min-[768px]:grid-cols-3'>
+			class='card-wrapper mt-12.5 pt-5 pb-7.5 border-y-2 border-solid border-y-black xl:mt-21.25 xl:pt-11.25 xl:pb-13.75'>
+			<div class='grid justify-center gap-8 md:grid-cols-3'>
 				{
 					values.map((value) => (
 						<div class='card-style-twentySix wow fadeInUp text-center'>
 							<div
-								class='icon m-auto flex size-13.75 items-center justify-center rounded-full p-3.75 min-[1280px]:size-18.75 min-[1280px]:p-0'
+								class='icon m-auto flex size-13.75 items-center justify-center rounded-full p-3.75 xl:size-18.75 xl:p-0'
 								style={value.bgColor ? `background-color: ${value.bgColor};` : ''}>
 								<img
 									src='images/lazy.svg'
@@ -84,10 +84,10 @@ const {
 									class='lazy-img h-10'
 								/>
 							</div>
-							<h5 class='mt-7.5 mb-1.25 text-xl text-black min-[1280px]:mt-10'>
+							<h5 class='mt-7.5 mb-1.25 text-xl text-black xl:mt-10'>
 								{value.title}
 							</h5>
-							<p class='text-base leading-[1.67em] min-[1280px]:text-lg'>
+							<p class='text-base leading-[1.67em] xl:text-lg'>
 								{value.subtitle}
 							</p>
 						</div>
@@ -103,6 +103,6 @@ const {
 		src='images/lazy.svg'
 		data-src={shapeImage}
 		alt=''
-		class='lazy-img shapes shape-one hidden absolute left-0 -z-1 min-[768px]:block min-[768px]:-top-10 min-[1280px]:top-[4%]'
+		class='lazy-img shapes shape-one hidden absolute left-0 -z-1 md:block md:-top-10 xl:top-[4%]'
 	/>
 </div>

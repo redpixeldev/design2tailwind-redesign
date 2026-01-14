@@ -377,7 +377,7 @@ body .btn-seventeen:before {
 	@apply border-[#1B1B1B] bg-[#1B1B1B] text-white;
 }
 .pricing-table-area-two .pr-column.active {
-	@apply xsm:before:hidden! shadow-[0_40px_80px_rgba(3,17,54,0.04)] before:absolute before:top-[-62px] before:-right-24 before:content-[url(../images/shape/popular-tag.svg)] sm:before:hidden!;
+	@apply before:hidden! md:before:block shadow-[0_40px_80px_rgba(3,17,54,0.04)] before:absolute before:top-[-62px] before:-right-24 before:content-[url(../images/shape/popular-tag.svg)];
 }
 .g-control-nav-one li.is-checked {
 	@apply font-medium text-black;
@@ -433,7 +433,7 @@ body .btn-seventeen:before {
 	@apply block;
 }
 .pricing-table-area-three .tab-content .pr-column.active {
-	@apply xsm:before:hidden! rounded-[15px] border border-[#b1b2f4] bg-white shadow-[0px_25px_60px_rgba(0,13,48,0.0480786)] before:absolute before:-top-20 before:right-[-75px] before:content-[url(../images/shape/popular-tag.svg)];
+	@apply before:hidden! md:before:block rounded-[15px] border border-[#b1b2f4] bg-white shadow-[0px_25px_60px_rgba(0,13,48,0.0480786)] before:absolute before:-top-20 before:right-[-75px] before:content-[url(../images/shape/popular-tag.svg)];
 }
 .pricing-table-area-three .tab-content .pr-column.active .btn-twelve {
 	@apply bg-[#BC46E2] text-white;
@@ -490,7 +490,7 @@ body .btn-seventeen:before {
 	-webkit-text-fill-color: transparent;
 }
 .feedback-section-seven .slick-dots {
-	@apply xsm:mt-[50px] mt-20 text-center sm:mt-[50px] md:mt-[50px] lg:mt-[50px];
+	@apply mt-12.5 xl:mt-20 text-center;
 }
 .feedback-section-seven .slick-dots li button {
 	@apply h-2.5 w-2.5 bg-[rgba(255,255,255,0.4)];
@@ -578,7 +578,7 @@ body .btn-seventeen:before {
 	transform: scale3d(1.1, 1.1, 1);
 }
 .feedback_slider_nine .slick-dots {
-	@apply xsm:mt-[50px] mt-[85px] p-0 text-center sm:mt-[50px] md:mt-[50px];
+	@apply mt-12.5 lg:mt-[85px] p-0 text-center;
 }
 .feedback_slider_nine .slick-dots li button {
 	@apply h-2.5 w-2.5 border border-solid border-black bg-white;
@@ -634,7 +634,7 @@ body .btn-seventeen:before {
 	-webkit-text-stroke-color: #fff;
 }
 .feedback_slider_eleven .slick-dots {
-	@apply xsm:mt-[25px] mt-[45px] p-0 sm:mt-[25px] md:mt-[25px] lg:mt-[25px];
+	@apply mt-6.25 xl:mt-11.25 p-0;
 }
 .feedback_slider_eleven .slick-dots li button {
 	@apply h-2.5 w-2.5 border border-solid border-black bg-white;

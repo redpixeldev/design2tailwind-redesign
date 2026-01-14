@@ -70,14 +70,14 @@ const {
 ---
 
 <div
-	class='fancy-feature-thirtyThree mt-16 mb-20 min-[640px]:mt-20 min-[640px]:mb-24 min-[1024px]:mt-24 min-[1024px]:mb-28 min-[1280px]:mt-32 min-[1280px]:mb-32'>
+	class='fancy-feature-thirtyThree mt-16 mb-20 sm:mt-20 sm:mb-24 lg:mt-24 lg:mb-28 xl:mt-32 xl:mb-32'>
 	<div class='container'>
 		<div class='title-style-ten wow fadeInUp text-center'>
 			<div
-				class='sc-title text-[13px] pb-2.5 tracking-[3px] text-(--prime-nine) uppercase min-[1280px]:text-[15px] min-[1280px]:pb-4'>
+				class='sc-title text-[13px] pb-2.5 tracking-[3px] text-(--prime-nine) uppercase xl:text-[15px] xl:pb-4'>
 				{subtitle}
 			</div>
-			<h2 class='font-Recoleta text-4xl font-normal text-black min-[1024px]:text-5xl min-[1280px]:text-6xl'>
+			<h2 class='font-Recoleta text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
 				{titlePart1}
 				<span class='relative'
 					>{titlePart2}
@@ -92,7 +92,7 @@ const {
 		<!-- /.title-style-ten -->
 
 		<div
-			class='bg-wrapper wow fadeInUp relative mt-10 p-2.5 bg-[#F6F6F6] min-[1280px]:mt-20 min-[1280px]:py-2.5 min-[1280px]:px-12.5'>
+			class='bg-wrapper wow fadeInUp relative mt-10 p-2.5 bg-[#F6F6F6] xl:mt-20 xl:py-2.5 xl:px-12.5'>
 			<div
 				class='accordion accordion-style-four'
 				id={accordionId}>
@@ -123,14 +123,14 @@ const {
 												? 'collapseFive'
 												: 'collapseSix';
 						const buttonClasses = faq.isDefaultOpen
-							? "accordion-button relative flex w-full items-center rounded-none border-0 border-b border-solid border-b-black/8 bg-transparent text-left text-lg/[1.67em] font-medium text-black shadow-none outline-0 transition-all duration-200 ease-in-out py-4.5 px-3.75 after:ml-auto after:size-7.5 after:bg-white after:text-center after:text-2xl after:font-normal after:leading-7.5 after:content-['+'] min-[1280px]:text-2xl min-[1280px]:py-7.5 min-[1280px]:pl-10 min-[1280px]:pr-11.25"
-							: "accordion-button collapsed relative flex w-full items-center rounded-none border-0 border-b border-solid border-b-black/8 bg-transparent text-left text-lg/[1.67em] font-medium text-black shadow-none outline-0 transition-all duration-200 ease-in-out py-4.5 px-3.75 after:ml-auto after:size-7.5 after:bg-white after:text-center after:text-2xl after:font-normal after:leading-7.5 after:content-['+'] min-[1280px]:text-2xl min-[1280px]:py-7.5 min-[1280px]:pl-10 min-[1280px]:pr-11.25";
+							? "accordion-button relative flex w-full items-center rounded-none border-0 border-b border-solid border-b-black/8 bg-transparent text-left text-lg/[1.67em] font-medium text-black shadow-none outline-0 transition-all duration-200 ease-in-out py-4.5 px-3.75 after:ml-auto after:size-7.5 after:bg-white after:text-center after:text-2xl after:font-normal after:leading-7.5 after:content-['+'] xl:text-2xl xl:py-7.5 xl:pl-10 xl:pr-11.25"
+							: "accordion-button collapsed relative flex w-full items-center rounded-none border-0 border-b border-solid border-b-black/8 bg-transparent text-left text-lg/[1.67em] font-medium text-black shadow-none outline-0 transition-all duration-200 ease-in-out py-4.5 px-3.75 after:ml-auto after:size-7.5 after:bg-white after:text-center after:text-2xl after:font-normal after:leading-7.5 after:content-['+'] xl:text-2xl xl:py-7.5 xl:pl-10 xl:pr-11.25";
 						const collapseClasses = faq.isDefaultOpen
 							? 'accordion-collapse collapse show'
 							: 'accordion-collapse collapse';
 						const lastItemButton =
 							index === 5
-								? "accordion-button collapsed relative flex w-full items-center rounded-none bg-transparent text-left text-lg/[1.67em] font-medium text-black shadow-none outline-0 transition-all duration-200 ease-in-out py-4.5 px-3.75 after:ml-auto after:size-7.5 after:bg-white after:text-center after:text-2xl after:font-normal after:leading-7.5 after:content-['+'] min-[1280px]:text-2xl min-[1280px]:py-7.5 min-[1280px]:pl-10 min-[1280px]:pr-11.25"
+								? "accordion-button collapsed relative flex w-full items-center rounded-none bg-transparent text-left text-lg/[1.67em] font-medium text-black shadow-none outline-0 transition-all duration-200 ease-in-out py-4.5 px-3.75 after:ml-auto after:size-7.5 after:bg-white after:text-center after:text-2xl after:font-normal after:leading-7.5 after:content-['+'] xl:text-2xl xl:py-7.5 xl:pl-10 xl:pr-11.25"
 								: buttonClasses;
 
 						return (
@@ -153,7 +153,7 @@ const {
 									class={collapseClasses}
 									aria-labelledby={headingId}
 									data-bs-parent={`#${accordionId}`}>
-									<div class='accordion-body bg-[#0F0F0F] text-white/80 pt-0 pr-11.25 pb-6.25 pl-15 min-[1280px]:px-25 min-[1280px]:pb-10'>
+									<div class='accordion-body bg-[#0F0F0F] text-white/80 pt-0 pr-11.25 pb-6.25 pl-15 xl:px-25 xl:pb-10'>
 										<p
 											class='m-0 text-lg/[1.67em]'
 											set:html={faq.answer.replace(/\n\n/g, '<br><br>')}

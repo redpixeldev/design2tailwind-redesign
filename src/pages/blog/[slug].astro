@@ -47,9 +47,9 @@ const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.me
 	article={article}>
 	<Header />
 
-	<div class='container flex flex-col pt-36 lg:pt-44 xl:pt-52 mb-20 lg:flex-row'>
+	<div class='container flex flex-col pt-36 mb-20 lg:pt-44 lg:flex-row xl:pt-52'>
 		<div class='mx-auto w-full max-w-3xl'>
-			<h1 class='font-Recoleta font-normal text-black xl:text-[43px]/[48px]! lg:text-4xl! text-3xl!'>
+			<h1 class='font-Recoleta font-normal text-black text-3xl! lg:text-4xl! xl:text-[43px]/[48px]!'>
 				{post.data.title}
 			</h1>
 			<div class='border-grey-light flex flex-col border-b pb-5 md:flex-row md:items-center'>
@@ -65,15 +65,15 @@ const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.me
 				</div>
 			</div>
 			<div
-				class='prose-blog prose relative mt-8 max-w-none md:prose-lg prose-headings:mt-4 prose-li:marker:text-black text-black font-Gordita'>
+				class='prose-blog prose relative mt-8 max-w-none prose-headings:mt-4 prose-li:marker:text-black text-black font-Gordita md:prose-lg'>
 				<Content />
 			</div>
 
 			{
 				hasSyndication && (
-					<div class='mt-8 flex flex-col md:flex-row md:items-center border-t border-grey-light pt-6'>
+					<div class='mt-8 flex flex-col border-t border-grey-light pt-6 md:flex-row md:items-center'>
 						<span class='text-black mr-4 font-medium text-lg md:text-base'>Also published on:</span>
-						<div class='flex gap-4 mt-2 md:mt-0 items-center flex-wrap'>
+						<div class='flex gap-4 mt-2 items-center flex-wrap md:mt-0'>
 							{post.data['dev.to'] && (
 								<a
 									href={post.data['dev.to']}

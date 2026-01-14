@@ -41,33 +41,33 @@ const {
 <div class="blog-section-five mb-36 relative z-30">
 	<div class="container">
 		<div class="relative">
-			<div class="flex flex-wrap mx-[-12px]">
-				<div class="xl:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full ">
-					<div class="title-style-five text-center xl:text-left lg:text-left md:text-left ">
-						<h2 class="font-Recoleta font-normal text-black xl:text-6xl lg:text-5xl text-4xl">{title}</h2>
+			<div class="-mx-3 flex flex-wrap">
+				<div class="w-full max-w-full flex-[0_0_auto] px-3 md:w-6/12">
+					<div class="title-style-five text-center md:text-left">
+						<h2 class="font-Recoleta font-normal text-black text-4xl lg:text-5xl xl:text-6xl">{title}</h2>
 					</div>
 				</div>
 			</div>
 
-			<div class="flex flex-wrap mx-[-12px] xxl:mx-[-24px]">
+			<div class="-mx-3 flex flex-wrap 2xl:-mx-6">
 				{blogPosts.map((post) => (
-					<div class="xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] px-[12px] max-w-full flex">
-						<article class="blog-meta-five mt-6 md:mt-10 flex flex-col relative tran3s border w-full transition-all duration-[0.3s] ease-[ease-in-out]  xl:p-[50px_40px_50px_50px] xs:p-[50px_15px_25px_20px] p-[35px_10px_25px_19px] border-solid border-[#241149] before:content-[''] before:absolute before:w-full before:h-full before:border before:z-[-1] before:transition-all before:duration-[0.3s] before:ease-[ease-in-out] before:border-solid before:border-[#241149] before:left-2 before:top-2 hover:border-[#BC46E2] hover:before:border-[#BC46E2] wow fadeInUp">
-							<div class="post-data mb-12 lg:mb-[50px] md:mb-[50px] sm:mb-[50px] xsm:mb-[50px] ">
-								<a href={post.link}><h4 class="tran3s blog-title xl:text-2xl font-normal xsm:text-xl leading-[1.416em] hover:underline">{post.title}</h4></a>
-								<p class="text-base/[24px] md:text-xl mt-3 md:mt-5 font-gordita mb-0 line-clamp-2">{post.excerpt}</p>
+					<div class="w-full max-w-full flex-[0_0_auto] px-3 flex md:w-6/12">
+						<article class="blog-meta-five mt-6 flex flex-col relative tran3s border w-full transition-all duration-300 ease-in-out p-[35px_10px_25px_19px] border-solid border-[#241149] before:content-[''] before:absolute before:w-full before:h-full before:border before:-z-1 before:transition-all before:duration-300 before:ease-in-out before:border-solid before:border-[#241149] before:left-2 before:top-2 hover:border-[#BC46E2] hover:before:border-[#BC46E2] wow fadeInUp xs:p-[50px_15px_25px_20px] md:mt-10 xl:p-[50px_40px_50px_50px]">
+							<div class="post-data mb-12.5">
+								<a href={post.link}><h4 class="tran3s blog-title text-xl font-normal leading-[1.416em] hover:underline xl:text-2xl">{post.title}</h4></a>
+								<p class="text-base/6 mt-3 font-gordita mb-0 line-clamp-2 md:text-xl md:mt-5">{post.excerpt}</p>
 							</div>
 							<div class="blog-footer flex items-center justify-between mt-auto">
-								<div class="blog-date font-medium text-black ">{post.category} - <span class="font-normal tran3s">{post.date}</span></div>
-								<a href={post.link} class="read-more tran3s w-[45px] h-[45px] text-center leading-[45px] text-white text-[24px] bg-[#241149] hover:bg-(--prime-ten)"><i class="bi bi-arrow-up-right"></i></a>
-							</div> <!-- /.blog-footer -->
-						</article> <!-- /.blog-meta-five -->
+								<div class="blog-date font-medium text-black">{post.category} - <span class="font-normal tran3s">{post.date}</span></div>
+								<a href={post.link} class="read-more tran3s size-11.25 text-center leading-[45px] text-white text-2xl bg-[#241149] hover:bg-(--prime-ten)"><i class="bi bi-arrow-up-right"></i></a>
+							</div>
+						</article>
 					</div>
 				))}
 			</div>
 
-			<div class="btn-holder text-center absolute right-0 top-4 sm:relative sm:top-0 md:top-1 lg:top-0 xsm:relative">
-				<div class="btn-eighteen relative inline-block text-black xsm:mt-6 sm:mt-12 md:mt-0 text-[17px] lg:text-[16px] md:text-[16px] sm:text-[16px] xsm:text-[16px] leading-[initial] before:content-[''] before:absolute before:h-0.5 before:w-full before:left-0 before:-bottom-1 before:bg-black"><a href={ctaLink} class="font-gordita font-medium tran3s hover:text-[#BC46E2]">{ctaText} <i class="fa-solid fa-angle-right text-[15px]"></i></a></div>
+			<div class="btn-holder text-center relative top-0 md:absolute md:right-0 md:top-1 lg:top-0">
+				<div class="btn-eighteen relative inline-block text-black mt-6 text-base leading-[initial] before:content-[''] before:absolute before:h-0.5 before:w-full before:left-0 before:-bottom-1 before:bg-black sm:mt-12 md:mt-0 xl:text-[17px]"><a href={ctaLink} class="font-gordita font-medium tran3s hover:text-[#BC46E2]">{ctaText} <i class="fa-solid fa-angle-right text-[15px]"></i></a></div>
 			</div>
 		</div>
 	</div>

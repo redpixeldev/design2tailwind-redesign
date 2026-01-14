@@ -29,12 +29,12 @@ const {
 } = Astro.props;
 ---
 
-<div class='fancy-feature-five mb-12 min-[768px]:mb-16 min-[1024px]:mb-20 min-[1280px]:mb-24'>
+<div class='fancy-feature-five mb-12 md:mb-16 lg:mb-20 xl:mb-24'>
 	<div class='container'>
 		<div class='flex flex-wrap items-center'>
 			<div
-				class='ml-auto w-full max-w-full flex-[0_0_auto] px-3 min-[768px]:order-last min-[768px]:w-6/12 min-[1024px]:w-[45%]'>
-				<div class='block-style-two wow fadeInRight mb-12.5 min-[768px]:mb-0 min-[1536px]:pr-12'>
+				class='ml-auto w-full max-w-full flex-[0_0_auto] px-3 md:order-last md:w-6/12 lg:w-[45%]'>
+				<div class='block-style-two wow fadeInRight mb-12.5 md:mb-0 2xl:pr-12'>
 					<div class='title-style-three'>
 						<!-- <div
 							class='sc-title xsm:text-[13px] pb-2.5 text-[14px] tracking-[1px] text-[rgba(0,0,0,0.3)] uppercase sm:text-[13px] md:text-[13px] lg:text-[13px]'>
@@ -44,10 +44,10 @@ const {
 								>{subtitle}</span
 							>
 						</div> -->
-						<h2 class='main-title font-Recoleta m-0 text-4xl font-normal text-black min-[1024px]:text-5xl min-[1280px]:text-6xl'>
+						<h2 class='main-title font-Recoleta m-0 text-4xl font-normal text-black lg:text-5xl xl:text-6xl'>
 							{title.split('choose')[0]}<span class='relative z-1 inline-block'
 								>choose <span
-									class='mark-bg absolute top-1/2 -left-1.25 -z-1 h-8.5 w-[98%] -translate-y-1/2 min-[1024px]:h-12.5'
+									class='mark-bg absolute top-1/2 -left-1.25 -z-1 h-8.5 w-[98%] -translate-y-1/2 lg:h-12.5'
 									style={`background-color:${highlightColor};`}
 								></span></span
 							>
@@ -55,20 +55,20 @@ const {
 						</h2>
 					</div>
 					<p
-						class='font-gordita mt-8 text-[19px]/[1.67em] min-[1280px]:text-[22px]'>
+						class='font-gordita mt-8 text-[19px]/[1.67em] xl:text-[22px]'>
 						{paragraph1}
 					</p>
 					<p
-						class='font-gordita text-[19px]/[1.67em] min-[1280px]:text-[22px]'>
+						class='font-gordita text-[19px]/[1.67em] xl:text-[22px]'>
 						{paragraph2}
 					</p>
 				</div>
 			</div>
 
 			<div
-				class='wow fadeInLeft w-full max-w-full flex-[0_0_auto] px-3 min-[768px]:order-first min-[768px]:w-6/12'>
+				class='wow fadeInLeft w-full max-w-full flex-[0_0_auto] px-3 md:order-first md:w-6/12'>
 				<div
-					class='tags-wrapper relative rounded-[25px] bg-[#F3F7F8] pt-6.25 px-3.75 pb-7.5 min-[1280px]:pt-8.75 min-[1280px]:px-8.75 min-[1280px]:pb-10 min-[1536px]:pt-11.25 min-[1536px]:px-16.25 min-[1536px]:pb-12.5'>
+					class='tags-wrapper relative rounded-[25px] bg-[#F3F7F8] pt-6.25 px-3.75 pb-7.5 xl:pt-8.75 xl:px-8.75 xl:pb-10 2xl:pt-11.25 2xl:px-16.25 2xl:pb-12.5'>
 					<img
 						src='images/lazy.svg'
 						data-src='images/shape/shape_35.svg'
@@ -77,15 +77,15 @@ const {
 					/>
 					<div class='h3 m-0 font-normal text-black'>{reasonsCount}</div>
 					<p
-						class='pb-2.5 text-[19px]/[1.67em] opacity-50 min-[1280px]:text-[22px] min-[1536px]:pb-6.25 min-[1536px]:text-2xl'>
+						class='pb-2.5 text-[19px]/[1.67em] opacity-50 xl:text-[22px] 2xl:pb-6.25 2xl:text-2xl'>
 						{reasonsText}
 					</p>
 					<ul class='-mx-2.5 mb-0 flex list-none flex-wrap items-center pl-0'>
 						{
 							tags.map((tag) => (
-								<li class='my-1.25 px-2.5 text-xl text-black min-[1280px]:my-2.5 min-[1280px]:text-2xl'>
+								<li class='my-1.25 px-2.5 text-xl text-black xl:my-2.5 xl:text-2xl'>
 									<a
-										class='rounded-[10px] bg-white p-3 text-[15px] text-black transition-all duration-300 ease-in-out hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] min-[1280px]:px-7.5 min-[1280px]:py-5.5 min-[1280px]:text-lg'
+										class='rounded-[10px] bg-white p-3 text-[15px] text-black transition-all duration-300 ease-in-out hover:shadow-[0_15px_40px_rgba(0,0,0,0.05)] xl:px-7.5 xl:py-5.5 xl:text-lg'
 										href='#'>
 										<span
 											class='inline-block rounded-[5px] px-0.75 leading-6.25'
@@ -97,7 +97,7 @@ const {
 							))
 						}
 						<li
-							class='my-1.25 px-2.5 text-xl text-black min-[1280px]:my-2.5 min-[1280px]:text-2xl'>
+							class='my-1.25 px-2.5 text-xl text-black xl:my-2.5 xl:text-2xl'>
 							& more…
 						</li>
 					</ul>

@@ -1,6 +1,6 @@
 <header
 	x-data='{ mobileMenuOpen: false }'
-	class='theme-main-menu sticky-menu theme-menu-two absolute inset-x-0 top-0 z-99 px-3 py-5 transition-all duration-400 ease-out min-[1024px]:px-5 min-[1536px]:px-8.75'>
+	class='theme-main-menu sticky-menu theme-menu-two absolute inset-x-0 top-0 z-99 px-3 py-5 transition-all duration-400 ease-out lg:px-5 2xl:px-8.75'>
 	<!-- Mobile menu overlay -->
 	<div
 		x-show='mobileMenuOpen'
@@ -11,7 +11,7 @@
 		x-transition:leave-start='opacity-50'
 		x-transition:leave-end='opacity-0'
 		@click='mobileMenuOpen = false'
-		class='fixed inset-0 z-9998 bg-black min-[1024px]:hidden'
+		class='fixed inset-0 z-9998 bg-black lg:hidden'
 		style='display: none;'>
 	</div>
 	<div class='inner-content relative pl-4'>
@@ -26,21 +26,21 @@
 				>
 			</div>
 
-			<div class='right-widget flex items-center min-[1024px]:order-3'>
+			<div class='right-widget flex items-center lg:order-3'>
 				<!-- <a href="signin.html" class="login-btn-one text-[17px] lg:text-[15px] md:text-[15px] sm:text-[15px] xsm:text-[15px] font-medium tran3s mr-4 leading-[48px] border text-black p-[0_35px] rounded-[30px] border-solid border-[#E4E4E4] hover:text-white hover:bg-[#BC46E2] lg:p-[0_25px] lg:leading-[45px] md:p-[0_25px] md:leading-[45px] sm:p-[0_25px] sm:leading-[45px] xsm:p-[0_25px] xsm:leading-[45px]">Login</a> -->
 				<a
 					href='/#quote'
-					class='contact-btn-two tran3s hidden rounded-[30px] border border-solid border-[#BC46E2] px-6.25 py-0 text-[15px] leading-[45px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white min-[1024px]:block min-[1280px]:px-8.75 min-[1280px]:text-[17px] min-[1280px]:leading-[48px]'
+					class='contact-btn-two tran3s hidden rounded-[30px] border border-solid border-[#BC46E2] px-6.25 py-0 text-[15px] leading-[45px] font-medium text-[#BC46E2] hover:bg-[#BC46E2] hover:text-white lg:block xl:px-8.75 xl:text-[17px] xl:leading-[48px]'
 					>Get a Free Quote</a
 				>
 			</div>
 			<!-- /.right-widget -->
 
 			<nav
-				class='navbar navbar-expand-lg static flex flex-wrap items-center justify-between p-0 min-[1024px]:order-2 min-[1024px]:flex-nowrap min-[1024px]:justify-start min-[1024px]:py-2'>
+				class='navbar navbar-expand-lg static flex flex-wrap items-center justify-between p-0 lg:order-2 lg:flex-nowrap lg:justify-start lg:py-2'>
 				<button
 					@click='mobileMenuOpen = !mobileMenuOpen'
-					class='navbar-toggler relative z-9999 flex h-10 w-10 items-center justify-center rounded-lg border-0 bg-[#BC46E2] p-0 text-white shadow-[0_15px_20px_0px_rgba(0,0,0,0.05)] transition-all duration-200 ease-in-out hover:bg-[#a93dd0] focus:shadow-none min-[1024px]:hidden'
+					class='navbar-toggler relative z-9999 flex h-10 w-10 items-center justify-center rounded-lg border-0 bg-[#BC46E2] p-0 text-white shadow-[0_15px_20px_0px_rgba(0,0,0,0.05)] transition-all duration-200 ease-in-out hover:bg-[#a93dd0] focus:shadow-none lg:hidden'
 					type='button'
 					aria-controls='navbarNav'
 					:aria-expanded='mobileMenuOpen.toString()'
@@ -56,10 +56,10 @@
 				</button>
 				<div
 					:class="mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'"
-					class='visible fixed top-0 left-0 z-9999 clear-both block h-screen max-h-screen w-80 max-w-[calc(100vw-60px)] overflow-y-auto bg-white px-3.75 pt-8 pb-5 shadow-[4px_0_25px_rgba(0,0,0,0.1)] transition-transform duration-300 ease-in-out min-[768px]:w-4/5 min-[1024px]:static min-[1024px]:z-auto min-[1024px]:clear-none min-[1024px]:h-auto min-[1024px]:max-h-none min-[1024px]:w-auto min-[1024px]:max-w-none min-[1024px]:grow min-[1024px]:basis-full min-[1024px]:translate-x-0! min-[1024px]:items-center min-[1024px]:overflow-visible min-[1024px]:bg-transparent min-[1024px]:p-0 min-[1024px]:shadow-none min-[1024px]:transition-none'
+					class='visible fixed top-0 left-0 z-9999 clear-both block h-screen max-h-screen w-80 max-w-[calc(100vw-60px)] overflow-y-auto bg-white px-3.75 pt-8 pb-5 shadow-[4px_0_25px_rgba(0,0,0,0.1)] transition-transform duration-300 ease-in-out md:w-4/5 lg:static lg:z-auto lg:clear-none lg:h-auto lg:max-h-none lg:w-auto lg:max-w-none lg:grow lg:basis-full lg:translate-x-0! lg:items-center lg:overflow-visible lg:bg-transparent lg:p-0 lg:shadow-none lg:transition-none'
 					id='navbarNav'>
-					<ul class='navbar-nav mb-0 flex flex-col pl-0 min-[1024px]:flex-row'>
-						<li class='block min-[1024px]:hidden'>
+					<ul class='navbar-nav mb-0 flex flex-col pl-0 lg:flex-row'>
+						<li class='block lg:hidden'>
 							<div class='mb-12 flex items-center justify-between'>
 								<a
 									href='/'
@@ -92,7 +92,7 @@
 						<li>
 							<a
 								href='/'
-								class='nav-link visible relative mx-6.5 block py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! min-[1024px]:text-[17px]'
+								class='nav-link visible relative mx-6.5 block py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! lg:text-[17px]'
 								>Home</a
 							>
 						</li>
@@ -103,7 +103,7 @@
 							<button
 								@click='servicesOpen = !servicesOpen'
 								:class="servicesOpen ? 'text-[#BC46E2]' : ''"
-								class='nav-link visible relative mx-6.5 flex w-full items-center justify-between gap-1 py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! min-[1024px]:hidden'
+								class='nav-link visible relative mx-6.5 flex w-full items-center justify-between gap-1 py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! lg:hidden'
 								type='button'>
 								Services
 								<svg
@@ -123,7 +123,7 @@
 							<!-- Desktop: Hover trigger -->
 							<a
 								href='#'
-								class='nav-link visible relative mx-6.5 hidden items-center gap-1 py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! min-[1024px]:flex min-[1024px]:text-[17px]'
+								class='nav-link visible relative mx-6.5 hidden items-center gap-1 py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! lg:flex lg:text-[17px]'
 								>Services
 								<svg
 									class='h-4 w-4 transition-transform duration-200 group-hover:rotate-180'
@@ -142,7 +142,7 @@
 							<div
 								x-show='servicesOpen'
 								x-collapse
-								class='overflow-hidden pl-4 min-[1024px]:hidden'>
+								class='overflow-hidden pl-4 lg:hidden'>
 								<!-- Design Tools -->
 								<span class='mt-2 mb-2 block px-6.5 text-[11px] font-semibold tracking-wider text-gray-400 uppercase'
 									>Design Tools</span
@@ -278,7 +278,7 @@
 							</div>
 							<!-- Desktop: Hover dropdown -->
 							<div
-								class='invisible absolute top-full left-0 z-50 hidden min-w-[480px] translate-y-2 grid-cols-2 gap-0 rounded-xl bg-white p-4 opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.12)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 min-[1024px]:grid'>
+								class='invisible absolute top-full left-0 z-50 hidden min-w-[480px] translate-y-2 grid-cols-2 gap-0 rounded-xl bg-white p-4 opacity-0 shadow-[0_10px_40px_rgba(0,0,0,0.12)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 lg:grid'>
 								<!-- Design Tools Column -->
 								<div class='border-r border-gray-100 pr-4'>
 									<span class='mb-2 block px-3 text-[11px] font-semibold tracking-wider text-gray-400 uppercase'
@@ -420,21 +420,21 @@
 						<li>
 							<a
 								href='/for-agencies'
-								class='nav-link visible relative mx-6.5 block py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! min-[1024px]:text-[17px]'
+								class='nav-link visible relative mx-6.5 block py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! lg:text-[17px]'
 								>For agencies</a
 							>
 						</li>
 						<li>
 							<a
 								href='/about'
-								class='nav-link visible relative mx-6.5 block py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! min-[1024px]:text-[17px]'
+								class='nav-link visible relative mx-6.5 block py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! lg:text-[17px]'
 								>About</a
 							>
 						</li>
 						<li>
 							<a
 								href='/blog'
-								class='nav-link visible relative mx-6.5 block py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! min-[1024px]:text-[17px]'
+								class='nav-link visible relative mx-6.5 block py-3.25 text-lg font-medium text-black transition-all duration-300 ease-in-out hover:text-[#BC46E2]! lg:text-[17px]'
 								>Blog</a
 							>
 						</li>
