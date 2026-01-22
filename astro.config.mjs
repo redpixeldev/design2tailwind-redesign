@@ -10,6 +10,11 @@ export default defineConfig({
       assets: 'assets',
       format: 'file',
 	},
+	markdown: {
+    shikiConfig: {
+      // theme: 'dracula',
+    },
+  },
 
   vite: {
       define: {

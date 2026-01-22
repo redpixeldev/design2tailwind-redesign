@@ -49,7 +49,13 @@ const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.me
 
 	<div class='container flex flex-col pt-36 mb-20 lg:pt-44 lg:flex-row xl:pt-52'>
 		<div class='mx-auto w-full max-w-3xl'>
-			<h1 class='font-Recoleta font-normal text-black text-3xl! lg:text-4xl! xl:text-[43px]/[48px]!'>
+			<a href='/blog' class='text-black/60 font-body text-sm md:text-base inline-flex items-center gap-2 border border-black/30 rounded-full px-4 py-2 hover:bg-black/5 transition-colors duration-300'>
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+				</svg>
+				Back to Blog
+			</a>
+			<h1 class='font-Recoleta font-normal text-black text-3xl! lg:text-4xl! xl:text-[43px]/[48px]! mt-8'>
 				{post.data.title}
 			</h1>
 			<div class='border-grey-light flex flex-col border-b pb-5 md:flex-row md:items-center'>
@@ -65,11 +71,11 @@ const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.me
 				</div>
 			</div>
 			<div
-				class='prose-blog prose relative mt-8 max-w-none prose-headings:mt-4 prose-li:marker:text-black text-black font-Gordita md:prose-lg'>
+				class='prose-blog prose relative mt-8 max-w-none prose-headings:mt-4 prose-headings:font-Recoleta prose-headings:font-normal prose-li:marker:text-black text-black font-Gordita md:prose-lg prose-h2:!text-3xl prose-h3:!text-2xl'>
 				<Content />
 			</div>
 
-			{
+			<!-- {
 				hasSyndication && (
 					<div class='mt-8 flex flex-col border-t border-grey-light pt-6 md:flex-row md:items-center'>
 						<span class='text-black mr-4 font-medium text-lg md:text-base'>Also published on:</span>
@@ -113,9 +119,9 @@ const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.me
 						</div>
 					</div>
 				)
-			}
+			} -->
 
-			<div class='mt-8 flex flex-col md:flex-row md:items-center'>
+			<!-- <div class='mt-8 flex flex-col md:flex-row md:items-center'>
 				<span class='text-black mr-4 font-medium text-lg md:text-base'>Share this article on:</span>
 				<div class='flex gap-2.5 mt-2 items-center'>
 					<button id='twitter'>
@@ -128,7 +134,7 @@ const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.me
 						<img src='/images/lazy.svg' data-src='/images/icon/icon-reddit.svg' alt='Reddit' class='lazy-img h-9' />
 					</button>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
