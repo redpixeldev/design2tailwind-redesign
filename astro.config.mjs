@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
 
 import cloudflare from '@astrojs/cloudflare';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
+  integrations: [sitemap()],
   site: 'https://design2tailwind.com',
   compressHTML: false,
 
