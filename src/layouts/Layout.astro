@@ -59,6 +59,12 @@ const ogImageURL = new URL(ogImage, siteConfig.url).href;
 			rel='canonical'
 			href={canonicalURL}
 		/>
+		<link
+			rel='alternate'
+			type='application/rss+xml'
+			title={`${siteConfig.name} Blog`}
+			href='/rss.xml'
+		/>
 		{
 			noindex && (
 				<meta
