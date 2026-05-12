@@ -32,6 +32,10 @@ const blog = defineCollection({
 		keyword: z.string().optional(),
 		category: z.string().default('Tutorial'),
 
+		// Per-post OG image (path relative to site root, e.g. /images/blog/post-slug.jpg).
+		// Falls back to siteConfig.defaultOgImage if not provided.
+		ogImage: z.string().optional(),
+
 		// URL fields
 		permalink: z.string(),
 		url: z.string().optional(),

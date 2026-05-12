@@ -2,6 +2,13 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import { buildServiceSchema } from '@/lib/service-schema';
+
+const schema = buildServiceSchema({
+	name: 'Shopify + Tailwind CSS Theme Development',
+	description: 'Custom Shopify themes hand-coded with Tailwind CSS. Beautiful, fast-loading storefronts that convert.',
+	path: '/design-to-tailwind-shopify',
+});
 import WhyUs from '@components/WhyUs.astro';
 import OurProcess from '@components/OurProcess.astro';
 import CTA from '@components/CTA.astro';
@@ -13,7 +20,8 @@ import Advantages from '@components/Advantages.astro';
 <Layout
 	title='Shopify + Tailwind CSS Theme Development | Design2Tailwind'
 	description='Custom Shopify themes built with Tailwind CSS. Beautiful, fast-loading storefronts that convert.'
-	keywords={['shopify tailwind', 'shopify theme development', 'custom shopify themes', 'tailwind css']}>
+	keywords={['shopify tailwind', 'shopify theme development', 'custom shopify themes', 'tailwind css']}
+	schema={schema}>
 	<Header />
 
 	<div

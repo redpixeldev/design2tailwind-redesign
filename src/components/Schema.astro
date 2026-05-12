@@ -1,0 +1,20 @@
+---
+interface Props {
+	/** One JSON-LD object or many. Emitted as a single @graph when multiple. */
+	schema: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { schema } = Astro.props;
+
+const items = Array.isArray(schema) ? schema : [schema];
+
+const ldJson = {
+	'@context': 'https://schema.org',
+	'@graph': items,
+};
+---
+
+<script
+	type='application/ld+json'
+	set:html={JSON.stringify(ldJson)}
+/>

@@ -8,12 +8,20 @@ import CTA from '@components/CTA.astro';
 import FAQ from '@components/FAQ.astro';
 import Testimonials from '@components/Testimonials.astro';
 import Advantages from '@components/Advantages.astro';
+import { buildServiceSchema } from '@/lib/service-schema';
+
+const schema = buildServiceSchema({
+	name: 'Figma to Tailwind CSS Conversion',
+	description: 'Hand-coded Tailwind CSS from your Figma designs. Pixel-accurate, responsive, production-ready.',
+	path: '/figma-to-tailwind',
+});
 ---
 
 <Layout
 	title='Figma to Tailwind CSS Conversion Service | Design2Tailwind'
 	description='Send us your Figma file and we deliver pixel-accurate, responsive Tailwind CSS. Perfect for agencies and teams who care about handoff quality.'
-	keywords={['figma to tailwind', 'figma to code', 'figma conversion', 'tailwind css']}>
+	keywords={['figma to tailwind', 'figma to code', 'figma conversion', 'tailwind css']}
+	schema={schema}>
 	<Header />
 
 	<div

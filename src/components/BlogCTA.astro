@@ -1,0 +1,39 @@
+---
+interface Props {
+	/** Optional override for the headline. */
+	heading?: string;
+	/** Optional override for the body copy. */
+	body?: string;
+}
+
+const {
+	heading = 'Need your design built in Tailwind CSS?',
+	body = 'We hand-code your Figma, Sketch, Adobe XD, or PSD designs into clean, production-ready Tailwind CSS. Send us your file and we will reply with a quote.',
+} = Astro.props;
+---
+
+<aside
+	class='mt-12 rounded-2xl border border-solid border-neutral-200 bg-[#F6F9FB] px-6 py-8 md:px-10 md:py-10'>
+	<div class='flex flex-col gap-6 md:flex-row md:items-center md:justify-between'>
+		<div class='max-w-2xl'>
+			<h3 class='font-Recoleta text-2xl font-normal text-black md:text-3xl'>
+				{heading}
+			</h3>
+			<p class='font-Gordita mt-3 text-base text-black/70 md:text-lg'>
+				{body}
+			</p>
+		</div>
+		<div class='flex shrink-0 flex-wrap gap-3 md:flex-col md:gap-2'>
+			<a
+				href='/figma-to-tailwind'
+				class='inline-flex items-center justify-center rounded-full bg-[#BC46E2] px-6 py-3 text-base font-medium text-white transition-colors hover:bg-[#a93dd0]'>
+				Get a free quote
+			</a>
+			<a
+				href='/for-agencies'
+				class='inline-flex items-center justify-center rounded-full border border-solid border-black/20 px-6 py-3 text-base font-medium text-black transition-colors hover:border-[#BC46E2] hover:text-[#BC46E2]'>
+				For agencies
+			</a>
+		</div>
+	</div>
+</aside>

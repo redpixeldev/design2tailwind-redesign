@@ -2,6 +2,13 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import { buildServiceSchema } from '@/lib/service-schema';
+
+const schema = buildServiceSchema({
+	name: 'Sketch to Tailwind CSS Conversion',
+	description: 'Hand-coded Tailwind CSS from your Sketch designs. Pixel-accurate, responsive, production-ready.',
+	path: '/sketch-to-tailwind',
+});
 import WhyUs from '@components/WhyUs.astro';
 import OurProcess from '@components/OurProcess.astro';
 import CTA from '@components/CTA.astro';
@@ -13,7 +20,8 @@ import Advantages from '@components/Advantages.astro';
 <Layout
 	title='Sketch to Tailwind CSS Conversion Service | Design2Tailwind'
 	description='Convert your Sketch designs to handcrafted Tailwind CSS code. Responsive, maintainable, and ready for production.'
-	keywords={['sketch to tailwind', 'sketch to code', 'sketch conversion', 'tailwind css']}>
+	keywords={['sketch to tailwind', 'sketch to code', 'sketch conversion', 'tailwind css']}
+	schema={schema}>
 	<Header />
 
 	<div

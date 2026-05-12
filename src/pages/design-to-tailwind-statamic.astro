@@ -2,6 +2,13 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import { buildServiceSchema } from '@/lib/service-schema';
+
+const schema = buildServiceSchema({
+	name: 'Statamic + Tailwind CSS Site Development',
+	description: 'Hand-coded Statamic sites with Tailwind CSS, built from your designs. Clean templates, easy to maintain.',
+	path: '/design-to-tailwind-statamic',
+});
 import WhyUs from '@components/WhyUs.astro';
 import OurProcess from '@components/OurProcess.astro';
 import CTA from '@components/CTA.astro';
@@ -13,7 +20,8 @@ import Advantages from '@components/Advantages.astro';
 <Layout
 	title='Statamic + Tailwind CSS Site Development | Design2Tailwind'
 	description='Beautiful Statamic sites built with Tailwind CSS. Clean templates that are easy to maintain and extend.'
-	keywords={['statamic tailwind', 'statamic development', 'statamic themes', 'tailwind css']}>
+	keywords={['statamic tailwind', 'statamic development', 'statamic themes', 'tailwind css']}
+	schema={schema}>
 	<Header />
 
 	<div

@@ -2,6 +2,13 @@
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import { buildServiceSchema } from '@/lib/service-schema';
+
+const schema = buildServiceSchema({
+	name: 'Vue.js + Tailwind CSS Component Development',
+	description: 'Hand-coded Vue.js components with Tailwind CSS, built from your designs. Clean, reusable, production-ready.',
+	path: '/design-to-tailwind-vue',
+});
 import WhyUs from '@components/WhyUs.astro';
 import OurProcess from '@components/OurProcess.astro';
 import CTA from '@components/CTA.astro';
@@ -13,7 +20,8 @@ import Advantages from '@components/Advantages.astro';
 <Layout
 	title='Vue.js + Tailwind CSS Component Development | Design2Tailwind'
 	description='Convert your designs to Tailwind CSS with Vue.js components. Production-ready code for modern Vue applications.'
-	keywords={['design to vue', 'tailwind vue components', 'vue development', 'tailwind css']}>
+	keywords={['design to vue', 'tailwind vue components', 'vue development', 'tailwind css']}
+	schema={schema}>
 	<Header />
 
 	<div

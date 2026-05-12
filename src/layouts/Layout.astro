@@ -2,6 +2,7 @@
 import '../styles/main.css';
 import { siteConfig } from '@config/site';
 import type { SEOProps } from '@/types/seo';
+import Schema from '@components/Schema.astro';
 
 interface Props extends SEOProps {}
 
@@ -15,6 +16,7 @@ const {
 	keywords = [],
 	article,
 	noindex = false,
+	schema: pageSchema,
 } = Astro.props;
 
 const formattedTitle = seoTitle ?? (title ? `${title}` : siteConfig.name);
@@ -23,6 +25,38 @@ const canonicalURL = canonical
 	? new URL(canonical, siteConfig.url).href
 	: new URL(cleanPath, siteConfig.url).href;
 const ogImageURL = new URL(ogImage, siteConfig.url).href;
+
+const organizationSchema: Record<string, unknown> = {
+	'@type': 'Organization',
+	'@id': `${siteConfig.url}/#organization`,
+	name: siteConfig.name,
+	url: siteConfig.url,
+	logo: `${siteConfig.url}/images/logo.svg`,
+	email: 'hello@design2tailwind.com',
+	sameAs: [`https://twitter.com/${siteConfig.twitterHandle.replace('@', '')}`],
+	parentOrganization: {
+		'@type': 'Organization',
+		name: 'Red Pixel LLC',
+	},
+};
+
+const websiteSchema: Record<string, unknown> = {
+	'@type': 'WebSite',
+	'@id': `${siteConfig.url}/#website`,
+	url: siteConfig.url,
+	name: siteConfig.name,
+	description: siteConfig.description,
+	publisher: { '@id': `${siteConfig.url}/#organization` },
+	inLanguage: 'en-US',
+};
+
+const isHomepage = cleanPath === '/';
+const schemaGraph: Record<string, unknown>[] = [organizationSchema];
+if (isHomepage) schemaGraph.push(websiteSchema);
+if (pageSchema) {
+	const extra = Array.isArray(pageSchema) ? pageSchema : [pageSchema];
+	schemaGraph.push(...extra);
+}
 ---
 
 <!doctype html>
@@ -160,6 +194,9 @@ const ogImageURL = new URL(ogImage, siteConfig.url).href;
 				</>
 			)
 		}
+
+		<!-- Structured Data (JSON-LD) -->
+		{!noindex && <Schema schema={schemaGraph} />}
 
 		<!-- Theme & Browser -->
 		<meta

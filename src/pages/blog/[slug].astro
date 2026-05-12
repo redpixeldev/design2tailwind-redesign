@@ -3,6 +3,8 @@ import { getCollection, render } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import BlogCTA from '@components/BlogCTA.astro';
+import { siteConfig } from '@config/site';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -37,14 +39,43 @@ const article = {
 
 // Check if any syndication links exist
 const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.medium || post.data.reddit;
+
+// Canonical URL for this post (no trailing slash, no .html)
+const postUrl = `${siteConfig.url}${post.data.permalink.replace(/\/$/, '')}`;
+const postOgImage = post.data.ogImage ?? siteConfig.defaultOgImage;
+
+const articleSchema: Record<string, unknown> = {
+	'@type': 'Article',
+	'@id': `${postUrl}#article`,
+	headline: post.data.title,
+	description: post.data.description,
+	image: new URL(postOgImage, siteConfig.url).href,
+	datePublished: post.data.publishing_date.toISOString(),
+	dateModified: post.data.publishing_date.toISOString(),
+	author: { '@type': 'Person', name: post.data.author },
+	publisher: { '@id': `${siteConfig.url}/#organization` },
+	mainEntityOfPage: postUrl,
+	keywords: [post.data.category, post.data.keyword].filter(Boolean) as string[],
+};
+
+const breadcrumbSchema: Record<string, unknown> = {
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+		{ '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteConfig.url}/blog` },
+		{ '@type': 'ListItem', position: 3, name: post.data.title, item: postUrl },
+	],
+};
 ---
 
 <Layout
 	title={`${post.data.title} | Design2Tailwind`}
 	description={post.data.description}
 	ogType='article'
+	ogImage={postOgImage}
 	keywords={[post.data.keyword, post.data.category].filter(Boolean) as string[]}
-	article={article}>
+	article={article}
+	schema={[articleSchema, breadcrumbSchema]}>
 	<Header />
 
 	<div class='container flex flex-col pt-36 mb-20 lg:pt-44 lg:flex-row xl:pt-52'>
@@ -74,6 +105,9 @@ const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.me
 				class='prose-blog prose relative mt-8 max-w-none prose-headings:mt-4 prose-headings:font-Recoleta prose-headings:font-normal prose-li:marker:text-black text-black font-Gordita md:prose-lg prose-h2:!text-3xl prose-h3:!text-2xl'>
 				<Content />
 			</div>
+
+			<BlogCTA />
+
 
 			<!-- {
 				hasSyndication && (

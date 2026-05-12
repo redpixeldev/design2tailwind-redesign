@@ -30,4 +30,7 @@ export interface SEOProps {
 
 	/** Disable indexing for this page */
 	noindex?: boolean;
+
+	/** Additional JSON-LD schema(s) for this page (Service, Article, FAQPage, BreadcrumbList, etc.) */
+	schema?: Record<string, unknown> | Record<string, unknown>[];
 }

@@ -19,7 +19,7 @@ export async function GET(context: APIContext) {
 			title: post.data.title,
 			description: post.data.description,
 			pubDate: post.data.publishing_date,
-			link: post.data.permalink,
+			link: post.data.permalink.replace(/\/$/, ''),
 			author: post.data.author,
 		})),
 		customData: '<language>en-us</language>',
