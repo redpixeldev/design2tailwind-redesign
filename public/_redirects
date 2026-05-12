@@ -1,0 +1,4 @@
+# Force 301 (permanent) redirects from legacy .html URLs to clean URLs.
+# Without this, Cloudflare Pages serves 307 (temporary) redirects which
+# do not consolidate PageRank to the canonical URL.
+/*.html  /:splat  301

@@ -18,9 +18,10 @@ const {
 } = Astro.props;
 
 const formattedTitle = seoTitle ?? (title ? `${title}` : siteConfig.name);
+const cleanPath = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
 const canonicalURL = canonical
 	? new URL(canonical, siteConfig.url).href
-	: new URL(Astro.url.pathname, siteConfig.url).href;
+	: new URL(cleanPath, siteConfig.url).href;
 const ogImageURL = new URL(ogImage, siteConfig.url).href;
 ---
 

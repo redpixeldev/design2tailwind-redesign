@@ -1,0 +1,206 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+
+const effectiveDate = 'May 12, 2026';
+---
+
+<Layout
+	title='Terms & Conditions | Design2Tailwind'
+	description='Terms governing the use of design2tailwind.com and design-to-code services provided by Red Pixel LLC.'>
+	<Header />
+
+	<div class='container flex flex-col pt-36 mb-20 lg:pt-44 lg:flex-row xl:pt-52'>
+		<div class='mx-auto w-full max-w-3xl'>
+			<h1 class='font-Recoleta font-normal text-black text-3xl! lg:text-4xl! xl:text-[43px]/[48px]! mt-8'>
+				Terms &amp; Conditions
+			</h1>
+			<p class='text-black/60 font-body text-sm md:text-base mt-3'>
+				Effective {effectiveDate}
+			</p>
+
+			<div
+				class='prose-blog prose relative mt-8 max-w-none prose-headings:mt-8 prose-headings:font-Recoleta prose-headings:font-normal prose-li:marker:text-black text-black font-Gordita md:prose-lg prose-h2:!text-3xl prose-h3:!text-2xl'>
+				<p>
+					These Terms &amp; Conditions ("Terms") govern your use of the website at
+					<a href='https://design2tailwind.com'>design2tailwind.com</a> (the "Site") and any design-to-code
+					services (the "Services") provided by Red Pixel LLC, a Delaware limited liability company, operating
+					as Design2Tailwind ("Design2Tailwind," "we," "us," or "our"). By using the Site or engaging us for
+					Services, you ("Client" or "you") agree to these Terms.
+				</p>
+
+				<h2>1. Services</h2>
+				<p>
+					Design2Tailwind provides design-to-code conversion services, including converting design files (such as
+					Figma, Sketch, Adobe XD, and Photoshop) into hand-coded HTML, Tailwind CSS, and framework-specific
+					components (such as React, Vue, Astro, Alpine.js, Shopify, and Statamic). The specific scope, schedule,
+					and deliverables for an engagement will be set out in a separate written statement of work, proposal, or
+					project agreement ("SOW"). If there is a conflict between an SOW and these Terms, the SOW controls for
+					that engagement.
+				</p>
+
+				<h2>2. Quotes and Engagement</h2>
+				<p>
+					Quotes provided through the Site or by email are estimates based on the information you share with us.
+					A quote is not binding until both parties sign an SOW. We reserve the right to revise a quote if the
+					scope, assets, or requirements change before the SOW is signed. Engagements begin when the deposit
+					described in Section 4 is received and the SOW is countersigned.
+				</p>
+
+				<h2>3. Client Responsibilities</h2>
+				<p>You agree to:</p>
+				<ul>
+					<li>
+						Provide accurate project information, final design files, brand assets, copy, and any third-party
+						access we need to perform the Services.
+					</li>
+					<li>
+						Respond to reasonable requests for feedback and approvals in a timely manner. Project timelines
+						assume your responses within five (5) business days.
+					</li>
+					<li>
+						Confirm that you own or have a valid license to all designs, content, fonts, images, and other
+						materials you provide to us, and that our use of them in connection with the Services will not
+						infringe any third party's rights.
+					</li>
+				</ul>
+
+				<h2>4. Fees and Payment</h2>
+				<ul>
+					<li>
+						<strong>Deposit.</strong> Fifty percent (50%) of the total project fee is due before we begin work
+						and is non-refundable once work commences.
+					</li>
+					<li>
+						<strong>Balance.</strong> The remaining fifty percent (50%) is due upon delivery of the completed
+						Services, prior to transfer of ownership under Section 5.
+					</li>
+					<li>
+						<strong>Invoices.</strong> Invoices are payable within fifteen (15) days of issuance unless the SOW
+						says otherwise.
+					</li>
+					<li>
+						<strong>Late payment.</strong> Overdue invoices accrue interest at the lesser of 1.5% per month or
+						the maximum rate permitted by law. We may pause or suspend Services on any engagement with an
+						overdue invoice.
+					</li>
+					<li>
+						<strong>Taxes.</strong> Fees are exclusive of any applicable sales, use, VAT, or similar taxes,
+						which are your responsibility.
+					</li>
+				</ul>
+
+				<h2>5. Intellectual Property</h2>
+				<p>
+					Upon receipt of full payment for an engagement, we assign to you all right, title, and interest in the
+					final, accepted deliverables created specifically for your project, except for any pre-existing
+					materials, open-source components, third-party libraries, or general know-how described below. Before
+					full payment is received, we retain all rights in the deliverables.
+				</p>
+				<p>
+					"Pre-existing materials" include any code, components, utilities, templates, or methodologies that we
+					owned or developed prior to or outside of your engagement. We grant you a perpetual, worldwide,
+					royalty-free license to use any such pre-existing materials incorporated into your deliverables solely
+					for the purposes of the project.
+				</p>
+				<p>
+					You retain all right, title, and interest in materials you provide to us. You grant us a non-exclusive
+					license to use those materials to perform the Services.
+				</p>
+				<p>
+					We may display non-confidential aspects of our work (such as a screenshot or short description of the
+					completed deliverables) in our portfolio, case studies, and marketing unless you opt out in writing.
+				</p>
+
+				<h2>6. Revisions and Acceptance</h2>
+				<p>
+					Each engagement includes the revision rounds specified in the SOW. Additional revisions are billable at
+					our then-current hourly rate. Deliverables are deemed accepted upon the earlier of (a) your written
+					approval or (b) seven (7) days after delivery without written objection.
+				</p>
+
+				<h2>7. Confidentiality</h2>
+				<p>
+					Each party agrees to keep confidential any non-public information disclosed by the other party in
+					connection with an engagement and to use it only for the purpose of performing or receiving the
+					Services. This obligation does not apply to information that is publicly known, independently
+					developed, or rightfully obtained from a third party without confidentiality obligation. The
+					confidentiality obligation survives termination of the engagement for three (3) years.
+				</p>
+
+				<h2>8. Warranties and Disclaimers</h2>
+				<p>
+					We warrant that we will perform the Services in a professional and workmanlike manner consistent with
+					industry standards. Except for that express warranty, the Site and Services are provided
+					<strong>"as is" and "as available"</strong> without warranties of any kind, whether express or implied,
+					including the implied warranties of merchantability, fitness for a particular purpose, and
+					non-infringement. We do not warrant that the Site or deliverables will be uninterrupted, error-free, or
+					compatible with every browser, device, or third-party system.
+				</p>
+
+				<h2>9. Limitation of Liability</h2>
+				<p>
+					To the maximum extent permitted by law, neither party will be liable to the other for any indirect,
+					incidental, special, consequential, or punitive damages, including lost profits, lost revenue, or loss
+					of data, arising out of or related to these Terms or any engagement. Our aggregate liability for any
+					claim arising out of or related to these Terms or an engagement will not exceed the fees actually paid
+					by you to Red Pixel LLC for the engagement giving rise to the claim during the twelve (12) months
+					preceding the event giving rise to liability.
+				</p>
+
+				<h2>10. Indemnification</h2>
+				<p>
+					You agree to defend, indemnify, and hold harmless Red Pixel LLC and its members, officers, employees,
+					and contractors from and against any claims, damages, liabilities, and expenses (including reasonable
+					attorneys' fees) arising out of or related to (a) materials you provide to us, (b) your use of the
+					deliverables in violation of these Terms or applicable law, or (c) your breach of these Terms.
+				</p>
+
+				<h2>11. Termination</h2>
+				<p>
+					Either party may terminate an engagement for material breach by the other party if the breach is not
+					cured within fifteen (15) days of written notice. If you terminate for convenience, the deposit is
+					non-refundable, and you remain responsible for fees for work performed through the termination date.
+					Sections 4, 5, 7, 8, 9, 10, and 12 survive termination.
+				</p>
+
+				<h2>12. Governing Law and Disputes</h2>
+				<p>
+					These Terms are governed by the laws of the State of Delaware, United States, without regard to its
+					conflict of laws rules. The parties consent to the exclusive jurisdiction and venue of the state and
+					federal courts located in Delaware for any dispute arising out of or related to these Terms or an
+					engagement, unless the parties agree in writing to resolve the dispute through binding arbitration.
+				</p>
+
+				<h2>13. Use of the Site</h2>
+				<p>
+					You may browse and use the Site for lawful purposes. You agree not to (a) interfere with the Site's
+					operation, security, or availability; (b) attempt to access non-public areas or data; (c) scrape or
+					harvest information except as permitted by the <code>robots.txt</code> file; or (d) use the Site in a
+					way that violates applicable law.
+				</p>
+
+				<h2>14. Changes to These Terms</h2>
+				<p>
+					We may update these Terms from time to time. The "Effective" date at the top of this page will reflect
+					the latest revision. Material changes will be highlighted on this page for at least 30 days. Continued
+					use of the Site or Services after a change constitutes acceptance of the updated Terms.
+				</p>
+
+				<h2>15. Contact</h2>
+				<p>
+					For questions about these Terms, email
+					<a href='mailto:hello@design2tailwind.com'>hello@design2tailwind.com</a>.
+				</p>
+				<p>
+					Red Pixel LLC<br />
+					Operating as Design2Tailwind<br />
+					Delaware, United States
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<Footer />
+</Layout>
