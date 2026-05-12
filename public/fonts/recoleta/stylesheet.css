@@ -1,4 +1,5 @@
 @font-face {
+    font-display: swap;
     font-family: 'Recoleta';
     src: url('Recoleta-Thin.eot');
     src: local('Recoleta Thin'), local('Recoleta-Thin'),
@@ -12,6 +13,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'Recoleta';
     src: url('Recoleta-Light.eot');
     src: local('Recoleta Light'), local('Recoleta-Light'),
@@ -25,6 +27,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'Recoleta';
     src: url('Recoleta-Regular.eot');
     src: local('Recoleta Regular'), local('Recoleta-Regular'),
@@ -38,6 +41,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'Recoleta';
     src: url('Recoleta-Medium.eot');
     src: local('Recoleta Medium'), local('Recoleta-Medium'),
@@ -51,6 +55,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'Recoleta';
     src: url('Recoleta-SemiBold.eot');
     src: local('Recoleta SemiBold'), local('Recoleta-SemiBold'),
@@ -63,6 +68,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Recoleta';
     src: url('Recoleta-Bold.eot');
     src: local('Recoleta Bold'), local('Recoleta-Bold'),
@@ -75,6 +81,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Recoleta';
     src: url('Recoleta-Black.eot');
     src: local('Recoleta Black'), local('Recoleta-Black'),

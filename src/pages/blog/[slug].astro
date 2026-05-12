@@ -40,7 +40,7 @@ const hasSyndication = post.data['dev.to'] || post.data.hashnode || post.data.me
 ---
 
 <Layout
-	title={post.data.title}
+	title={`${post.data.title} | Design2Tailwind`}
 	description={post.data.description}
 	ogType='article'
 	keywords={[post.data.keyword, post.data.category].filter(Boolean) as string[]}

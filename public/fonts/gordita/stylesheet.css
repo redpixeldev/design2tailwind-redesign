@@ -3,6 +3,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'gordita';
     src: url('gordita_black-webfont.woff2') format('woff2'),
          url('gordita_black-webfont.woff') format('woff');
@@ -15,6 +16,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'gordita';
     src: url('gordita_bold-webfont.woff2') format('woff2'),
          url('gordita_bold-webfont.woff') format('woff');
@@ -27,6 +29,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'gordita';
     src: url('gordita_light-webfont.woff2') format('woff2'),
          url('gordita_light-webfont.woff') format('woff');
@@ -39,6 +42,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'gordita';
     src: url('gordita_medium-webfont.woff2') format('woff2'),
          url('gordita_medium-webfont.woff') format('woff');
@@ -51,6 +55,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'gordita';
     src: url('gordita_regular-webfont.woff2') format('woff2'),
          url('gordita_regular-webfont.woff') format('woff');

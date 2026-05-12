@@ -3,6 +3,7 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'eustacheregular';
     src: url('eustache-regular-webfont.woff2') format('woff2'),
          url('eustache-regular-webfont.woff') format('woff');
